@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="6" passed="6">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="1128" started-at="2019-04-01T12:29:15Z" finished-at="2019-04-01T12:29:16Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="1128" started-at="2019-04-01T12:29:15Z" finished-at="2019-04-01T12:29:16Z">
+      <class name="api.medium_practice.MediumGet1WithExcelUtils">
+        <test-method status="PASS" signature="get(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:api.medium_practice.MediumGet1WithExcelUtils@3ecf72fd]" name="get" duration-ms="589" started-at="2019-04-01T20:29:15Z" data-provider="getDatas" finished-at="2019-04-01T20:29:16Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[http://localhost:12345/futureloan/mvc/api%20/member/register]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[13783948731]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[123456]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[caicai]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[手机号码已被注册]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- get -->
+        <test-method status="PASS" signature="get(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:api.medium_practice.MediumGet1WithExcelUtils@3ecf72fd]" name="get" duration-ms="8" started-at="2019-04-01T20:29:16Z" data-provider="getDatas" finished-at="2019-04-01T20:29:16Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[http://localhost:12345/futureloan/mvc/api%20/member/register]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[caicai]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[123456]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[caicai]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[手机号码格式不正确]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- get -->
+        <test-method status="PASS" signature="get(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:api.medium_practice.MediumGet1WithExcelUtils@3ecf72fd]" name="get" duration-ms="8" started-at="2019-04-01T20:29:16Z" data-provider="getDatas" finished-at="2019-04-01T20:29:16Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[http://localhost:12345/futureloan/mvc/api%20/member/register]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[13783948731]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[12345]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[caicai]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[密码长度必须为6~18]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- get -->
+        <test-method status="PASS" signature="post(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:api.medium_practice.MediumGet1WithExcelUtils@3ecf72fd]" name="post" duration-ms="20" started-at="2019-04-01T20:29:16Z" data-provider="getDatas" finished-at="2019-04-01T20:29:16Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[http://localhost:12345/futureloan/mvc/api%20/member/register]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[13783948731]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[123456]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[caicai]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[手机号码已被注册]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- post -->
+        <test-method status="PASS" signature="post(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:api.medium_practice.MediumGet1WithExcelUtils@3ecf72fd]" name="post" duration-ms="10" started-at="2019-04-01T20:29:16Z" data-provider="getDatas" finished-at="2019-04-01T20:29:16Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[http://localhost:12345/futureloan/mvc/api%20/member/register]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[caicai]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[123456]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[caicai]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[手机号码格式不正确]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- post -->
+        <test-method status="PASS" signature="post(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:api.medium_practice.MediumGet1WithExcelUtils@3ecf72fd]" name="post" duration-ms="7" started-at="2019-04-01T20:29:16Z" data-provider="getDatas" finished-at="2019-04-01T20:29:16Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[http://localhost:12345/futureloan/mvc/api%20/member/register]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[13783948731]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[12345]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[caicai]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[密码长度必须为6~18]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- post -->
+      </class> <!-- api.medium_practice.MediumGet1WithExcelUtils -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

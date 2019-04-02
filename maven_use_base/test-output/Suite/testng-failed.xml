@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]">
+  <test name="Invest(failed)">
+    <classes>
+      <class name="com.testng.DataProviderTest">
+        <methods>
+          <include name="test_case" invocation-numbers="5"/>
+        </methods>
+      </class> <!-- com.testng.DataProviderTest -->
+      <class name="com.testng.Invest_Forward_Test">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="init"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- com.testng.Invest_Forward_Test -->
+      <class name="com.testng.Invest_Reverse_Test">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- com.testng.Invest_Reverse_Test -->
+    </classes>
+  </test> <!-- Invest(failed) -->
+</suite> <!-- Failed suite [Suite] -->
