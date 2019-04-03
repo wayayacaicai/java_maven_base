@@ -18,44 +18,48 @@ import org.apache.http.util.EntityUtils;
 
 /**
  * http发包工具类
+ * 
  * @author happy
  * @date 2019年3月30日
- * @desc 
+ * @desc
  * @email
  */
 public class HttpUtils {
 
 	/**
 	 * get方法
-	 * @param baseUrl 基础url
-	 * @param parametersMap 参数列表
+	 * 
+	 * @param baseUrl
+	 *            基础url
+	 * @param parametersMap
+	 *            参数列表
 	 * @return
 	 */
 	public static String get(String baseUrl, HashMap<String, String> parametersMap) {
 		try {
-			//准备一个参数容器，httpclient需要
+			// 准备一个参数容器，httpclient需要
 			List<NameValuePair> parameters = null;
-			//如果不为空才需要遍历
+			// 如果不为空才需要遍历
 			if (parametersMap != null) {
-				//实例化容器
+				// 实例化容器
 				parameters = new ArrayList<NameValuePair>();
-				//map的迭代
+				// map的迭代
 				Set<String> keySet = parametersMap.keySet();
 				for (String key : keySet) {
 					String value = parametersMap.get(key);
-					//添加名值对到容器
+					// 添加名值对到容器
 					parameters.add(new BasicNameValuePair(key, value));
 				}
 			}
-			//参数的编码
+			// 参数的编码
 			String encodeParamStr = URLEncodedUtils.format(parameters, "utf-8");
-			//get请求实例化
+			// get请求实例化
 			HttpGet get = new HttpGet(baseUrl + "?" + encodeParamStr);
-			//准备发包客户端
+			// 准备发包客户端
 			CloseableHttpClient httpClient = HttpClients.createDefault();
-			//获得相应
+			// 获得相应
 			CloseableHttpResponse response = httpClient.execute(get);
-			//返回相应体
+			// 返回相应体
 			return EntityUtils.toString(response.getEntity());
 		} catch (Exception e) {
 			e.printStackTrace();
