@@ -1,4 +1,4 @@
-package api.advanced.day02.section01;
+package api.teachers.day02.section01;
 
 import java.io.IOException;
 import java.util.ArrayList;

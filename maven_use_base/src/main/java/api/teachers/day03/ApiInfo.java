@@ -1,4 +1,4 @@
-package api.advanced.day03;
+package api.teachers.day03;
 
 /**
  * 接口的基本信息

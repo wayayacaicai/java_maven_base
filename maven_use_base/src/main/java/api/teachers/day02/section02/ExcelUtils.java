@@ -1,4 +1,4 @@
-package api.advanced.day02.section02;
+package api.teachers.day02.section02;
 
 import java.io.IOException;
 import java.io.InputStream;

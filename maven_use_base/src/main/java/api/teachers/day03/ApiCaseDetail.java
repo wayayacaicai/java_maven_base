@@ -1,4 +1,4 @@
-package api.advanced.day03;
+package api.teachers.day03;
 
 /**
  * 测试用例详细信息

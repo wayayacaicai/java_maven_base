@@ -1,4 +1,4 @@
-package api.advanced.day03;
+package api.teachers.day03;
 
 import java.io.IOException;
 import java.io.InputStream;

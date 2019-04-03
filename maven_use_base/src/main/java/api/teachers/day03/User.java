@@ -1,4 +1,4 @@
-package api.advanced.day03;
+package api.teachers.day03;
 
 public class User {
 //	Name(用例编号)	Age(接口编号)	Gender(是否执行)

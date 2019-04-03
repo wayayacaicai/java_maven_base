@@ -1,4 +1,4 @@
-package api.advanced.day01;
+package api.teachers.day01;
 
 import java.io.IOException;
 import java.util.ArrayList;
