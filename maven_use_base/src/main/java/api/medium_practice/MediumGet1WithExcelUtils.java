@@ -14,7 +14,7 @@ import org.testng.annotations.Test;
 public class MediumGet1WithExcelUtils {
 	@DataProvider
 	public Object[][] getDatas() {
-		String excelPath = "/excel/testExcel.xlsx";
+		String excelPath = "/excel/baseExcelWork.xlsx";
 		Object[][] datas = ExcelUtilsUpdate.readExcel(excelPath, 0);
 		return datas;
 	}

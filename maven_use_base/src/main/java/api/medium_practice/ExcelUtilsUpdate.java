@@ -18,7 +18,7 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
 public class ExcelUtilsUpdate {
 	public static void main(String[] args) throws Exception {
 		// 打印excel所有数据
-		String excelPath = "/excel/testExcel.xlsx";
+		String excelPath = "/excel/baseExcelWork.xlsx";
 		Object[][] allDatas = readExcel(excelPath, 0);
 		for (Object[] objects : allDatas) {
 			for (Object object : objects) {

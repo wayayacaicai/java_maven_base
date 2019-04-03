@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" total="6" passed="6">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="1128" started-at="2019-04-01T12:29:15Z" finished-at="2019-04-01T12:29:16Z">
+  <suite name="Default suite" duration-ms="1614" started-at="2019-04-03T02:54:00Z" finished-at="2019-04-03T02:54:02Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="1128" started-at="2019-04-01T12:29:15Z" finished-at="2019-04-01T12:29:16Z">
+    <test name="Default test" duration-ms="1614" started-at="2019-04-03T02:54:00Z" finished-at="2019-04-03T02:54:02Z">
       <class name="api.medium_practice.MediumGet1WithExcelUtils">
-        <test-method status="PASS" signature="get(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:api.medium_practice.MediumGet1WithExcelUtils@3ecf72fd]" name="get" duration-ms="589" started-at="2019-04-01T20:29:15Z" data-provider="getDatas" finished-at="2019-04-01T20:29:16Z">
+        <test-method status="PASS" signature="get(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:api.medium_practice.MediumGet1WithExcelUtils@4b6995df]" name="get" duration-ms="652" started-at="2019-04-03T10:54:01Z" data-provider="getDatas" finished-at="2019-04-03T10:54:02Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[http://localhost:12345/futureloan/mvc/api%20/member/register]]>
+                <![CDATA[http://120.78.128.25:8080/futureloan/mvc/api%20/member/register]]>
               </value>
             </param>
             <param index="1">
@@ -38,11 +38,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- get -->
-        <test-method status="PASS" signature="get(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:api.medium_practice.MediumGet1WithExcelUtils@3ecf72fd]" name="get" duration-ms="8" started-at="2019-04-01T20:29:16Z" data-provider="getDatas" finished-at="2019-04-01T20:29:16Z">
+        <test-method status="PASS" signature="get(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:api.medium_practice.MediumGet1WithExcelUtils@4b6995df]" name="get" duration-ms="85" started-at="2019-04-03T10:54:02Z" data-provider="getDatas" finished-at="2019-04-03T10:54:02Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[http://localhost:12345/futureloan/mvc/api%20/member/register]]>
+                <![CDATA[http://120.78.128.25:8080/futureloan/mvc/api%20/member/register]]>
               </value>
             </param>
             <param index="1">
@@ -69,11 +69,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- get -->
-        <test-method status="PASS" signature="get(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:api.medium_practice.MediumGet1WithExcelUtils@3ecf72fd]" name="get" duration-ms="8" started-at="2019-04-01T20:29:16Z" data-provider="getDatas" finished-at="2019-04-01T20:29:16Z">
+        <test-method status="PASS" signature="get(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:api.medium_practice.MediumGet1WithExcelUtils@4b6995df]" name="get" duration-ms="67" started-at="2019-04-03T10:54:02Z" data-provider="getDatas" finished-at="2019-04-03T10:54:02Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[http://localhost:12345/futureloan/mvc/api%20/member/register]]>
+                <![CDATA[http://120.78.128.25:8080/futureloan/mvc/api%20/member/register]]>
               </value>
             </param>
             <param index="1">
@@ -100,11 +100,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- get -->
-        <test-method status="PASS" signature="post(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:api.medium_practice.MediumGet1WithExcelUtils@3ecf72fd]" name="post" duration-ms="20" started-at="2019-04-01T20:29:16Z" data-provider="getDatas" finished-at="2019-04-01T20:29:16Z">
+        <test-method status="PASS" signature="post(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:api.medium_practice.MediumGet1WithExcelUtils@4b6995df]" name="post" duration-ms="75" started-at="2019-04-03T10:54:02Z" data-provider="getDatas" finished-at="2019-04-03T10:54:02Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[http://localhost:12345/futureloan/mvc/api%20/member/register]]>
+                <![CDATA[http://120.78.128.25:8080/futureloan/mvc/api%20/member/register]]>
               </value>
             </param>
             <param index="1">
@@ -131,11 +131,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- post -->
-        <test-method status="PASS" signature="post(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:api.medium_practice.MediumGet1WithExcelUtils@3ecf72fd]" name="post" duration-ms="10" started-at="2019-04-01T20:29:16Z" data-provider="getDatas" finished-at="2019-04-01T20:29:16Z">
+        <test-method status="PASS" signature="post(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:api.medium_practice.MediumGet1WithExcelUtils@4b6995df]" name="post" duration-ms="89" started-at="2019-04-03T10:54:02Z" data-provider="getDatas" finished-at="2019-04-03T10:54:02Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[http://localhost:12345/futureloan/mvc/api%20/member/register]]>
+                <![CDATA[http://120.78.128.25:8080/futureloan/mvc/api%20/member/register]]>
               </value>
             </param>
             <param index="1">
@@ -162,11 +162,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- post -->
-        <test-method status="PASS" signature="post(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:api.medium_practice.MediumGet1WithExcelUtils@3ecf72fd]" name="post" duration-ms="7" started-at="2019-04-01T20:29:16Z" data-provider="getDatas" finished-at="2019-04-01T20:29:16Z">
+        <test-method status="PASS" signature="post(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:api.medium_practice.MediumGet1WithExcelUtils@4b6995df]" name="post" duration-ms="73" started-at="2019-04-03T10:54:02Z" data-provider="getDatas" finished-at="2019-04-03T10:54:02Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[http://localhost:12345/futureloan/mvc/api%20/member/register]]>
+                <![CDATA[http://120.78.128.25:8080/futureloan/mvc/api%20/member/register]]>
               </value>
             </param>
             <param index="1">
