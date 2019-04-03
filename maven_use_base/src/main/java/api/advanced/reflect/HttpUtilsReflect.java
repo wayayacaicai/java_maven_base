@@ -1,4 +1,4 @@
-package api.advanced;
+package api.advanced.reflect;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,11 +19,11 @@ import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
 
 /**
- * @Desc:请求工具类（最终版）
+ * @Desc:请求工具类
  * @author:zpp
  * @time:2019年4月1日 下午8:50:26
  */
-public class HttpUtilsUpdate {
+public class HttpUtilsReflect {
 	/**
 	 * @Desc get请求方法
 	 * @param baseUrl

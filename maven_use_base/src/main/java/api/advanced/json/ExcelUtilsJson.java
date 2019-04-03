@@ -1,4 +1,4 @@
-package api.advanced;
+package api.advanced.json;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -11,11 +11,11 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 
 /**
- * @Desc:excel读取最终版
+ * @Desc:excel工具类
  * @author:zpp
  * @time:2019年4月1日 下午8:18:53
  */
-public class ExcelUtilsUpdate {
+public class ExcelUtilsJson {
 	public static void main(String[] args) throws Exception {
 		// 打印excel所有数据
 		String excelPath = "/excel/mediumExcelWork.xlsx";
@@ -39,7 +39,7 @@ public class ExcelUtilsUpdate {
 		Workbook workbook = null; // 定义工作薄
 		Object[][] allDatasArray = null; // 定义二维数组
 		try {
-			is = ExcelUtilsUpdate.class.getResourceAsStream(excelPath); // Excel文件流
+			is = ExcelUtilsJson.class.getResourceAsStream(excelPath); // Excel文件流
 			workbook = WorkbookFactory.create(is); // 获得工作薄
 			Sheet sheet = workbook.getSheetAt(index); // 获得sheet表
 
