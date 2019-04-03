@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="api.medium_practice.MediumGet11">
+      <class name="api.advanced.MediumGet1WithExcelUtils">
         <methods>
-          <include name="post" invocation-numbers="0 1 2"/>
+          <include name="get" invocation-numbers="0"/>
         </methods>
-      </class> <!-- api.medium_practice.MediumGet11 -->
+      </class> <!-- api.advanced.MediumGet1WithExcelUtils -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

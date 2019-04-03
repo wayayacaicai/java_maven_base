@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" total="6" passed="6">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="1614" started-at="2019-04-03T02:54:00Z" finished-at="2019-04-03T02:54:02Z">
+  <suite name="Default suite" duration-ms="2047" started-at="2019-04-03T06:00:16Z" finished-at="2019-04-03T06:00:19Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="1614" started-at="2019-04-03T02:54:00Z" finished-at="2019-04-03T02:54:02Z">
-      <class name="api.medium_practice.MediumGet1WithExcelUtils">
-        <test-method status="PASS" signature="get(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:api.medium_practice.MediumGet1WithExcelUtils@4b6995df]" name="get" duration-ms="652" started-at="2019-04-03T10:54:01Z" data-provider="getDatas" finished-at="2019-04-03T10:54:02Z">
+    <test name="Default test" duration-ms="2047" started-at="2019-04-03T06:00:16Z" finished-at="2019-04-03T06:00:19Z">
+      <class name="api.advanced.MediumGet1WithExcelUtils">
+        <test-method status="PASS" signature="get(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:api.advanced.MediumGet1WithExcelUtils@4b6995df]" name="get" duration-ms="796" started-at="2019-04-03T14:00:17Z" data-provider="getDatas" finished-at="2019-04-03T14:00:18Z">
           <params>
             <param index="0">
               <value>
@@ -16,20 +16,10 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[13783948731]]>
+                <![CDATA[{"mobilephone":"13783948731","pwd":"123456","regname":"caicai"}]]>
               </value>
             </param>
             <param index="2">
-              <value>
-                <![CDATA[123456]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[caicai]]>
-              </value>
-            </param>
-            <param index="4">
               <value>
                 <![CDATA[手机号码已被注册]]>
               </value>
@@ -38,7 +28,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- get -->
-        <test-method status="PASS" signature="get(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:api.medium_practice.MediumGet1WithExcelUtils@4b6995df]" name="get" duration-ms="85" started-at="2019-04-03T10:54:02Z" data-provider="getDatas" finished-at="2019-04-03T10:54:02Z">
+        <test-method status="PASS" signature="get(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:api.advanced.MediumGet1WithExcelUtils@4b6995df]" name="get" duration-ms="135" started-at="2019-04-03T14:00:18Z" data-provider="getDatas" finished-at="2019-04-03T14:00:18Z">
           <params>
             <param index="0">
               <value>
@@ -47,20 +37,10 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[caicai]]>
+                <![CDATA[{"mobilephone":"lemon","pwd":"123456","regname":"caicai" }]]>
               </value>
             </param>
             <param index="2">
-              <value>
-                <![CDATA[123456]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[caicai]]>
-              </value>
-            </param>
-            <param index="4">
               <value>
                 <![CDATA[手机号码格式不正确]]>
               </value>
@@ -69,7 +49,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- get -->
-        <test-method status="PASS" signature="get(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:api.medium_practice.MediumGet1WithExcelUtils@4b6995df]" name="get" duration-ms="67" started-at="2019-04-03T10:54:02Z" data-provider="getDatas" finished-at="2019-04-03T10:54:02Z">
+        <test-method status="PASS" signature="get(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:api.advanced.MediumGet1WithExcelUtils@4b6995df]" name="get" duration-ms="83" started-at="2019-04-03T14:00:18Z" data-provider="getDatas" finished-at="2019-04-03T14:00:18Z">
           <params>
             <param index="0">
               <value>
@@ -78,20 +58,10 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[13783948731]]>
+                <![CDATA[{"mobilephone":"13783948731","pwd":"12345","regname":"caicai" }]]>
               </value>
             </param>
             <param index="2">
-              <value>
-                <![CDATA[12345]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[caicai]]>
-              </value>
-            </param>
-            <param index="4">
               <value>
                 <![CDATA[密码长度必须为6~18]]>
               </value>
@@ -100,7 +70,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- get -->
-        <test-method status="PASS" signature="post(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:api.medium_practice.MediumGet1WithExcelUtils@4b6995df]" name="post" duration-ms="75" started-at="2019-04-03T10:54:02Z" data-provider="getDatas" finished-at="2019-04-03T10:54:02Z">
+        <test-method status="PASS" signature="post(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:api.advanced.MediumGet1WithExcelUtils@4b6995df]" name="post" duration-ms="286" started-at="2019-04-03T14:00:18Z" data-provider="getDatas" finished-at="2019-04-03T14:00:18Z">
           <params>
             <param index="0">
               <value>
@@ -109,20 +79,10 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[13783948731]]>
+                <![CDATA[{"mobilephone":"13783948731","pwd":"123456","regname":"caicai"}]]>
               </value>
             </param>
             <param index="2">
-              <value>
-                <![CDATA[123456]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[caicai]]>
-              </value>
-            </param>
-            <param index="4">
               <value>
                 <![CDATA[手机号码已被注册]]>
               </value>
@@ -131,7 +91,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- post -->
-        <test-method status="PASS" signature="post(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:api.medium_practice.MediumGet1WithExcelUtils@4b6995df]" name="post" duration-ms="89" started-at="2019-04-03T10:54:02Z" data-provider="getDatas" finished-at="2019-04-03T10:54:02Z">
+        <test-method status="PASS" signature="post(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:api.advanced.MediumGet1WithExcelUtils@4b6995df]" name="post" duration-ms="88" started-at="2019-04-03T14:00:18Z" data-provider="getDatas" finished-at="2019-04-03T14:00:18Z">
           <params>
             <param index="0">
               <value>
@@ -140,20 +100,10 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[caicai]]>
+                <![CDATA[{"mobilephone":"lemon","pwd":"123456","regname":"caicai" }]]>
               </value>
             </param>
             <param index="2">
-              <value>
-                <![CDATA[123456]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[caicai]]>
-              </value>
-            </param>
-            <param index="4">
               <value>
                 <![CDATA[手机号码格式不正确]]>
               </value>
@@ -162,7 +112,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- post -->
-        <test-method status="PASS" signature="post(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:api.medium_practice.MediumGet1WithExcelUtils@4b6995df]" name="post" duration-ms="73" started-at="2019-04-03T10:54:02Z" data-provider="getDatas" finished-at="2019-04-03T10:54:02Z">
+        <test-method status="PASS" signature="post(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:api.advanced.MediumGet1WithExcelUtils@4b6995df]" name="post" duration-ms="92" started-at="2019-04-03T14:00:18Z" data-provider="getDatas" finished-at="2019-04-03T14:00:18Z">
           <params>
             <param index="0">
               <value>
@@ -171,20 +121,10 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[13783948731]]>
+                <![CDATA[{"mobilephone":"13783948731","pwd":"12345","regname":"caicai" }]]>
               </value>
             </param>
             <param index="2">
-              <value>
-                <![CDATA[12345]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[caicai]]>
-              </value>
-            </param>
-            <param index="4">
               <value>
                 <![CDATA[密码长度必须为6~18]]>
               </value>
@@ -193,7 +133,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- post -->
-      </class> <!-- api.medium_practice.MediumGet1WithExcelUtils -->
+      </class> <!-- api.advanced.MediumGet1WithExcelUtils -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
