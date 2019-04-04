@@ -14,7 +14,7 @@ import org.testng.annotations.Test;
  * @author:zpp
  * @time:2019年4月1日 下午9:05:17
  */
-public class MediumGet11 {
+public class MediumGet11WithHttpUtil {
 	@DataProvider
 	public Object[][] getDatas() {
 		Object[][] datas = { { "13783948731", "123456", "登录成功" }, { "lemon", "123456", "用户名或密码错误" },

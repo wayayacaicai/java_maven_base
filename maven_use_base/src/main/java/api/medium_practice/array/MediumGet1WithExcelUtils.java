@@ -1,4 +1,4 @@
-package api.medium_practice;
+package api.medium_practice.array;
 
 import java.util.HashMap;
 
