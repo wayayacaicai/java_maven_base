@@ -21,7 +21,7 @@ public class ExcelUtils {
 		// getAllDatas();
 
 		// 打印excel所有数据
-		String excelPath = "/excel/testExcel.xlsx";
+		String excelPath = "/excel/baseExcelWork.xlsx";
 		Object[][] allDatas = readExcel(excelPath, 0);
 		for (Object[] objects : allDatas) {
 			for (Object object : objects) {
