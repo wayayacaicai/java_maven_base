@@ -38,9 +38,9 @@ public class ExcelUtilsReflect {
 
 			// -------------读第一行数据start--------------------
 			Row firstRow = sheet.getRow(0); // 获取所有的字段（列名）
-			int firstColNum = firstRow.getLastCellNum(); // 得到第一行的列数
-			String[] fieldArray = new String[firstColNum]; // 列名的数组
-			for (int m = 0; m < firstColNum; m++) {
+			int colNum = firstRow.getLastCellNum(); // 得到第一行的列数
+			String[] fieldArray = new String[colNum]; // 列名的数组
+			for (int m = 0; m < colNum; m++) {
 				Cell firstRowCell = firstRow.getCell(m); // 得到列
 				firstRowCell.setCellType(CellType.STRING); // 设置所有的cell为string
 				String firstRowCellValue = firstRowCell.getStringCellValue(); // 得到列值
@@ -52,11 +52,11 @@ public class ExcelUtilsReflect {
 
 			for (int i = 1; i <= lastRowNum; i++) { // 第一行不要，从第二行开始
 				Row row = sheet.getRow(i); // 遍历每一行
-				int lastCellNum = row.getLastCellNum(); // 总列数
+				// int lastCellNum = row.getLastCellNum(); // 总列数
 				// 反射型的
 				Object object = clazz.newInstance(); // 创建一个字节码对象
 
-				for (int j = 0; j < lastCellNum; j++) {
+				for (int j = 0; j < colNum; j++) {
 					// Cell cell = row.getCell(j); // 遍历每一列
 					// 可以解决空指针问题
 					Cell cell = row.getCell(j, MissingCellPolicy.CREATE_NULL_AS_BLANK);

@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" total="22" passed="22">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="3083" started-at="2019-04-06T05:10:16Z" finished-at="2019-04-06T05:10:19Z">
+  <suite name="Default suite" duration-ms="2844" started-at="2019-04-06T07:06:36Z" finished-at="2019-04-06T07:06:39Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="3083" started-at="2019-04-06T05:10:16Z" finished-at="2019-04-06T05:10:19Z">
+    <test name="Default test" duration-ms="2844" started-at="2019-04-06T07:06:36Z" finished-at="2019-04-06T07:06:39Z">
       <class name="api.advanced.reflectUpdate.AllTestCase">
-        <test-method status="PASS" signature="get(api.advanced.reflectUpdate.ApiCaseDetail)[pri:0, instance:api.advanced.reflectUpdate.AllTestCase@21a06946]" name="get" duration-ms="757" started-at="2019-04-06T13:10:17Z" data-provider="getDatas" finished-at="2019-04-06T13:10:17Z">
+        <test-method status="PASS" signature="get(api.advanced.reflectUpdate.ApiCaseDetail)[pri:0, instance:api.advanced.reflectUpdate.AllTestCase@21a06946]" name="get" duration-ms="703" started-at="2019-04-06T15:06:36Z" data-provider="getDatas" finished-at="2019-04-06T15:06:37Z">
           <params>
             <param index="0">
               <value>
@@ -18,7 +18,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- get -->
-        <test-method status="PASS" signature="get(api.advanced.reflectUpdate.ApiCaseDetail)[pri:0, instance:api.advanced.reflectUpdate.AllTestCase@21a06946]" name="get" duration-ms="96" started-at="2019-04-06T13:10:17Z" data-provider="getDatas" finished-at="2019-04-06T13:10:17Z">
+        <test-method status="PASS" signature="get(api.advanced.reflectUpdate.ApiCaseDetail)[pri:0, instance:api.advanced.reflectUpdate.AllTestCase@21a06946]" name="get" duration-ms="73" started-at="2019-04-06T15:06:37Z" data-provider="getDatas" finished-at="2019-04-06T15:06:37Z">
           <params>
             <param index="0">
               <value>
@@ -29,7 +29,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- get -->
-        <test-method status="PASS" signature="get(api.advanced.reflectUpdate.ApiCaseDetail)[pri:0, instance:api.advanced.reflectUpdate.AllTestCase@21a06946]" name="get" duration-ms="82" started-at="2019-04-06T13:10:17Z" data-provider="getDatas" finished-at="2019-04-06T13:10:17Z">
+        <test-method status="PASS" signature="get(api.advanced.reflectUpdate.ApiCaseDetail)[pri:0, instance:api.advanced.reflectUpdate.AllTestCase@21a06946]" name="get" duration-ms="72" started-at="2019-04-06T15:06:37Z" data-provider="getDatas" finished-at="2019-04-06T15:06:37Z">
           <params>
             <param index="0">
               <value>
@@ -40,7 +40,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- get -->
-        <test-method status="PASS" signature="get(api.advanced.reflectUpdate.ApiCaseDetail)[pri:0, instance:api.advanced.reflectUpdate.AllTestCase@21a06946]" name="get" duration-ms="73" started-at="2019-04-06T13:10:17Z" data-provider="getDatas" finished-at="2019-04-06T13:10:18Z">
+        <test-method status="PASS" signature="get(api.advanced.reflectUpdate.ApiCaseDetail)[pri:0, instance:api.advanced.reflectUpdate.AllTestCase@21a06946]" name="get" duration-ms="69" started-at="2019-04-06T15:06:37Z" data-provider="getDatas" finished-at="2019-04-06T15:06:37Z">
           <params>
             <param index="0">
               <value>
@@ -51,7 +51,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- get -->
-        <test-method status="PASS" signature="get(api.advanced.reflectUpdate.ApiCaseDetail)[pri:0, instance:api.advanced.reflectUpdate.AllTestCase@21a06946]" name="get" duration-ms="71" started-at="2019-04-06T13:10:18Z" data-provider="getDatas" finished-at="2019-04-06T13:10:18Z">
+        <test-method status="PASS" signature="get(api.advanced.reflectUpdate.ApiCaseDetail)[pri:0, instance:api.advanced.reflectUpdate.AllTestCase@21a06946]" name="get" duration-ms="70" started-at="2019-04-06T15:06:37Z" data-provider="getDatas" finished-at="2019-04-06T15:06:37Z">
           <params>
             <param index="0">
               <value>
@@ -62,7 +62,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- get -->
-        <test-method status="PASS" signature="get(api.advanced.reflectUpdate.ApiCaseDetail)[pri:0, instance:api.advanced.reflectUpdate.AllTestCase@21a06946]" name="get" duration-ms="74" started-at="2019-04-06T13:10:18Z" data-provider="getDatas" finished-at="2019-04-06T13:10:18Z">
+        <test-method status="PASS" signature="get(api.advanced.reflectUpdate.ApiCaseDetail)[pri:0, instance:api.advanced.reflectUpdate.AllTestCase@21a06946]" name="get" duration-ms="64" started-at="2019-04-06T15:06:37Z" data-provider="getDatas" finished-at="2019-04-06T15:06:37Z">
           <params>
             <param index="0">
               <value>
@@ -73,7 +73,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- get -->
-        <test-method status="PASS" signature="get(api.advanced.reflectUpdate.ApiCaseDetail)[pri:0, instance:api.advanced.reflectUpdate.AllTestCase@21a06946]" name="get" duration-ms="74" started-at="2019-04-06T13:10:18Z" data-provider="getDatas" finished-at="2019-04-06T13:10:18Z">
+        <test-method status="PASS" signature="get(api.advanced.reflectUpdate.ApiCaseDetail)[pri:0, instance:api.advanced.reflectUpdate.AllTestCase@21a06946]" name="get" duration-ms="71" started-at="2019-04-06T15:06:37Z" data-provider="getDatas" finished-at="2019-04-06T15:06:37Z">
           <params>
             <param index="0">
               <value>
@@ -84,7 +84,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- get -->
-        <test-method status="PASS" signature="get(api.advanced.reflectUpdate.ApiCaseDetail)[pri:0, instance:api.advanced.reflectUpdate.AllTestCase@21a06946]" name="get" duration-ms="79" started-at="2019-04-06T13:10:18Z" data-provider="getDatas" finished-at="2019-04-06T13:10:18Z">
+        <test-method status="PASS" signature="get(api.advanced.reflectUpdate.ApiCaseDetail)[pri:0, instance:api.advanced.reflectUpdate.AllTestCase@21a06946]" name="get" duration-ms="74" started-at="2019-04-06T15:06:37Z" data-provider="getDatas" finished-at="2019-04-06T15:06:37Z">
           <params>
             <param index="0">
               <value>
@@ -95,7 +95,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- get -->
-        <test-method status="PASS" signature="get(api.advanced.reflectUpdate.ApiCaseDetail)[pri:0, instance:api.advanced.reflectUpdate.AllTestCase@21a06946]" name="get" duration-ms="83" started-at="2019-04-06T13:10:18Z" data-provider="getDatas" finished-at="2019-04-06T13:10:18Z">
+        <test-method status="PASS" signature="get(api.advanced.reflectUpdate.ApiCaseDetail)[pri:0, instance:api.advanced.reflectUpdate.AllTestCase@21a06946]" name="get" duration-ms="81" started-at="2019-04-06T15:06:37Z" data-provider="getDatas" finished-at="2019-04-06T15:06:38Z">
           <params>
             <param index="0">
               <value>
@@ -106,7 +106,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- get -->
-        <test-method status="PASS" signature="get(api.advanced.reflectUpdate.ApiCaseDetail)[pri:0, instance:api.advanced.reflectUpdate.AllTestCase@21a06946]" name="get" duration-ms="82" started-at="2019-04-06T13:10:18Z" data-provider="getDatas" finished-at="2019-04-06T13:10:18Z">
+        <test-method status="PASS" signature="get(api.advanced.reflectUpdate.ApiCaseDetail)[pri:0, instance:api.advanced.reflectUpdate.AllTestCase@21a06946]" name="get" duration-ms="74" started-at="2019-04-06T15:06:38Z" data-provider="getDatas" finished-at="2019-04-06T15:06:38Z">
           <params>
             <param index="0">
               <value>
@@ -117,7 +117,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- get -->
-        <test-method status="PASS" signature="get(api.advanced.reflectUpdate.ApiCaseDetail)[pri:0, instance:api.advanced.reflectUpdate.AllTestCase@21a06946]" name="get" duration-ms="67" started-at="2019-04-06T13:10:18Z" data-provider="getDatas" finished-at="2019-04-06T13:10:18Z">
+        <test-method status="PASS" signature="get(api.advanced.reflectUpdate.ApiCaseDetail)[pri:0, instance:api.advanced.reflectUpdate.AllTestCase@21a06946]" name="get" duration-ms="74" started-at="2019-04-06T15:06:38Z" data-provider="getDatas" finished-at="2019-04-06T15:06:38Z">
           <params>
             <param index="0">
               <value>
@@ -128,7 +128,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- get -->
-        <test-method status="PASS" signature="post(api.advanced.reflectUpdate.ApiCaseDetail)[pri:0, instance:api.advanced.reflectUpdate.AllTestCase@21a06946]" name="post" duration-ms="85" started-at="2019-04-06T13:10:18Z" data-provider="getDatas" finished-at="2019-04-06T13:10:18Z">
+        <test-method status="PASS" signature="post(api.advanced.reflectUpdate.ApiCaseDetail)[pri:0, instance:api.advanced.reflectUpdate.AllTestCase@21a06946]" name="post" duration-ms="80" started-at="2019-04-06T15:06:38Z" data-provider="getDatas" finished-at="2019-04-06T15:06:38Z">
           <params>
             <param index="0">
               <value>
@@ -139,7 +139,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- post -->
-        <test-method status="PASS" signature="post(api.advanced.reflectUpdate.ApiCaseDetail)[pri:0, instance:api.advanced.reflectUpdate.AllTestCase@21a06946]" name="post" duration-ms="74" started-at="2019-04-06T13:10:18Z" data-provider="getDatas" finished-at="2019-04-06T13:10:18Z">
+        <test-method status="PASS" signature="post(api.advanced.reflectUpdate.ApiCaseDetail)[pri:0, instance:api.advanced.reflectUpdate.AllTestCase@21a06946]" name="post" duration-ms="67" started-at="2019-04-06T15:06:38Z" data-provider="getDatas" finished-at="2019-04-06T15:06:38Z">
           <params>
             <param index="0">
               <value>
@@ -150,7 +150,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- post -->
-        <test-method status="PASS" signature="post(api.advanced.reflectUpdate.ApiCaseDetail)[pri:0, instance:api.advanced.reflectUpdate.AllTestCase@21a06946]" name="post" duration-ms="86" started-at="2019-04-06T13:10:18Z" data-provider="getDatas" finished-at="2019-04-06T13:10:18Z">
+        <test-method status="PASS" signature="post(api.advanced.reflectUpdate.ApiCaseDetail)[pri:0, instance:api.advanced.reflectUpdate.AllTestCase@21a06946]" name="post" duration-ms="80" started-at="2019-04-06T15:06:38Z" data-provider="getDatas" finished-at="2019-04-06T15:06:38Z">
           <params>
             <param index="0">
               <value>
@@ -161,7 +161,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- post -->
-        <test-method status="PASS" signature="post(api.advanced.reflectUpdate.ApiCaseDetail)[pri:0, instance:api.advanced.reflectUpdate.AllTestCase@21a06946]" name="post" duration-ms="85" started-at="2019-04-06T13:10:18Z" data-provider="getDatas" finished-at="2019-04-06T13:10:18Z">
+        <test-method status="PASS" signature="post(api.advanced.reflectUpdate.ApiCaseDetail)[pri:0, instance:api.advanced.reflectUpdate.AllTestCase@21a06946]" name="post" duration-ms="62" started-at="2019-04-06T15:06:38Z" data-provider="getDatas" finished-at="2019-04-06T15:06:38Z">
           <params>
             <param index="0">
               <value>
@@ -172,7 +172,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- post -->
-        <test-method status="PASS" signature="post(api.advanced.reflectUpdate.ApiCaseDetail)[pri:0, instance:api.advanced.reflectUpdate.AllTestCase@21a06946]" name="post" duration-ms="92" started-at="2019-04-06T13:10:18Z" data-provider="getDatas" finished-at="2019-04-06T13:10:19Z">
+        <test-method status="PASS" signature="post(api.advanced.reflectUpdate.ApiCaseDetail)[pri:0, instance:api.advanced.reflectUpdate.AllTestCase@21a06946]" name="post" duration-ms="76" started-at="2019-04-06T15:06:38Z" data-provider="getDatas" finished-at="2019-04-06T15:06:38Z">
           <params>
             <param index="0">
               <value>
@@ -183,7 +183,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- post -->
-        <test-method status="PASS" signature="post(api.advanced.reflectUpdate.ApiCaseDetail)[pri:0, instance:api.advanced.reflectUpdate.AllTestCase@21a06946]" name="post" duration-ms="87" started-at="2019-04-06T13:10:19Z" data-provider="getDatas" finished-at="2019-04-06T13:10:19Z">
+        <test-method status="PASS" signature="post(api.advanced.reflectUpdate.ApiCaseDetail)[pri:0, instance:api.advanced.reflectUpdate.AllTestCase@21a06946]" name="post" duration-ms="71" started-at="2019-04-06T15:06:38Z" data-provider="getDatas" finished-at="2019-04-06T15:06:38Z">
           <params>
             <param index="0">
               <value>
@@ -194,7 +194,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- post -->
-        <test-method status="PASS" signature="post(api.advanced.reflectUpdate.ApiCaseDetail)[pri:0, instance:api.advanced.reflectUpdate.AllTestCase@21a06946]" name="post" duration-ms="83" started-at="2019-04-06T13:10:19Z" data-provider="getDatas" finished-at="2019-04-06T13:10:19Z">
+        <test-method status="PASS" signature="post(api.advanced.reflectUpdate.ApiCaseDetail)[pri:0, instance:api.advanced.reflectUpdate.AllTestCase@21a06946]" name="post" duration-ms="78" started-at="2019-04-06T15:06:38Z" data-provider="getDatas" finished-at="2019-04-06T15:06:38Z">
           <params>
             <param index="0">
               <value>
@@ -205,7 +205,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- post -->
-        <test-method status="PASS" signature="post(api.advanced.reflectUpdate.ApiCaseDetail)[pri:0, instance:api.advanced.reflectUpdate.AllTestCase@21a06946]" name="post" duration-ms="91" started-at="2019-04-06T13:10:19Z" data-provider="getDatas" finished-at="2019-04-06T13:10:19Z">
+        <test-method status="PASS" signature="post(api.advanced.reflectUpdate.ApiCaseDetail)[pri:0, instance:api.advanced.reflectUpdate.AllTestCase@21a06946]" name="post" duration-ms="79" started-at="2019-04-06T15:06:38Z" data-provider="getDatas" finished-at="2019-04-06T15:06:38Z">
           <params>
             <param index="0">
               <value>
@@ -216,7 +216,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- post -->
-        <test-method status="PASS" signature="post(api.advanced.reflectUpdate.ApiCaseDetail)[pri:0, instance:api.advanced.reflectUpdate.AllTestCase@21a06946]" name="post" duration-ms="86" started-at="2019-04-06T13:10:19Z" data-provider="getDatas" finished-at="2019-04-06T13:10:19Z">
+        <test-method status="PASS" signature="post(api.advanced.reflectUpdate.ApiCaseDetail)[pri:0, instance:api.advanced.reflectUpdate.AllTestCase@21a06946]" name="post" duration-ms="72" started-at="2019-04-06T15:06:38Z" data-provider="getDatas" finished-at="2019-04-06T15:06:38Z">
           <params>
             <param index="0">
               <value>
@@ -227,7 +227,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- post -->
-        <test-method status="PASS" signature="post(api.advanced.reflectUpdate.ApiCaseDetail)[pri:0, instance:api.advanced.reflectUpdate.AllTestCase@21a06946]" name="post" duration-ms="88" started-at="2019-04-06T13:10:19Z" data-provider="getDatas" finished-at="2019-04-06T13:10:19Z">
+        <test-method status="PASS" signature="post(api.advanced.reflectUpdate.ApiCaseDetail)[pri:0, instance:api.advanced.reflectUpdate.AllTestCase@21a06946]" name="post" duration-ms="69" started-at="2019-04-06T15:06:38Z" data-provider="getDatas" finished-at="2019-04-06T15:06:39Z">
           <params>
             <param index="0">
               <value>
@@ -238,7 +238,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- post -->
-        <test-method status="PASS" signature="post(api.advanced.reflectUpdate.ApiCaseDetail)[pri:0, instance:api.advanced.reflectUpdate.AllTestCase@21a06946]" name="post" duration-ms="90" started-at="2019-04-06T13:10:19Z" data-provider="getDatas" finished-at="2019-04-06T13:10:19Z">
+        <test-method status="PASS" signature="post(api.advanced.reflectUpdate.ApiCaseDetail)[pri:0, instance:api.advanced.reflectUpdate.AllTestCase@21a06946]" name="post" duration-ms="75" started-at="2019-04-06T15:06:39Z" data-provider="getDatas" finished-at="2019-04-06T15:06:39Z">
           <params>
             <param index="0">
               <value>
