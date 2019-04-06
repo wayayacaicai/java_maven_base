@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="api.medium.MediumGet2">
+      <class name="api.advanced.reflect.AllTestCase">
         <methods>
-          <include name="Get2" invocation-numbers="0 1 2"/>
+          <include name="get" invocation-numbers="0 6 8 9 10"/>
         </methods>
-      </class> <!-- api.medium.MediumGet2 -->
+      </class> <!-- api.advanced.reflect.AllTestCase -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

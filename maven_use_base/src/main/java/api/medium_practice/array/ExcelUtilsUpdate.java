@@ -6,6 +6,7 @@ import java.io.InputStream;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Row.MissingCellPolicy;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
@@ -50,7 +51,9 @@ public class ExcelUtilsUpdate {
 				int lastCellNum = row.getLastCellNum(); // 总列数
 				Object[] rowDatasArray = new Object[lastCellNum]; // 一维数组大小
 				for (int j = 0; j < lastCellNum; j++) {
-					Cell cell = row.getCell(j); // 遍历每一列
+					// Cell cell = row.getCell(j); // 遍历每一列
+					//可以解决空指针问题
+					Cell cell = row.getCell(j, MissingCellPolicy.CREATE_NULL_AS_BLANK);
 					cell.setCellType(CellType.STRING); // 设置所有的cell为string
 					String cellValue = cell.getStringCellValue(); // 获取当前cell值
 					rowDatasArray[j] = cellValue; // 保存cell的值
