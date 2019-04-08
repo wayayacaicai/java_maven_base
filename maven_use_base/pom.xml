@@ -7,8 +7,6 @@
 
 	<dependencies>
 		
-		
-		
 		<!-- fastjson -->
 		<dependency>
 			<groupId>com.alibaba</groupId>

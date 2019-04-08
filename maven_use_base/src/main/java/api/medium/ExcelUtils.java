@@ -25,7 +25,7 @@ public class ExcelUtils {
 
 		// methodMedium();
 
-		String excelPath = "/excel/testExcel.xlsx";
+		String excelPath = "/excel/baseExcelWork.xlsx";
 		Object[][] method_High1 = method_High1(excelPath, 0);
 		for (Object[] objects : method_High1) {
 			for (Object object : objects) {
@@ -127,7 +127,7 @@ public class ExcelUtils {
 
 	public static void methodBase() throws Exception {
 		// 1.Excel文件流
-		InputStream is = ExcelUtils.class.getResourceAsStream("/excel/testExcel.xlsx");
+		InputStream is = ExcelUtils.class.getResourceAsStream("/excel/baseExcelWork.xlsx");
 		// 2.获得工作薄
 		Workbook workbook = WorkbookFactory.create(is);
 		// 3.获得第一个sheet表
