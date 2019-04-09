@@ -18,7 +18,7 @@ import org.dom4j.io.SAXReader;
  */
 public class XmlToProduct {
 	public static void main(String[] args) {
-		String resourcePath = "/Products/Products.xml";
+		String resourcePath = "/xml_reflect/Products/Products.xml";
 
 		List<Product> lp = xmlToProduct(resourcePath);
 
@@ -71,24 +71,23 @@ public class XmlToProduct {
 
 	private static void reflectMethod(Product product, Class<? extends Product> clazz, String name, String value) {
 		try {
-			String setMethod1 = "set" + (name.charAt(0) + "").toUpperCase() + name.substring(1);
+			String setMethod = "set" + (name.charAt(0) + "").toUpperCase() + name.substring(1);
 			// 获取声明的属性
-			Field field1 = clazz.getDeclaredField(name);
+			Field field = clazz.getDeclaredField(name);
 			// 获取声明的属性类型
-			Method method1 = clazz.getMethod(setMethod1, field1.getType());
+			Method method = clazz.getMethod(setMethod, field.getType());
 
 			Object newValue = null;
-			if (field1.getType().equals(int.class)) {
+			if (field.getType().equals(int.class)) {
 				newValue = Integer.parseInt(value);
-			} else if (field1.getType().equals(float.class)) {
+			} else if (field.getType().equals(float.class)) {
 				newValue = Float.parseFloat(value);
-			} else if (field1.getType().equals(String.class)) {
+			} else if (field.getType().equals(String.class)) {
 				newValue = value;
 			}
-			method1.invoke(product, newValue);
+			method.invoke(product, newValue);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
-
 }

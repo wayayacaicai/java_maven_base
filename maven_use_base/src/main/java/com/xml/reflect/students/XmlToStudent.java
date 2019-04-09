@@ -19,7 +19,7 @@ public class XmlToStudent {
 		ArrayList<Student> astudents = new ArrayList<>();
 
 		// 需要保存的文件路径
-		String file_path = "src/main/resources/Students/Students.txt";
+		String file_path = "src/main/resources/xml_reflect/Students/Students.txt";
 
 		// 获取xml转换后的student对象
 		astudents = XmlToStudent.changeXmlToStudent(astudents);
@@ -40,7 +40,7 @@ public class XmlToStudent {
 		// InputStream fileInputStream = new
 		// FileInputStream("src/main/resources/Students.xml");
 		// Document read = reader.read(fileInputStream);
-		Document read = reader.read(XmlToStudent.class.getResourceAsStream("/Students/Students.xml"));
+		Document read = reader.read(XmlToStudent.class.getResourceAsStream("/xml_reflect/Students/Students.xml"));
 		// 获取xml根节点
 		Element rootElement = read.getRootElement();
 		// 获取所有的子标签
@@ -92,7 +92,6 @@ public class XmlToStudent {
 			// System.out.println(student);
 			aList.add(student);
 		}
-
 		return aList;
 	}
 }
