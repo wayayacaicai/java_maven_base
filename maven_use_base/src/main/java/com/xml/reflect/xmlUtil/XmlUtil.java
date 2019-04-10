@@ -21,22 +21,19 @@ public class XmlUtil {
 
 	public static void main(String[] args) throws Exception {
 		SAXReader reader = new SAXReader();
-		Document document = reader.read(XmlUtil.class.getResourceAsStream("/xmlUtil/xmlUtil.xml"));
+		Document document = reader.read(XmlUtil.class.getResourceAsStream("/xml_reflect/xmlUtil/xmlUtil.xml"));
 
 		// 定义两个hashmap--接收数据
-		HashMap<String, Locator> hm2 = new HashMap<>();
-		HashMap<String, HashMap<String, Locator>> hm1 = new HashMap<>();
+		
 
 		// 定义反射,定义object类向下好抽出方法，多态
 		Class clazz1 = Page.class;
 		Class clazz2 = Locator.class;
-		Object page = (Page) clazz1.newInstance();
-		Object loc = (Locator) clazz2.newInstance();
 
 		// 层级遍历，其中调用反射方法
-		LevelIter(document, hm2, hm1, page, loc);
-		// 遍历hm1\hm2
-		printHashMap(hm1);
+		HashMap<String, HashMap<String, Locator>> hm = LevelIter(document,  clazz1, clazz2);
+		// 遍历打印
+		printHashMap(hm);
 	}
 
 	/**
@@ -47,12 +44,20 @@ public class XmlUtil {
 	 * @param page
 	 * @param loc
 	 */
-	public static void LevelIter(Document document, HashMap<String, Locator> hm2,
-			HashMap<String, HashMap<String, Locator>> hm1, Object page, Object loc) {
+	public static HashMap<String, HashMap<String, Locator>> LevelIter(Document document,  Class clazz1,
+			Class clazz2) {
+		HashMap<String, HashMap<String, Locator>> hm1 = new HashMap<>();
+		int i = 0;
 		// 第一层
 		Element rootElement = document.getRootElement();
 		List<Element> elements1 = rootElement.elements();
 		for (Element element1 : elements1) {
+			Object page = null;
+			try {
+				page = (Page) clazz1.newInstance();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 			// 第一层的属性
 			List<Attribute> attributes1 = element1.attributes();
 			for (Attribute attribute1 : attributes1) {
@@ -62,28 +67,44 @@ public class XmlUtil {
 				// 反射
 				setReflect(page, text1, value1);
 
-				if (text1.equals("name")) {
-					hm1.put(value1, hm2);
+				// 第二层
+				
+				List<Element> elements2 = element1.elements();
+				for (Element element2 : elements2) {
+					// 存取locator的对象
+					HashMap<String, Locator> hm2 = new HashMap<>();
+					// 创建一个locator的实例
+					Object loc = null; // 声明一个locator的对象
+					try {
+						loc = (Locator) clazz2.newInstance();
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
+					
+					String text2 = element2.getText();
+					// 得到第二层属性
+					List<Attribute> attributes2 = element2.attributes();
+					for (Attribute attribute2 : attributes2) {
+						String text22 = attribute2.getName();
+						String value22 = attribute2.getValue();
+
+						// 反射
+						setReflect(loc, text22, value22);
+					}
+					hm2.put(text2, (Locator) loc);
+					
+					// 因为传的hm2是空的，所以会存在空指针问题，放在最后来处理
+					String value11 = value1 + "-" + i;
+					if (text1.equals("name")) {
+						hm1.put(value11, hm2);
+					}
+					i++;		
 				}
-			}
-
-			// 第二层
-			List<Element> elements2 = element1.elements();
-			for (Element element2 : elements2) {
-				String text2 = element2.getText();
-				// 得到第二层属性
-				List<Attribute> attributes2 = element2.attributes();
-				for (Attribute attribute2 : attributes2) {
-					String text22 = attribute2.getName();
-					String value22 = attribute2.getValue();
-
-					// 反射
-					setReflect(loc, text22, value22);
-
-				}
-				hm2.put(text2, (Locator) loc);
+				
 			}
 		}
+//		System.out.println(hm1);
+		return hm1;
 	}
 
 	/**
