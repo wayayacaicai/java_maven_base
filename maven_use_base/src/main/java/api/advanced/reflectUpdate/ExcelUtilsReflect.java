@@ -6,6 +6,7 @@ import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.log4j.Logger;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.Row;
@@ -20,6 +21,9 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
  * @time:2019年4月1日 下午8:18:53
  */
 public class ExcelUtilsReflect {
+	// 创建日志对象
+	private static Logger logger = Logger.getLogger(ExcelUtilsReflect.class);
+
 	/**
 	 * @Desc 不打印第一行，需要注意少一行，并且索引应该从0开始
 	 * @param excelPath
@@ -73,7 +77,8 @@ public class ExcelUtilsReflect {
 				aList.add(object);
 			}
 		} catch (Exception e) {
-			e.printStackTrace();
+			// e.printStackTrace();
+			logger.error("操作excel反射出现异常：" + e.getMessage());
 		} finally {
 			close(is, workbook);
 		}
@@ -90,14 +95,16 @@ public class ExcelUtilsReflect {
 			try {
 				workbook.close();
 			} catch (IOException e) {
-				e.printStackTrace();
+				// e.printStackTrace();
+				logger.error("关闭workbook流出现异常：" + e.getMessage());
 			}
 		}
 		if (is != null) {
 			try {
 				is.close();
 			} catch (IOException e) {
-				e.printStackTrace();
+				// e.printStackTrace();
+				logger.error("关闭输入流出现异常：" + e.getMessage());
 			}
 		}
 	}

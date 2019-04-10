@@ -8,9 +8,14 @@ import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
 
+import org.apache.log4j.Logger;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Row.MissingCellPolicy;
+import org.omg.PortableInterceptor.INACTIVE;
+
+import api.advanced.reflectUpdate.ExcelUtilsReflect;
+
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
@@ -33,6 +38,6 @@ public class Test1 {
 		 
 		 workbook.write(os);
 		 os.close();
-		 is.close();
+		 is.close();	
 	}
 }
