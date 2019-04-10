@@ -23,15 +23,12 @@ public class XmlUtil {
 		SAXReader reader = new SAXReader();
 		Document document = reader.read(XmlUtil.class.getResourceAsStream("/xml_reflect/xmlUtil/xmlUtil.xml"));
 
-		// 定义两个hashmap--接收数据
-		
-
 		// 定义反射,定义object类向下好抽出方法，多态
 		Class clazz1 = Page.class;
 		Class clazz2 = Locator.class;
 
 		// 层级遍历，其中调用反射方法
-		HashMap<String, HashMap<String, Locator>> hm = LevelIter(document,  clazz1, clazz2);
+		HashMap<String, HashMap<String, Locator>> hm = LevelIter(document, clazz1, clazz2);
 		// 遍历打印
 		printHashMap(hm);
 	}
@@ -44,14 +41,15 @@ public class XmlUtil {
 	 * @param page
 	 * @param loc
 	 */
-	public static HashMap<String, HashMap<String, Locator>> LevelIter(Document document,  Class clazz1,
-			Class clazz2) {
+	public static HashMap<String, HashMap<String, Locator>> LevelIter(Document document, Class clazz1, Class clazz2) {
+		// 返回结果的容器
 		HashMap<String, HashMap<String, Locator>> hm1 = new HashMap<>();
-		int i = 0;
+
 		// 第一层
 		Element rootElement = document.getRootElement();
 		List<Element> elements1 = rootElement.elements();
 		for (Element element1 : elements1) {
+			// 第一层的对象
 			Object page = null;
 			try {
 				page = (Page) clazz1.newInstance();
@@ -68,19 +66,18 @@ public class XmlUtil {
 				setReflect(page, text1, value1);
 
 				// 第二层
-				
 				List<Element> elements2 = element1.elements();
 				for (Element element2 : elements2) {
-					// 存取locator的对象
+					// 第二层的容器
 					HashMap<String, Locator> hm2 = new HashMap<>();
-					// 创建一个locator的实例
-					Object loc = null; // 声明一个locator的对象
+					// 第二层的对象
+					Object loc = null;
 					try {
 						loc = (Locator) clazz2.newInstance();
 					} catch (Exception e) {
 						e.printStackTrace();
 					}
-					
+					// 得到文本信息
 					String text2 = element2.getText();
 					// 得到第二层属性
 					List<Attribute> attributes2 = element2.attributes();
@@ -91,19 +88,16 @@ public class XmlUtil {
 						// 反射
 						setReflect(loc, text22, value22);
 					}
+					// 用第二层容器装第二层的对象
 					hm2.put(text2, (Locator) loc);
-					
-					// 因为传的hm2是空的，所以会存在空指针问题，放在最后来处理
-					String value11 = value1 + "-" + i;
+
+					// 用第一层容器装第一层对象
 					if (text1.equals("name")) {
-						hm1.put(value11, hm2);
+						hm1.put(value1 + ":" + text2, hm2);
 					}
-					i++;		
 				}
-				
 			}
 		}
-//		System.out.println(hm1);
 		return hm1;
 	}
 
@@ -113,13 +107,13 @@ public class XmlUtil {
 	 * @param text
 	 * @param value
 	 */
-	public static void setReflect(Object loc, String text, String value) {
+	public static void setReflect(Object object, String text, String value) {
 		String newMethod = "set" + (text.charAt(0) + "").toUpperCase() + text.substring(1);
 		try {
-			Field declaredField = loc.getClass().getDeclaredField(text);
+			Field declaredField = object.getClass().getDeclaredField(text);
 			Class<?> type = declaredField.getType();
-			Method method = loc.getClass().getMethod(newMethod, type);
-			method.invoke(loc, value);
+			Method method = object.getClass().getMethod(newMethod, type);
+			method.invoke(object, value);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
