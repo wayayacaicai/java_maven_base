@@ -1,5 +1,11 @@
 package api.advanced.data_re_write;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.InputStream;
+import java.util.Properties;
+
+import org.apache.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.DataProvider;
@@ -14,44 +20,51 @@ import org.testng.annotations.Test;
  * @time:2019年4月1日 下午9:08:57
  */
 public class AllTestCase {
+	private static String sourceExcelPath;
+	private static String targetExcelPath;
+	private static int sheetIndex1;
+	private static int cellNo;
+	private static Logger logger = Logger.getLogger(AllTestCase.class);
+
+	static {
+		try {
+			Properties properties = new Properties();
+			InputStream is = new FileInputStream(
+					new File("src/main/java/api/advanced/data_re_write/api_info.properties"));
+			properties.load(is);
+			sourceExcelPath = properties.getProperty("sourceExcelPath");
+			targetExcelPath = properties.getProperty("targetExcelPath");
+			sheetIndex1 = Integer.parseInt(properties.getProperty("sheetIndex1"));
+			cellNo = Integer.parseInt(properties.getProperty("cellNo"));
+		} catch (Exception e) {
+			logger.error("配置文件读取出现异常" + e.getMessage());
+		}
+	}
+
 	@DataProvider
 	public Object[][] getDatas() {
 		return DataProviderUtils.getDatas();
 	}
 
-	//@Test(dataProvider = "getDatas")
+	// @Test(dataProvider = "getDatas")
 	// 每一个apiCaseDetail就是一条测试用例，测试用例有一条对应得接口信息
 	// 接口信息是接口测试用例的属性
 	public static void get(ApiCaseDetail apiCaseDetail) {
-		// 通过注入进来的apiId，到第1个sheet去找
-		// 数据是excel中，然后我们读取出来时保存到了二维数组对象--》遍历这个数组中的每个元素，一一匹配
-		// 给我一个apiId，我就能知道对应的api的基本信息
-
-		// json字符串转换为对象
-		// Map<String, String> params = (Map<String, String>)
-		// JSONObject.parse(apiCaseDetail.getRequestData());
-		// String entityStr =
-		// HttpUtilsReflect.get(apiCaseDetail.getApiInfo().getUrl(), params);
-
-		String entityStr = HttpUtilsReflect.get(apiCaseDetail);
+		String entityStr = HttpUtils.get(apiCaseDetail);
 		Assert.assertTrue(entityStr.contains(apiCaseDetail.getExpectedReponseData()));
 	}
 
 	@Test(dataProvider = "getDatas")
 	public static void post(ApiCaseDetail apiCaseDetail) {
-		// Map<String, String> params = (Map<String, String>)
-		// JSONObject.parse(apiCaseDetail.getRequestData());
-		// String entityStr =
-		// HttpUtilsReflect.post(apiCaseDetail.getApiInfo().getUrl(), params);
-
-		String entityStr = HttpUtilsReflect.post(apiCaseDetail);
-//		ExcelUtils.writeExcel("/excel/data_re_write/data_re_write_base.xlsx", "D:/data_re_write_base01.xlsx", 1, apiCaseDetail.getCaseId(), 6, entityStr);
-		ExcelUtils.writeExcel("src/main/java/api/advanced/data_re_write/data_re_write_base2.xlsx", "src/main/java/api/advanced/data_re_write/data_re_write_base2.xlsx", 1, apiCaseDetail.getCaseId(), 6, entityStr);
-//		Assert.assertTrue(entityStr.contains(apiCaseDetail.getExpectedReponseData()));
+		String entityStr = HttpUtils.post(apiCaseDetail);
+		// 回写数据
+		ExcelUtils.writeExcel(sourceExcelPath, targetExcelPath, sheetIndex1, apiCaseDetail.getCaseId(), cellNo,
+				entityStr);
+		// Assert.assertTrue(entityStr.contains(apiCaseDetail.getExpectedReponseData()));
 	}
-	
+
 	@AfterSuite
-	public void afterSuite(){
-		//一次性数据回写--一次性把数据收集好
+	public void afterSuite() {
+		// 一次性数据回写--一次性把数据收集好
 	}
 }

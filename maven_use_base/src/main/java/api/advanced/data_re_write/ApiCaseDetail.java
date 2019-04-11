@@ -20,13 +20,14 @@ public class ApiCaseDetail extends ExcelSheetObject {
 	// ExpectedReponseData(期望响应数据)
 	private String expectedReponseData;
 	// ActualReponseData(期望响应数据)
-	private String actualReponseData;
-	public String getActualReponseData() {
-		return actualReponseData;
+	private String actualResponseData;
+
+	public String getActualResponseData() {
+		return actualResponseData;
 	}
 
-	public void setActualReponseData(String actualReponseData) {
-		this.actualReponseData = actualReponseData;
+	public void setActualResponseData(String actualResponseData) {
+		this.actualResponseData = actualResponseData;
 	}
 
 	// 接口基本信息对象
@@ -83,9 +84,8 @@ public class ApiCaseDetail extends ExcelSheetObject {
 	@Override
 	public String toString() {
 		return "ApiCaseDetail [caseId=" + caseId + ", apiId=" + apiId + ", isExcute=" + isExcute + ", requestData="
-				+ requestData + ", expectedReponseData=" + expectedReponseData + ", actualReponseData="
-				+ actualReponseData + ", apiInfo=" + apiInfo + ", getRowNo()=" + getRowNo() + "]";
+				+ requestData + ", expectedReponseData=" + expectedReponseData + ", actualResponseData="
+				+ actualResponseData + ", apiInfo=" + apiInfo + ", getRowNo()=" + getRowNo() + "]";
 	}
 
-	
 }

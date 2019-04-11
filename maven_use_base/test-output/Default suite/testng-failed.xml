@@ -3,11 +3,12 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="api.advanced.reflect.AllTestCase">
+      <class name="api.advanced.data_re_write.AllTestCase">
         <methods>
-          <include name="get" invocation-numbers="0 6 8 9 10"/>
+          <include name="post" invocation-numbers="6"/>
+          <include name="afterSuite"/>
         </methods>
-      </class> <!-- api.advanced.reflect.AllTestCase -->
+      </class> <!-- api.advanced.data_re_write.AllTestCase -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
