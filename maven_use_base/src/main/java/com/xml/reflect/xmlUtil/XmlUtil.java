@@ -44,13 +44,13 @@ public class XmlUtil {
 	public static HashMap<String, HashMap<String, Locator>> LevelIter(Document document, Class clazz1, Class clazz2) {
 		// 返回结果的容器
 		HashMap<String, HashMap<String, Locator>> hm1 = new HashMap<>();
-
 		// 第一层
 		Element rootElement = document.getRootElement();
 		List<Element> elements1 = rootElement.elements();
 		for (Element element1 : elements1) {
-			// 第一层的对象
+			// 第一层的对象,声明对象
 			Object page = null;
+			// 实例化对象
 			try {
 				page = (Page) clazz1.newInstance();
 			} catch (Exception e) {
@@ -61,36 +61,36 @@ public class XmlUtil {
 			for (Attribute attribute1 : attributes1) {
 				String text1 = attribute1.getName();
 				String value1 = attribute1.getValue();
-
 				// 反射
 				setReflect(page, text1, value1);
 
 				// 第二层
 				List<Element> elements2 = element1.elements();
 				for (Element element2 : elements2) {
+					// 得到文本信息
+					String text2 = element2.getText();
+					// 得到第二层属性
+					List<Attribute> attributes2 = element2.attributes();
 					// 第二层的容器
 					HashMap<String, Locator> hm2 = new HashMap<>();
-					// 第二层的对象
+					// 第二层的对象,声明对象
 					Object loc = null;
+					// 实例化对象
 					try {
 						loc = (Locator) clazz2.newInstance();
 					} catch (Exception e) {
 						e.printStackTrace();
 					}
-					// 得到文本信息
-					String text2 = element2.getText();
-					// 得到第二层属性
-					List<Attribute> attributes2 = element2.attributes();
 					for (Attribute attribute2 : attributes2) {
 						String text22 = attribute2.getName();
 						String value22 = attribute2.getValue();
-
 						// 反射
 						setReflect(loc, text22, value22);
 					}
 					// 用第二层容器装第二层的对象
-					hm2.put(text2, (Locator) loc);
-
+					if (loc != null) {
+						hm2.put(text2, (Locator) loc);
+					}
 					// 用第一层容器装第一层对象
 					if (text1.equals("name")) {
 						hm1.put(value1 + ":" + text2, hm2);
