@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="api.retry.post">
+      <class name="api.retry.Post">
         <methods>
           <include name="post"/>
         </methods>
-      </class> <!-- api.retry.post -->
+      </class> <!-- api.retry.Post -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

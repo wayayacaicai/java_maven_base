@@ -21,20 +21,21 @@ public class Post {
 	@DataProvider
 	public Object[][] getDatas() {
 		Object[][] allDatas = {
-				{ "http://120.78.128.25:8080/futureloan/mvc/api%20/member/register?", "13783948731", "123456", "caicai",
-						"手机号码已被注册" },
-				{ "http://120.78.128.25:8080/futureloan/mvc/api%20/member/register?", "13783948731", "12345", "caicai",
-						"密码长度必须为6~18" },
-				{ "http://120.78.128.25:8080/futureloan/mvc/api%20/member/register?", "1378394873", "123456", "caicai",
-						"手机号码格式不正确" },
-				{ "http://120.78.128.25:8080/futureloan/mvc/api%20/member/register?", "13783948731", "", "caicai",
-						"密码不能为空" } };
+				{"13783948731", "123456", "caicai","手机号码已被注册" },
+				{ "13783948731", "12345", "caicai","密码长度必须为6~18" },
+				{"1378394873", "123456", "caicai","手机号码格式不正确" },
+				{ "13783948731", "", "caicai","密码不能为空" } };
 		return allDatas;
 	}
 
 	@Test(dataProvider = "getDatas")
-	public void post(String url, String mobilephone, String pwd, String regname, String expected) {
-		String entityStr = HttpUtils.post(url, mobilephone, pwd, regname);
+	public void post(String mobilephone, String pwd, String regname, String expected) {
+		String baseUrl =  "http://120.78.128.25:8080/futureloan/mvc/api%20/member/register";
+		List<NameValuePair> params = new ArrayList<>();
+		params.add(new BasicNameValuePair("mobilephone", mobilephone));
+		params.add(new BasicNameValuePair("pwd", pwd));
+		params.add(new BasicNameValuePair("regname", regname));
+		String entityStr = HttpUtils.post(baseUrl, params);
 		Assert.assertTrue(entityStr.contains(expected));
 	}
 }
