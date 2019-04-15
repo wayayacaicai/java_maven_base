@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="api.retry.Post">
+      <class name="api.retry.Get">
         <methods>
-          <include name="post"/>
+          <include name="get" invocation-numbers="0 1 2 3"/>
         </methods>
-      </class> <!-- api.retry.Post -->
+      </class> <!-- api.retry.Get -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
