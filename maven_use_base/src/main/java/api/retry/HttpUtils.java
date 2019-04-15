@@ -18,6 +18,9 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
+import org.apache.xmlbeans.impl.xb.xsdschema.impl.PublicImpl;
+
+import com.alibaba.fastjson.JSONObject;
 
 public class HttpUtils {
 	public static String get(String url, Map<String, String> paramsMap) {
@@ -70,4 +73,18 @@ public class HttpUtils {
 		}
 		return entityStr;
 	}
+	
+	public static String get(ApiCaseDetail apiCaseDetail){
+		String url = apiCaseDetail.getApiInfo().getApiUrl();
+		Map<String, String> paramsMap = (Map<String, String>) JSONObject.parse(apiCaseDetail.getRequestData());
+		return get(url, paramsMap);
+	}
+	
+	public static String post(ApiCaseDetail apiCaseDetail){
+		String url = apiCaseDetail.getApiInfo().getApiUrl();
+		Map<String, String> paramsMap = (Map<String, String>) JSONObject.parse(apiCaseDetail.getRequestData());
+		return post(url, paramsMap);
+	}
 }
+
+		
