@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" total="11" passed="11">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="2658" started-at="2019-04-16T07:45:52Z" finished-at="2019-04-16T07:45:54Z">
+  <suite name="Default suite" duration-ms="3950" started-at="2019-04-16T14:56:11Z" finished-at="2019-04-16T14:56:15Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="2658" started-at="2019-04-16T07:45:52Z" finished-at="2019-04-16T07:45:54Z">
-      <class name="api.retry.RequestTestCase">
-        <test-method status="PASS" signature="get(api.retry.ApiCaseDetail)[pri:0, instance:api.retry.RequestTestCase@4b6995df]" name="get" duration-ms="868" started-at="2019-04-16T15:45:52Z" data-provider="getDatas" finished-at="2019-04-16T15:45:53Z">
+    <test name="Default test" duration-ms="3950" started-at="2019-04-16T14:56:11Z" finished-at="2019-04-16T14:56:15Z">
+      <class name="api.retry.testcase.RequestTestCase">
+        <test-method status="PASS" signature="get(api.retry.pojo.ApiCaseDetail)[pri:0, instance:api.retry.testcase.RequestTestCase@77f03bb1]" name="get" duration-ms="1208" started-at="2019-04-16T22:56:12Z" data-provider="getDatas" finished-at="2019-04-16T22:56:13Z">
           <params>
             <param index="0">
               <value>
@@ -18,7 +18,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- get -->
-        <test-method status="PASS" signature="get(api.retry.ApiCaseDetail)[pri:0, instance:api.retry.RequestTestCase@4b6995df]" name="get" duration-ms="134" started-at="2019-04-16T15:45:53Z" data-provider="getDatas" finished-at="2019-04-16T15:45:53Z">
+        <test-method status="PASS" signature="get(api.retry.pojo.ApiCaseDetail)[pri:0, instance:api.retry.testcase.RequestTestCase@77f03bb1]" name="get" duration-ms="161" started-at="2019-04-16T22:56:13Z" data-provider="getDatas" finished-at="2019-04-16T22:56:14Z">
           <params>
             <param index="0">
               <value>
@@ -29,7 +29,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- get -->
-        <test-method status="PASS" signature="get(api.retry.ApiCaseDetail)[pri:0, instance:api.retry.RequestTestCase@4b6995df]" name="get" duration-ms="121" started-at="2019-04-16T15:45:53Z" data-provider="getDatas" finished-at="2019-04-16T15:45:54Z">
+        <test-method status="PASS" signature="get(api.retry.pojo.ApiCaseDetail)[pri:0, instance:api.retry.testcase.RequestTestCase@77f03bb1]" name="get" duration-ms="117" started-at="2019-04-16T22:56:14Z" data-provider="getDatas" finished-at="2019-04-16T22:56:14Z">
           <params>
             <param index="0">
               <value>
@@ -40,7 +40,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- get -->
-        <test-method status="PASS" signature="get(api.retry.ApiCaseDetail)[pri:0, instance:api.retry.RequestTestCase@4b6995df]" name="get" duration-ms="115" started-at="2019-04-16T15:45:54Z" data-provider="getDatas" finished-at="2019-04-16T15:45:54Z">
+        <test-method status="PASS" signature="get(api.retry.pojo.ApiCaseDetail)[pri:0, instance:api.retry.testcase.RequestTestCase@77f03bb1]" name="get" duration-ms="285" started-at="2019-04-16T22:56:14Z" data-provider="getDatas" finished-at="2019-04-16T22:56:14Z">
           <params>
             <param index="0">
               <value>
@@ -51,7 +51,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- get -->
-        <test-method status="PASS" signature="get(api.retry.ApiCaseDetail)[pri:0, instance:api.retry.RequestTestCase@4b6995df]" name="get" duration-ms="112" started-at="2019-04-16T15:45:54Z" data-provider="getDatas" finished-at="2019-04-16T15:45:54Z">
+        <test-method status="PASS" signature="get(api.retry.pojo.ApiCaseDetail)[pri:0, instance:api.retry.testcase.RequestTestCase@77f03bb1]" name="get" duration-ms="187" started-at="2019-04-16T22:56:14Z" data-provider="getDatas" finished-at="2019-04-16T22:56:14Z">
           <params>
             <param index="0">
               <value>
@@ -62,7 +62,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- get -->
-        <test-method status="PASS" signature="get(api.retry.ApiCaseDetail)[pri:0, instance:api.retry.RequestTestCase@4b6995df]" name="get" duration-ms="120" started-at="2019-04-16T15:45:54Z" data-provider="getDatas" finished-at="2019-04-16T15:45:54Z">
+        <test-method status="PASS" signature="get(api.retry.pojo.ApiCaseDetail)[pri:0, instance:api.retry.testcase.RequestTestCase@77f03bb1]" name="get" duration-ms="126" started-at="2019-04-16T22:56:14Z" data-provider="getDatas" finished-at="2019-04-16T22:56:14Z">
           <params>
             <param index="0">
               <value>
@@ -73,7 +73,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- get -->
-        <test-method status="PASS" signature="get(api.retry.ApiCaseDetail)[pri:0, instance:api.retry.RequestTestCase@4b6995df]" name="get" duration-ms="117" started-at="2019-04-16T15:45:54Z" data-provider="getDatas" finished-at="2019-04-16T15:45:54Z">
+        <test-method status="PASS" signature="get(api.retry.pojo.ApiCaseDetail)[pri:0, instance:api.retry.testcase.RequestTestCase@77f03bb1]" name="get" duration-ms="110" started-at="2019-04-16T22:56:14Z" data-provider="getDatas" finished-at="2019-04-16T22:56:14Z">
           <params>
             <param index="0">
               <value>
@@ -84,7 +84,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- get -->
-        <test-method status="PASS" signature="get(api.retry.ApiCaseDetail)[pri:0, instance:api.retry.RequestTestCase@4b6995df]" name="get" duration-ms="105" started-at="2019-04-16T15:45:54Z" data-provider="getDatas" finished-at="2019-04-16T15:45:54Z">
+        <test-method status="PASS" signature="get(api.retry.pojo.ApiCaseDetail)[pri:0, instance:api.retry.testcase.RequestTestCase@77f03bb1]" name="get" duration-ms="220" started-at="2019-04-16T22:56:14Z" data-provider="getDatas" finished-at="2019-04-16T22:56:15Z">
           <params>
             <param index="0">
               <value>
@@ -95,7 +95,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- get -->
-        <test-method status="PASS" signature="get(api.retry.ApiCaseDetail)[pri:0, instance:api.retry.RequestTestCase@4b6995df]" name="get" duration-ms="104" started-at="2019-04-16T15:45:54Z" data-provider="getDatas" finished-at="2019-04-16T15:45:54Z">
+        <test-method status="PASS" signature="get(api.retry.pojo.ApiCaseDetail)[pri:0, instance:api.retry.testcase.RequestTestCase@77f03bb1]" name="get" duration-ms="152" started-at="2019-04-16T22:56:15Z" data-provider="getDatas" finished-at="2019-04-16T22:56:15Z">
           <params>
             <param index="0">
               <value>
@@ -106,7 +106,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- get -->
-        <test-method status="PASS" signature="get(api.retry.ApiCaseDetail)[pri:0, instance:api.retry.RequestTestCase@4b6995df]" name="get" duration-ms="99" started-at="2019-04-16T15:45:54Z" data-provider="getDatas" finished-at="2019-04-16T15:45:54Z">
+        <test-method status="PASS" signature="get(api.retry.pojo.ApiCaseDetail)[pri:0, instance:api.retry.testcase.RequestTestCase@77f03bb1]" name="get" duration-ms="177" started-at="2019-04-16T22:56:15Z" data-provider="getDatas" finished-at="2019-04-16T22:56:15Z">
           <params>
             <param index="0">
               <value>
@@ -117,7 +117,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- get -->
-        <test-method status="PASS" signature="get(api.retry.ApiCaseDetail)[pri:0, instance:api.retry.RequestTestCase@4b6995df]" name="get" duration-ms="109" started-at="2019-04-16T15:45:54Z" data-provider="getDatas" finished-at="2019-04-16T15:45:54Z">
+        <test-method status="PASS" signature="get(api.retry.pojo.ApiCaseDetail)[pri:0, instance:api.retry.testcase.RequestTestCase@77f03bb1]" name="get" duration-ms="250" started-at="2019-04-16T22:56:15Z" data-provider="getDatas" finished-at="2019-04-16T22:56:15Z">
           <params>
             <param index="0">
               <value>
@@ -128,7 +128,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- get -->
-      </class> <!-- api.retry.RequestTestCase -->
+      </class> <!-- api.retry.testcase.RequestTestCase -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
