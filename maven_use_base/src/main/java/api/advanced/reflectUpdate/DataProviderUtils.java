@@ -39,7 +39,7 @@ public class DataProviderUtils {
 			// }
 			apiCaseDetail.setApiInfo(apiInfoMap.get(apiCaseDetail.getApiId()));
 
-			Object[] dataArray = new Object[] { apiCaseDetail }; // 把对象放入一个一维数组
+			Object[] dataArray = new Object[]{ apiCaseDetail }; // 把对象放入一个一维数组
 			objects[i] = dataArray; // 把一维数组放入二维数组
 		}
 		return objects;
