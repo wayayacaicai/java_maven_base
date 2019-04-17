@@ -9,11 +9,13 @@ import org.apache.log4j.Logger;
 
 import api.retry.pojo.ApiCaseDetail;
 import api.retry.pojo.ApiInfo;
+import api.retry.testcase.RequestTestCase;
 
 public class DataProviderUtils {
 	private static String dataProviderSourceExcelPath;
 	private static int sheetIndex0;
 	private static int sheetIndex1;
+	private static Logger logger = Logger.getLogger(DataProviderUtils.class);
 	static{
 		try {
 			Properties properties = new Properties();
@@ -22,7 +24,8 @@ public class DataProviderUtils {
 			sheetIndex0 = Integer.parseInt(properties.getProperty("sheetIndex0"));
 			sheetIndex1 = Integer.parseInt(properties.getProperty("sheetIndex1"));
 		} catch (IOException e) {
-			e.printStackTrace();
+//			e.printStackTrace();
+			logger.error("配置文件读取出现异常" + e.getMessage());
 		}
 	}
 	public static Object[][] getDatas() {
