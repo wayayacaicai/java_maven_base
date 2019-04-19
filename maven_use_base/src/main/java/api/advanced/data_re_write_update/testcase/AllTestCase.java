@@ -3,6 +3,7 @@ package api.advanced.data_re_write_update.testcase;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
+import java.util.List;
 import java.util.Properties;
 
 import org.apache.log4j.Logger;
@@ -11,10 +12,13 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import api.advanced.data_re_write.pojo.ApiCaseDetail;
-import api.advanced.data_re_write.utils.DataProviderUtils;
-import api.advanced.data_re_write.utils.ExcelUtils;
-import api.advanced.data_re_write.utils.HttpUtils;
+import api.advanced.data_re_write_update.pojo.ApiCaseDetail;
+import api.advanced.data_re_write_update.pojo.CellData;
+import api.advanced.data_re_write_update.utils.ApiUtils;
+import api.advanced.data_re_write_update.utils.ExcelUtils;
+import api.advanced.data_re_write_update.utils.HttpUtils;
+
+
 
 /**
  * 当excel结构变化：增加、删除列、顺序调整 2：大量的冗余，不好维护--》怎么解决冗余，重复的
@@ -48,7 +52,7 @@ public class AllTestCase {
 
 	@DataProvider
 	public Object[][] getDatas() {
-		return DataProviderUtils.getDatas();
+		return ApiUtils.getDatas();
 	}
 
 	// @Test(dataProvider = "getDatas")
@@ -59,17 +63,24 @@ public class AllTestCase {
 		Assert.assertTrue(entityStr.contains(apiCaseDetail.getExpectedReponseData()));
 	}
 
+	
 	@Test(dataProvider = "getDatas")
 	public static void post(ApiCaseDetail apiCaseDetail) {
-		String entityStr = HttpUtils.post(apiCaseDetail);
+		String responseData = ApiUtils.request(apiCaseDetail);
+		//收集数据
+		CellData cellData = new CellData(apiCaseDetail.getRowNo(), 6, responseData);
+		ApiUtils.addData(cellData);
+		
 		// 回写数据
-		ExcelUtils.writeExcel(sourceExcelPath, targetExcelPath, sheetIndex1, apiCaseDetail.getCaseId(), cellNo,
-				entityStr);
+//		ExcelUtils.writeExcel(sourceExcelPath, targetExcelPath, sheetIndex1, apiCaseDetail.getCaseId(), cellNo,
+//				entityStr);
 		// Assert.assertTrue(entityStr.contains(apiCaseDetail.getExpectedReponseData()));
 	}
 
 	@AfterSuite
 	public void afterSuite() {
 		// 一次性数据回写--一次性把数据收集好
+		List<CellData> allDatas = ApiUtils.getAllDatas();
+		ExcelUtils.writeExcel(sourceExcelPath, targetExcelPath, sheetIndex1, allDatas);
 	}
 }

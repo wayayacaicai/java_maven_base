@@ -21,7 +21,9 @@ import org.apache.log4j.Logger;
 
 import com.alibaba.fastjson.JSONObject;
 
-import api.advanced.data_re_write.pojo.ApiCaseDetail;
+import api.advanced.data_re_write_update.pojo.ApiCaseDetail;
+
+
 
 /**
  * @Desc:请求工具类
@@ -100,35 +102,6 @@ public class HttpUtils {
 		String baseUrl = apiCaseDetail.getApiInfo().getUrl();
 		Map<String, String> paramsMap = (Map<String, String>) JSONObject.parse(apiCaseDetail.getRequestData());
 		return get(baseUrl, paramsMap);
-		// method--2
-		// List<NameValuePair> params = new ArrayList<NameValuePair>(); //
-		// 需要的容器类型
-		// // json字符串转换为对象
-		// Map<String, String> paramsMap = (Map<String, String>)
-		// JSONObject.parse(apiCaseDetail.getRequestData());
-		// if (paramsMap != null) { // 不能为空
-		// Set<Entry<String, String>> entrySet = paramsMap.entrySet(); //
-		// 通用类型转换为需要的容器类型
-		// for (Entry<String, String> entry : entrySet) {
-		// params.add(new BasicNameValuePair(entry.getKey(), entry.getValue()));
-		// }
-		// }
-		// String get_params = URLEncodedUtils.format(params, "utf-8"); //
-		// 请求参数拼接
-		// HttpGet get = new HttpGet(apiCaseDetail.getApiInfo().getUrl() + "?" +
-		// get_params); // get请求拼接
-		// String responseEntityStr = null; // 响应体信息定义
-		// try {
-		// CloseableHttpClient httpClient = HttpClients.createDefault(); //
-		// 创建客户端
-		// CloseableHttpResponse response = httpClient.execute(get); // 获取响应对象
-		//
-		// HttpEntity responseEntity = response.getEntity(); // 获取响应体
-		// responseEntityStr = EntityUtils.toString(responseEntity); // 响应体字符串形式
-		// } catch (Exception e) {
-		// e.printStackTrace();
-		// }
-		// return responseEntityStr;
 	}
 
 	/**
@@ -141,34 +114,5 @@ public class HttpUtils {
 		String baseUrl = apiCaseDetail.getApiInfo().getUrl();
 		Map<String, String> paramsMap = (Map<String, String>) JSONObject.parse(apiCaseDetail.getRequestData());
 		return post(baseUrl, paramsMap);
-
-		// method--2
-		// HttpPost post = new HttpPost(apiCaseDetail.getApiInfo().getUrl()); //
-		// post请求
-		// String responseEntityStr = null; // 响应体信息
-		// List<NameValuePair> params = new ArrayList<NameValuePair>(); //
-		// 需要的容器类型
-		// // json字符串转换为对象
-		// Map<String, String> paramsMap = (Map<String, String>)
-		// JSONObject.parse(apiCaseDetail.getRequestData());
-		// if (paramsMap != null) { // 不能为空
-		// Set<Entry<String, String>> entrySet = paramsMap.entrySet(); //
-		// 通用类型转换为需要的容器类型
-		// for (Entry<String, String> entry : entrySet) {
-		// params.add(new BasicNameValuePair(entry.getKey(), entry.getValue()));
-		// }
-		// }
-		// try {
-		// post.setEntity(new UrlEncodedFormEntity(params)); // 设置请求体
-		// CloseableHttpClient httpClient = HttpClients.createDefault(); //
-		// 创建客户端
-		// CloseableHttpResponse response = httpClient.execute(post); // 获取响应对象
-		//
-		// HttpEntity responseEntity = response.getEntity(); // 获取响应体
-		// responseEntityStr = EntityUtils.toString(responseEntity); // 响应体字符串形式
-		// } catch (Exception e) {
-		// e.printStackTrace();
-		// }
-		// return responseEntityStr;
 	}
 }

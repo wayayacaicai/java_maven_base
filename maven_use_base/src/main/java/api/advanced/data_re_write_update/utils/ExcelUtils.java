@@ -16,12 +16,12 @@ import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Row.MissingCellPolicy;
 
-import api.advanced.data_re_write.pojo.ApiCaseDetail;
-import api.advanced.data_re_write.pojo.ExcelSheetObject;
-
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
+
+import api.advanced.data_re_write_update.pojo.CellData;
+import api.advanced.data_re_write_update.pojo.ExcelSheetObject;
 
 /**
  * @Desc:excel工具类(反射型) 注意回写的时候增加了一列（返回回写数据），所以要注意在对应对象增加相关的属性
@@ -96,61 +96,33 @@ public class ExcelUtils {
 		return excelSheetObjectsList;
 	}
 
-	/**
-	 * @Desc Excel读取关闭流对象
-	 * @param is
-	 * @param workbook
-	 */
-	private static void close(InputStream is, Workbook workbook) {
-		if (workbook != null) {
-			try {
-				workbook.close();
-			} catch (IOException e) {
-				logger.error("关闭workbook流出现异常：" + e.getMessage());
-			}
-		}
-		if (is != null) {
-			try {
-				is.close();
-			} catch (IOException e) {
-				logger.error("关闭输入流出现异常：" + e.getMessage());
-			}
-		}
-	}
 
 	/**
-	 * @Desc 写回excel的基础版
+	 * @Desc  写回excel的进阶版
 	 * @param sourceExcelPath
-	 *            源路径
 	 * @param targetExcelPath
-	 *            目标路径
 	 * @param sheetIndex
-	 *            sheet索引 0-based
-	 * @param rowNo
-	 *            行号 1-based
-	 * @param cellNo
-	 *            列号 1-based
-	 * @param actualInfo
-	 *            实际返回结果
-	 * 
-	 *            缺陷 1.假如1000条数据每次都io读写，性能问题--读一次，写一次，收集所有响应结果
-	 *            2.如果caseId对应的一行比较靠后，出现没有必要的遍历匹配--效率低 -给一个apiCaseDetail对象，就知道哪一
+	 * @param allDatas
 	 */
-	public static void writeExcelBase(String sourceExcelPath, String targetExcelPath, int sheetIndex, int rowNo,
-			int cellNo, String actualInfo) {
+	public static void writeExcel(String sourceExcelPath, String targetExcelPath, int sheetIndex,List<CellData> allDatas) {
 		InputStream is = null;
 		Workbook workbook = null;
 		OutputStream os = null;
 		try {
-			is = ExcelUtils.class.getResourceAsStream(sourceExcelPath);
+//			is = ExcelUtils.class.getResourceAsStream(sourceExcelPath);
+			is = new FileInputStream(new File(sourceExcelPath));
 			workbook = WorkbookFactory.create(is);
 			Sheet sheet = workbook.getSheetAt(sheetIndex);
 
-			Row row = sheet.getRow(rowNo - 1); // 比实际行号小1
-			Cell cell = row.getCell(cellNo - 1, MissingCellPolicy.CREATE_NULL_AS_BLANK); // 比实际列号小1
-			cell.setCellType(CellType.STRING);
-			cell.setCellValue(actualInfo);
-
+			for (CellData cellData : allDatas) {
+				int rowNo = cellData.getRowNo();
+				int colNo = cellData.getColNo();
+				String cellValue = cellData.getCellValue();
+				Row row = sheet.getRow(rowNo-1);
+				Cell cell = row.getCell(colNo-1, MissingCellPolicy.CREATE_NULL_AS_BLANK);
+				cell.setCellType(CellType.STRING);
+				cell.setCellValue(cellValue);
+			}
 			os = new FileOutputStream(new File(targetExcelPath));
 			workbook.write(os);
 		} catch (Exception e) {
@@ -168,7 +140,10 @@ public class ExcelUtils {
 	 * @param caseId
 	 * @param cellNo
 	 * @param actualInfo
+	 * 缺陷 1.假如1000条数据每次都io读写，性能问题--读一次，写一次，收集所有响应结果
+	 * 2.如果caseId对应的一行比较靠后，出现没有必要的遍历匹配--效率低 -给一个apiCaseDetail对象，就知道哪一行
 	 */
+	@Deprecated
 	public static void writeExcel(String sourceExcelPath, String targetExcelPath, int sheetIndex, String caseId,
 			int cellNo, String actualInfo) {
 		InputStream is = null;
@@ -205,6 +180,28 @@ public class ExcelUtils {
 		}
 	}
 
+	/**
+	 * @Desc Excel读取关闭流对象
+	 * @param is
+	 * @param workbook
+	 */
+	private static void close(InputStream is, Workbook workbook) {
+		if (workbook != null) {
+			try {
+				workbook.close();
+			} catch (IOException e) {
+				logger.error("关闭workbook流出现异常：" + e.getMessage());
+			}
+		}
+		if (is != null) {
+			try {
+				is.close();
+			} catch (IOException e) {
+				logger.error("关闭输入流出现异常：" + e.getMessage());
+			}
+		}
+	}
+	
 	/**
 	 * @Desc 数据回写关闭流对象
 	 * @param is
