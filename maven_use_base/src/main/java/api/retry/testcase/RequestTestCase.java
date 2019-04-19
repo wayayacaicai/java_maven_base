@@ -3,6 +3,7 @@ package api.retry.testcase;
 import java.io.IOException;
 import java.util.Properties;
 
+import org.apache.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -17,6 +18,7 @@ public class RequestTestCase {
 	private static String targetExcelPath;
 	private static int sheetIndex1;
 	private static int cellNo;
+	private static Logger logger = Logger.getLogger(RequestTestCase.class);
 	static{
 		try {
 			Properties properties = new Properties();
@@ -26,7 +28,8 @@ public class RequestTestCase {
 			sheetIndex1 = Integer.parseInt(properties.getProperty("sheetIndex1"));
 			cellNo = Integer.parseInt(properties.getProperty("cellNo"));
 		} catch (IOException e) {
-			e.printStackTrace();
+//			e.printStackTrace();
+			logger.error("配置文件读取出现异常" + e.getMessage());
 		}
 	}
 	
