@@ -2,137 +2,137 @@
 <testng-results skipped="0" failed="0" total="11" passed="11">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="1938" started-at="2019-04-19T09:32:12Z" finished-at="2019-04-19T09:32:14Z">
+  <suite name="Default suite" duration-ms="4161" started-at="2019-04-21T17:21:46Z" finished-at="2019-04-21T17:21:50Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="1938" started-at="2019-04-19T09:32:12Z" finished-at="2019-04-19T09:32:14Z">
-      <class name="api.advanced.data_re_write_update.testcase.AllTestCase">
-        <test-method status="PASS" signature="post(api.advanced.data_re_write_update.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_re_write_update.testcase.AllTestCase@7a5d012c]" name="post" duration-ms="710" started-at="2019-04-19T17:32:13Z" data-provider="getDatas" finished-at="2019-04-19T17:32:13Z">
+    <test name="Default test" duration-ms="4161" started-at="2019-04-21T17:21:46Z" finished-at="2019-04-21T17:21:50Z">
+      <class name="api.advanced.data_check.testcase.AllTestCase">
+        <test-method status="PASS" signature="post(api.advanced.data_check.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_check.testcase.AllTestCase@22f71333]" name="post" duration-ms="2034" started-at="2019-04-22T01:21:47Z" data-provider="getDatas" finished-at="2019-04-22T01:21:49Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[ApiCaseDetail [caseId=1, apiId=1, isExcute=Y, requestData={"mobilephone":"13666666666","pwd":"123456","regname":"柠檬班"}, expectedReponseData={"status":0,"code":"20110","data":null,"msg":"手机号码已被注册"}, actualResponseData=, apiInfo=ApiInfo [apiId=1, apiName=register, type=post, url=http://120.78.128.25:8080/futureloan/mvc/api/member/register, getRowNo()=2], getRowNo()=2]]]>
+                <![CDATA[ApiCaseDetail [caseId=1, apiId=1, isExcute=Y, requestData={"mobilephone":"13666666666","pwd":"123456","regname":"柠檬班"}, expectedReponseData=手机号码已被注册, actualResponseData=, apiInfo=ApiInfo [apiId=1, apiName=register, type=post, url=http://120.78.128.25:8080/futureloan/mvc/api/member/register, getRowNo()=2], beforeSqlList=[SqlChecker [sqlId=1, caseId=1, type=before, sql=select count(*) from member where MobilePhone=13666666666;, expectedResult=[{"count(*)":"0"}], actualResult=, checkResult=, getRowNo()=2]], afterSqlList=[SqlChecker [sqlId=2, caseId=1, type=after, sql=select count(*) from member where MobilePhone=13666666666;, expectedResult=[{"count(*)":"1"}], actualResult=, checkResult=, getRowNo()=3], SqlChecker [sqlId=3, caseId=1, type=after, sql=select leaveamount,Type from member where MobilePhone=13666666666;, expectedResult=[{"leaveamount":"0.00","Type":"1"}], actualResult=, checkResult=, getRowNo()=4]], getRowNo()=2]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- post -->
-        <test-method status="PASS" signature="post(api.advanced.data_re_write_update.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_re_write_update.testcase.AllTestCase@7a5d012c]" name="post" duration-ms="70" started-at="2019-04-19T17:32:13Z" data-provider="getDatas" finished-at="2019-04-19T17:32:13Z">
+        <test-method status="PASS" signature="post(api.advanced.data_check.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_check.testcase.AllTestCase@22f71333]" name="post" duration-ms="419" started-at="2019-04-22T01:21:49Z" data-provider="getDatas" finished-at="2019-04-22T01:21:49Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[ApiCaseDetail [caseId=2, apiId=1, isExcute=Y, requestData={"mobilephone":"13666666666","pwd":"123456","regname":"柠檬班"}, expectedReponseData={"status":0,"code":"20110","data":null,"msg":"手机号码已被注册"}, actualResponseData=, apiInfo=ApiInfo [apiId=1, apiName=register, type=post, url=http://120.78.128.25:8080/futureloan/mvc/api/member/register, getRowNo()=2], getRowNo()=3]]]>
+                <![CDATA[ApiCaseDetail [caseId=2, apiId=1, isExcute=Y, requestData={"mobilephone":"13666666666","pwd":"123456","regname":"柠檬班"}, expectedReponseData=手机号码已被注册, actualResponseData=, apiInfo=ApiInfo [apiId=1, apiName=register, type=post, url=http://120.78.128.25:8080/futureloan/mvc/api/member/register, getRowNo()=2], beforeSqlList=[SqlChecker [sqlId=4, caseId=2, type=before, sql=select count(*) from member where MobilePhone=13666666666;, expectedResult=[{"count(*)":"1"}], actualResult=, checkResult=, getRowNo()=5]], afterSqlList=null, getRowNo()=3]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- post -->
-        <test-method status="PASS" signature="post(api.advanced.data_re_write_update.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_re_write_update.testcase.AllTestCase@7a5d012c]" name="post" duration-ms="68" started-at="2019-04-19T17:32:13Z" data-provider="getDatas" finished-at="2019-04-19T17:32:13Z">
+        <test-method status="PASS" signature="post(api.advanced.data_check.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_check.testcase.AllTestCase@22f71333]" name="post" duration-ms="88" started-at="2019-04-22T01:21:49Z" data-provider="getDatas" finished-at="2019-04-22T01:21:49Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[ApiCaseDetail [caseId=3, apiId=1, isExcute=Y, requestData={"mobilephone":"13666666666","pwd":"","regname":"柠檬班"}, expectedReponseData={"status":0,"code":"20103","data":null,"msg":"密码不能为空"}, actualResponseData=, apiInfo=ApiInfo [apiId=1, apiName=register, type=post, url=http://120.78.128.25:8080/futureloan/mvc/api/member/register, getRowNo()=2], getRowNo()=4]]]>
+                <![CDATA[ApiCaseDetail [caseId=3, apiId=1, isExcute=Y, requestData={"mobilephone":"13666666666","pwd":"","regname":"柠檬班"}, expectedReponseData=密码不能为空, actualResponseData=, apiInfo=ApiInfo [apiId=1, apiName=register, type=post, url=http://120.78.128.25:8080/futureloan/mvc/api/member/register, getRowNo()=2], beforeSqlList=null, afterSqlList=null, getRowNo()=4]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- post -->
-        <test-method status="PASS" signature="post(api.advanced.data_re_write_update.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_re_write_update.testcase.AllTestCase@7a5d012c]" name="post" duration-ms="66" started-at="2019-04-19T17:32:13Z" data-provider="getDatas" finished-at="2019-04-19T17:32:13Z">
+        <test-method status="PASS" signature="post(api.advanced.data_check.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_check.testcase.AllTestCase@22f71333]" name="post" duration-ms="86" started-at="2019-04-22T01:21:49Z" data-provider="getDatas" finished-at="2019-04-22T01:21:49Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[ApiCaseDetail [caseId=4, apiId=1, isExcute=Y, requestData={"mobilephone":"","pwd":"","regname":"柠檬班"}, expectedReponseData={"status":0,"code":"20103","data":null,"msg":"手机号不能为空"}, actualResponseData=, apiInfo=ApiInfo [apiId=1, apiName=register, type=post, url=http://120.78.128.25:8080/futureloan/mvc/api/member/register, getRowNo()=2], getRowNo()=5]]]>
+                <![CDATA[ApiCaseDetail [caseId=4, apiId=1, isExcute=Y, requestData={"mobilephone":"","pwd":"","regname":"柠檬班"}, expectedReponseData=手机号不能为空, actualResponseData=, apiInfo=ApiInfo [apiId=1, apiName=register, type=post, url=http://120.78.128.25:8080/futureloan/mvc/api/member/register, getRowNo()=2], beforeSqlList=null, afterSqlList=null, getRowNo()=5]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- post -->
-        <test-method status="PASS" signature="post(api.advanced.data_re_write_update.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_re_write_update.testcase.AllTestCase@7a5d012c]" name="post" duration-ms="59" started-at="2019-04-19T17:32:13Z" data-provider="getDatas" finished-at="2019-04-19T17:32:14Z">
+        <test-method status="PASS" signature="post(api.advanced.data_check.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_check.testcase.AllTestCase@22f71333]" name="post" duration-ms="92" started-at="2019-04-22T01:21:49Z" data-provider="getDatas" finished-at="2019-04-22T01:21:50Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[ApiCaseDetail [caseId=5, apiId=1, isExcute=N, requestData={"mobilephone":"135","pwd":"123456","regname":"柠檬班"}, expectedReponseData={"status":0,"code":"20109","data":null,"msg":"手机号码格式不正确"}, actualResponseData=, apiInfo=ApiInfo [apiId=1, apiName=register, type=post, url=http://120.78.128.25:8080/futureloan/mvc/api/member/register, getRowNo()=2], getRowNo()=6]]]>
+                <![CDATA[ApiCaseDetail [caseId=5, apiId=1, isExcute=N, requestData={"mobilephone":"135","pwd":"123456","regname":"柠檬班"}, expectedReponseData=手机号码格式不正确, actualResponseData=, apiInfo=ApiInfo [apiId=1, apiName=register, type=post, url=http://120.78.128.25:8080/futureloan/mvc/api/member/register, getRowNo()=2], beforeSqlList=null, afterSqlList=null, getRowNo()=6]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- post -->
-        <test-method status="PASS" signature="post(api.advanced.data_re_write_update.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_re_write_update.testcase.AllTestCase@7a5d012c]" name="post" duration-ms="71" started-at="2019-04-19T17:32:14Z" data-provider="getDatas" finished-at="2019-04-19T17:32:14Z">
+        <test-method status="PASS" signature="post(api.advanced.data_check.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_check.testcase.AllTestCase@22f71333]" name="post" duration-ms="91" started-at="2019-04-22T01:21:50Z" data-provider="getDatas" finished-at="2019-04-22T01:21:50Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[ApiCaseDetail [caseId=6, apiId=1, isExcute=Y, requestData={"mobilephone":"13666666666","pwd":"123","regname":"柠檬班"}, expectedReponseData={"status":0,"code":"20108","data":null,"msg":"密码长度必须为6~18"}, actualResponseData=, apiInfo=ApiInfo [apiId=1, apiName=register, type=post, url=http://120.78.128.25:8080/futureloan/mvc/api/member/register, getRowNo()=2], getRowNo()=7]]]>
+                <![CDATA[ApiCaseDetail [caseId=6, apiId=1, isExcute=Y, requestData={"mobilephone":"13666666666","pwd":"123","regname":"柠檬班"}, expectedReponseData=密码长度必须为6~18, actualResponseData=, apiInfo=ApiInfo [apiId=1, apiName=register, type=post, url=http://120.78.128.25:8080/futureloan/mvc/api/member/register, getRowNo()=2], beforeSqlList=null, afterSqlList=null, getRowNo()=7]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- post -->
-        <test-method status="PASS" signature="post(api.advanced.data_re_write_update.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_re_write_update.testcase.AllTestCase@7a5d012c]" name="post" duration-ms="63" started-at="2019-04-19T17:32:14Z" data-provider="getDatas" finished-at="2019-04-19T17:32:14Z">
+        <test-method status="PASS" signature="post(api.advanced.data_check.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_check.testcase.AllTestCase@22f71333]" name="post" duration-ms="431" started-at="2019-04-22T01:21:50Z" data-provider="getDatas" finished-at="2019-04-22T01:21:50Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[ApiCaseDetail [caseId=7, apiId=2, isExcute=Y, requestData={"mobilephone":"13666666666","pwd":"123456"}, expectedReponseData={"status":1,"code":"10001","data":null,"msg":"登录成功"}, actualResponseData=, apiInfo=ApiInfo [apiId=2, apiName=login, type=get, url=http://120.78.128.25:8080/futureloan/mvc/api/member/login, getRowNo()=3], getRowNo()=8]]]>
+                <![CDATA[ApiCaseDetail [caseId=7, apiId=2, isExcute=Y, requestData={"mobilephone":"13666666666","pwd":"123456"}, expectedReponseData=用户名或密码错误, actualResponseData=, apiInfo=ApiInfo [apiId=2, apiName=login, type=post, url=http://120.78.128.25:8080/futureloan/mvc/api/member/login, getRowNo()=3], beforeSqlList=[SqlChecker [sqlId=5, caseId=7, type=before, sql=select count(*) from member where MobilePhone=13666666666;, expectedResult=[{"count(*)":"1"}], actualResult=, checkResult=, getRowNo()=6]], afterSqlList=null, getRowNo()=8]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- post -->
-        <test-method status="PASS" signature="post(api.advanced.data_re_write_update.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_re_write_update.testcase.AllTestCase@7a5d012c]" name="post" duration-ms="61" started-at="2019-04-19T17:32:14Z" data-provider="getDatas" finished-at="2019-04-19T17:32:14Z">
+        <test-method status="PASS" signature="post(api.advanced.data_check.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_check.testcase.AllTestCase@22f71333]" name="post" duration-ms="89" started-at="2019-04-22T01:21:50Z" data-provider="getDatas" finished-at="2019-04-22T01:21:50Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[ApiCaseDetail [caseId=8, apiId=2, isExcute=Y, requestData={"mobilephone":"13666666666","pwd":""}, expectedReponseData={"status":0,"code":"20103","data":null,"msg":"密码不能为空"}, actualResponseData=, apiInfo=ApiInfo [apiId=2, apiName=login, type=get, url=http://120.78.128.25:8080/futureloan/mvc/api/member/login, getRowNo()=3], getRowNo()=9]]]>
+                <![CDATA[ApiCaseDetail [caseId=8, apiId=2, isExcute=Y, requestData={"mobilephone":"13666666666","pwd":""}, expectedReponseData=密码不能为空, actualResponseData=, apiInfo=ApiInfo [apiId=2, apiName=login, type=post, url=http://120.78.128.25:8080/futureloan/mvc/api/member/login, getRowNo()=3], beforeSqlList=null, afterSqlList=null, getRowNo()=9]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- post -->
-        <test-method status="PASS" signature="post(api.advanced.data_re_write_update.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_re_write_update.testcase.AllTestCase@7a5d012c]" name="post" duration-ms="59" started-at="2019-04-19T17:32:14Z" data-provider="getDatas" finished-at="2019-04-19T17:32:14Z">
+        <test-method status="PASS" signature="post(api.advanced.data_check.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_check.testcase.AllTestCase@22f71333]" name="post" duration-ms="87" started-at="2019-04-22T01:21:50Z" data-provider="getDatas" finished-at="2019-04-22T01:21:50Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[ApiCaseDetail [caseId=9, apiId=2, isExcute=Y, requestData={"mobilephone":"","pwd":"123456"}, expectedReponseData={"status":0,"code":"20103","data":null,"msg":"手机号不能为空"}, actualResponseData=, apiInfo=ApiInfo [apiId=2, apiName=login, type=get, url=http://120.78.128.25:8080/futureloan/mvc/api/member/login, getRowNo()=3], getRowNo()=10]]]>
+                <![CDATA[ApiCaseDetail [caseId=9, apiId=2, isExcute=Y, requestData={"mobilephone":"","pwd":"123456"}, expectedReponseData=手机号不能为空, actualResponseData=, apiInfo=ApiInfo [apiId=2, apiName=login, type=post, url=http://120.78.128.25:8080/futureloan/mvc/api/member/login, getRowNo()=3], beforeSqlList=null, afterSqlList=null, getRowNo()=10]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- post -->
-        <test-method status="PASS" signature="post(api.advanced.data_re_write_update.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_re_write_update.testcase.AllTestCase@7a5d012c]" name="post" duration-ms="62" started-at="2019-04-19T17:32:14Z" data-provider="getDatas" finished-at="2019-04-19T17:32:14Z">
+        <test-method status="PASS" signature="post(api.advanced.data_check.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_check.testcase.AllTestCase@22f71333]" name="post" duration-ms="95" started-at="2019-04-22T01:21:50Z" data-provider="getDatas" finished-at="2019-04-22T01:21:50Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[ApiCaseDetail [caseId=10, apiId=2, isExcute=Y, requestData={"mobilephone":"13666666665","pwd":"123456"}, expectedReponseData={"status":0,"code":"20111","data":null,"msg":"用户名或密码错误"}, actualResponseData=, apiInfo=ApiInfo [apiId=2, apiName=login, type=get, url=http://120.78.128.25:8080/futureloan/mvc/api/member/login, getRowNo()=3], getRowNo()=11]]]>
+                <![CDATA[ApiCaseDetail [caseId=10, apiId=2, isExcute=Y, requestData={"mobilephone":"13666666665","pwd":"123456"}, expectedReponseData=用户名或密码错误, actualResponseData=, apiInfo=ApiInfo [apiId=2, apiName=login, type=post, url=http://120.78.128.25:8080/futureloan/mvc/api/member/login, getRowNo()=3], beforeSqlList=null, afterSqlList=null, getRowNo()=11]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- post -->
-        <test-method status="PASS" signature="post(api.advanced.data_re_write_update.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_re_write_update.testcase.AllTestCase@7a5d012c]" name="post" duration-ms="59" started-at="2019-04-19T17:32:14Z" data-provider="getDatas" finished-at="2019-04-19T17:32:14Z">
+        <test-method status="PASS" signature="post(api.advanced.data_check.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_check.testcase.AllTestCase@22f71333]" name="post" duration-ms="96" started-at="2019-04-22T01:21:50Z" data-provider="getDatas" finished-at="2019-04-22T01:21:50Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[ApiCaseDetail [caseId=11, apiId=2, isExcute=Y, requestData={"mobilephone":"13666666666","pwd":"1234567"}, expectedReponseData={"status":0,"code":"20111","data":null,"msg":"用户名或密码错误"}, actualResponseData=, apiInfo=ApiInfo [apiId=2, apiName=login, type=get, url=http://120.78.128.25:8080/futureloan/mvc/api/member/login, getRowNo()=3], getRowNo()=12]]]>
+                <![CDATA[ApiCaseDetail [caseId=11, apiId=2, isExcute=Y, requestData={"mobilephone":"13666666666","pwd":"1234567"}, expectedReponseData=用户名或密码错误, actualResponseData=, apiInfo=ApiInfo [apiId=2, apiName=login, type=post, url=http://120.78.128.25:8080/futureloan/mvc/api/member/login, getRowNo()=3], beforeSqlList=null, afterSqlList=null, getRowNo()=12]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- post -->
-        <test-method status="PASS" signature="afterSuite()[pri:0, instance:api.advanced.data_re_write_update.testcase.AllTestCase@7a5d012c]" name="afterSuite" is-config="true" duration-ms="148" started-at="2019-04-19T17:32:14Z" finished-at="2019-04-19T17:32:14Z">
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:api.advanced.data_check.testcase.AllTestCase@22f71333]" name="afterSuite" is-config="true" duration-ms="129" started-at="2019-04-22T01:21:50Z" finished-at="2019-04-22T01:21:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
-      </class> <!-- api.advanced.data_re_write_update.testcase.AllTestCase -->
+      </class> <!-- api.advanced.data_check.testcase.AllTestCase -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

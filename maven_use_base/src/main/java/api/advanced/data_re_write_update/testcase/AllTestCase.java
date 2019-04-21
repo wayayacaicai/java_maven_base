@@ -66,7 +66,7 @@ public class AllTestCase {
 	
 	@Test(dataProvider = "getDatas")
 	public static void post(ApiCaseDetail apiCaseDetail) {
-		String responseData = ApiUtils.request(apiCaseDetail);
+		String responseData = HttpUtils.request(apiCaseDetail);
 		//收集数据
 		CellData cellData = new CellData(apiCaseDetail.getRowNo(), 6, responseData);
 		ApiUtils.addData(cellData);

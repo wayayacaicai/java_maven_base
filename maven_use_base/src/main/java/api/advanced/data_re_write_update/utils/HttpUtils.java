@@ -115,4 +115,24 @@ public class HttpUtils {
 		Map<String, String> paramsMap = (Map<String, String>) JSONObject.parse(apiCaseDetail.getRequestData());
 		return post(baseUrl, paramsMap);
 	}
+	
+	/**
+	 * @Desc 请求方法(判定get or post)
+	 * @param apiCaseDetail
+	 * @return
+	 */
+	public static String request(ApiCaseDetail apiCaseDetail){
+		//得到api类型（get or post）
+		String type = apiCaseDetail.getApiInfo().getType(); 
+		//返回响应值
+		String responseData = "";
+		if("get".equalsIgnoreCase(type)){
+			logger.info("发起get请求" + apiCaseDetail.getApiId());
+			responseData = get(apiCaseDetail);
+		}else if("post".equalsIgnoreCase(type)){
+			logger.info("发起post请求" + apiCaseDetail.getApiId());
+			responseData = post(apiCaseDetail);
+		}
+		return responseData;
+	}
 }
