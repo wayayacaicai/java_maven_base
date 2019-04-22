@@ -80,22 +80,4 @@ public class ApiUtils {
 		}
 		return objects;
 	}
-	
-	/**
-	 * @Desc 请求方法(判定get or post)
-	 * @param apiCaseDetail
-	 * @return
-	 */
-	public static String request(ApiCaseDetail apiCaseDetail){
-		//得到api类型（get or post）
-		String type = apiCaseDetail.getApiInfo().getType(); 
-		//返回响应值
-		String responseData = null;
-		if("get".equalsIgnoreCase(type)){
-			responseData = HttpUtils.get(apiCaseDetail);
-		}else{
-			responseData = HttpUtils.post(apiCaseDetail);
-		}
-		return responseData;
-	}
 }

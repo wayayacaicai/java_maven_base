@@ -1,1 +1,36 @@
-2019-04-19 10:04:19 method: api.advanced.data_re_write_update.utils.ExcelUtils.writeExcel(ExcelUtils.java:128) - [ ERROR ]----数据回写出现异常:null
+2019-04-22 00:13:01 method: api.advanced.data_check.utils.ExcelUtils.readExcel(ExcelUtils.java:92) - [ ERROR ]----操作excel反射返回List出现异常：null
+2019-04-22 00:13:01 method: api.advanced.data_check.utils.ExcelUtils.readExcel(ExcelUtils.java:92) - [ ERROR ]----操作excel反射返回List出现异常：null
+2019-04-22 00:13:01 method: api.advanced.data_check.utils.ExcelUtils.readExcel(ExcelUtils.java:92) - [ ERROR ]----操作excel反射返回List出现异常：null
+2019-04-22 00:13:01 method: api.advanced.data_check.utils.ExcelUtils.writeExcel(ExcelUtils.java:129) - [ ERROR ]----数据回写出现异常:src\main\resources\data_re_write_base1.xlsx (系统找不到指定的文件。)
+2019-04-22 00:13:01 method: api.advanced.data_check.utils.ExcelUtils.writeExcel(ExcelUtils.java:129) - [ ERROR ]----数据回写出现异常:src\main\resources\data_re_write_base1.xlsx (系统找不到指定的文件。)
+2019-04-22 00:14:35 method: api.advanced.data_check.utils.ExcelUtils.readExcel(ExcelUtils.java:92) - [ ERROR ]----操作excel反射返回List出现异常：null
+2019-04-22 00:14:35 method: api.advanced.data_check.utils.ExcelUtils.readExcel(ExcelUtils.java:92) - [ ERROR ]----操作excel反射返回List出现异常：null
+2019-04-22 00:14:35 method: api.advanced.data_check.utils.ExcelUtils.readExcel(ExcelUtils.java:92) - [ ERROR ]----操作excel反射返回List出现异常：null
+2019-04-22 00:14:35 method: api.advanced.data_check.utils.ExcelUtils.writeExcel(ExcelUtils.java:129) - [ ERROR ]----数据回写出现异常:src\main\resources\data_re_write_base1.xlsx (系统找不到指定的文件。)
+2019-04-22 00:14:35 method: api.advanced.data_check.utils.ExcelUtils.writeExcel(ExcelUtils.java:129) - [ ERROR ]----数据回写出现异常:src\main\resources\data_re_write_base1.xlsx (系统找不到指定的文件。)
+2019-04-22 00:17:03 method: api.advanced.data_check.utils.ExcelUtils.writeExcel(ExcelUtils.java:129) - [ ERROR ]----数据回写出现异常:src\main\resources\data_re_write_base1.xlsx (系统找不到指定的文件。)
+2019-04-22 00:17:03 method: api.advanced.data_check.utils.ExcelUtils.writeExcel(ExcelUtils.java:129) - [ ERROR ]----数据回写出现异常:src\main\resources\data_re_write_base1.xlsx (系统找不到指定的文件。)
+2019-04-22 00:17:17 method: api.advanced.data_check.utils.ExcelUtils.readExcel(ExcelUtils.java:92) - [ ERROR ]----操作excel反射返回List出现异常：null
+2019-04-22 00:17:17 method: api.advanced.data_check.utils.ExcelUtils.readExcel(ExcelUtils.java:92) - [ ERROR ]----操作excel反射返回List出现异常：null
+2019-04-22 00:17:17 method: api.advanced.data_check.utils.ExcelUtils.readExcel(ExcelUtils.java:92) - [ ERROR ]----操作excel反射返回List出现异常：null
+2019-04-22 00:17:17 method: api.advanced.data_check.utils.ExcelUtils.writeExcel(ExcelUtils.java:129) - [ ERROR ]----数据回写出现异常:src\main\resources\data_re_write_base1.xlsx (系统找不到指定的文件。)
+2019-04-22 00:17:17 method: api.advanced.data_check.utils.ExcelUtils.writeExcel(ExcelUtils.java:129) - [ ERROR ]----数据回写出现异常:src\main\resources\data_re_write_base1.xlsx (系统找不到指定的文件。)
+2019-04-22 00:18:31 method: api.advanced.data_check.utils.ExcelUtils.readExcel(ExcelUtils.java:92) - [ ERROR ]----操作excel反射返回List出现异常：null
+2019-04-22 00:18:31 method: api.advanced.data_check.utils.ExcelUtils.readExcel(ExcelUtils.java:92) - [ ERROR ]----操作excel反射返回List出现异常：null
+2019-04-22 00:18:31 method: api.advanced.data_check.utils.ExcelUtils.readExcel(ExcelUtils.java:92) - [ ERROR ]----操作excel反射返回List出现异常：null
+2019-04-22 00:18:31 method: api.advanced.data_check.utils.ExcelUtils.writeExcel(ExcelUtils.java:129) - [ ERROR ]----数据回写出现异常:src\main\resources\data_re_write_base1.xlsx (系统找不到指定的文件。)
+2019-04-22 00:18:31 method: api.advanced.data_check.utils.ExcelUtils.writeExcel(ExcelUtils.java:129) - [ ERROR ]----数据回写出现异常:src\main\resources\data_re_write_base1.xlsx (系统找不到指定的文件。)
+2019-04-22 00:24:41 method: api.advanced.data_check.utils.ExcelUtils.readExcel(ExcelUtils.java:92) - [ ERROR ]----操作excel反射返回List出现异常：api.advanced.data_check.pojo.SqlChecker.setSqlId(java.lang.String)
+2019-04-22 00:27:01 method: api.advanced.data_check.utils.ExcelUtils.writeExcel(ExcelUtils.java:129) - [ ERROR ]----数据回写出现异常:null
+2019-04-22 00:29:58 method: api.advanced.data_check.utils.ExcelUtils.writeExcel(ExcelUtils.java:129) - [ ERROR ]----数据回写出现异常:null
+2019-04-22 00:32:34 method: api.advanced.data_check.utils.ExcelUtils.writeExcel(ExcelUtils.java:129) - [ ERROR ]----数据回写出现异常:null
+2019-04-22 00:34:44 method: api.advanced.data_check.utils.ExcelUtils.writeExcel(ExcelUtils.java:129) - [ ERROR ]----数据回写出现异常:null
+2019-04-22 00:37:27 method: api.advanced.data_check.utils.ExcelUtils.writeExcel(ExcelUtils.java:129) - [ ERROR ]----数据回写出现异常:null
+2019-04-22 00:39:21 method: api.advanced.data_check.utils.ExcelUtils.writeExcel(ExcelUtils.java:129) - [ ERROR ]----数据回写出现异常:null
+2019-04-22 00:40:59 method: api.advanced.data_check.utils.ExcelUtils.writeExcel(ExcelUtils.java:129) - [ ERROR ]----数据回写出现异常:null
+2019-04-22 00:42:00 method: api.advanced.data_check.utils.ExcelUtils.writeExcel(ExcelUtils.java:129) - [ ERROR ]----数据回写出现异常:null
+2019-04-22 00:45:09 method: api.advanced.data_check.utils.ExcelUtils.writeExcel(ExcelUtils.java:129) - [ ERROR ]----数据回写出现异常:null
+2019-04-22 00:55:19 method: api.advanced.data_check.utils.ExcelUtils.writeExcel(ExcelUtils.java:129) - [ ERROR ]----数据回写出现异常:null
+2019-04-22 01:02:44 method: api.advanced.data_check.utils.ExcelUtils.writeExcel(ExcelUtils.java:129) - [ ERROR ]----数据回写出现异常:null
+2019-04-22 01:03:05 method: api.advanced.data_check.utils.ExcelUtils.writeExcel(ExcelUtils.java:129) - [ ERROR ]----数据回写出现异常:null
+2019-04-22 01:14:09 method: api.advanced.data_check.utils.ExcelUtils.writeExcel(ExcelUtils.java:129) - [ ERROR ]----数据回写出现异常:null
