@@ -1,6 +1,3 @@
-/**
- * 
- */
 package api.advanced.data_check.pojo;
 
 import java.util.List;
@@ -25,64 +22,83 @@ public class ApiCaseDetail extends ExcelSheetObject {
 	private String actualResponseData;
 	// 接口基本信息对象
 	private ApiInfo apiInfo;
-	//前置验证的sql信息列表
+	// 前置验证的sql信息列表
 	private List<SqlChecker> beforeSqlList;
-	//后置验证的sql信息列表
+	// 后置验证的sql信息列表
 	private List<SqlChecker> afterSqlList;
+
 	public String getCaseId() {
 		return caseId;
 	}
+
 	public void setCaseId(String caseId) {
 		this.caseId = caseId;
 	}
+
 	public String getApiId() {
 		return apiId;
 	}
+
 	public void setApiId(String apiId) {
 		this.apiId = apiId;
 	}
+
 	public String getIsExcute() {
 		return isExcute;
 	}
+
 	public void setIsExcute(String isExcute) {
 		this.isExcute = isExcute;
 	}
+
 	public String getRequestData() {
 		return requestData;
 	}
+
 	public void setRequestData(String requestData) {
 		this.requestData = requestData;
 	}
+
 	public String getExpectedReponseData() {
 		return expectedReponseData;
 	}
+
 	public void setExpectedReponseData(String expectedReponseData) {
 		this.expectedReponseData = expectedReponseData;
 	}
+
 	public String getActualResponseData() {
 		return actualResponseData;
 	}
+
 	public void setActualResponseData(String actualResponseData) {
 		this.actualResponseData = actualResponseData;
 	}
+
 	public ApiInfo getApiInfo() {
 		return apiInfo;
 	}
+
 	public void setApiInfo(ApiInfo apiInfo) {
 		this.apiInfo = apiInfo;
 	}
+
 	public List<SqlChecker> getBeforeSqlList() {
 		return beforeSqlList;
 	}
+
 	public void setBeforeSqlList(List<SqlChecker> beforeSqlList) {
 		this.beforeSqlList = beforeSqlList;
 	}
+
 	public List<SqlChecker> getAfterSqlList() {
 		return afterSqlList;
 	}
+
 	public void setAfterSqlList(List<SqlChecker> afterSqlList) {
 		this.afterSqlList = afterSqlList;
 	}
+
 	@Override
 	public String toString() {
 		return "ApiCaseDetail [caseId=" + caseId + ", apiId=" + apiId + ", isExcute=" + isExcute + ", requestData="

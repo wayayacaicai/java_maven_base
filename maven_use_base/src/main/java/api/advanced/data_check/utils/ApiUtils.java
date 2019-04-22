@@ -1,6 +1,3 @@
-/**
- * 
- */
 package api.advanced.data_check.utils;
 
 import java.io.File;
@@ -33,7 +30,8 @@ public class ApiUtils {
 	private static String streamSourceExcelPath;
 	private static int sheetIndex0;
 	private static int sheetIndex1;
-	private static Logger logger = Logger.getLogger(AllTestCase.class);
+	private static int sheetIndex2;
+	private static Logger logger = Logger.getLogger(ApiUtils.class);
 
 	public static List<CellData> getcellDataList() {
 		return cellDataList;
@@ -60,7 +58,7 @@ public class ApiUtils {
 			streamSourceExcelPath = properties.getProperty("streamSourceExcelPath");
 			sheetIndex0 = Integer.parseInt(properties.getProperty("sheetIndex0"));
 			sheetIndex1 = Integer.parseInt(properties.getProperty("sheetIndex1"));
-			System.out.println(streamSourceExcelPath);
+			sheetIndex2 = Integer.parseInt(properties.getProperty("sheetIndex2"));
 		} catch (Exception e) {
 			logger.error("配置文件读取出现异常" + e.getMessage());
 		}
@@ -74,7 +72,7 @@ public class ApiUtils {
 		List<ApiCaseDetail> datasDetailList = (List<ApiCaseDetail>) ExcelUtils.readExcel(streamSourceExcelPath,
 				sheetIndex1, ApiCaseDetail.class);
 		// 数据验证信息
-		List<SqlChecker> sqlCheckerList = (List<SqlChecker>) ExcelUtils.readExcel(streamSourceExcelPath, 2,
+		List<SqlChecker> sqlCheckerList = (List<SqlChecker>) ExcelUtils.readExcel(streamSourceExcelPath, sheetIndex2,
 				SqlChecker.class);
 		
 		//整理数据验证的信息，不同的case的前置，后置sql放不同的列表去
@@ -90,9 +88,7 @@ public class ApiUtils {
 			subSqlCheckerList.add(sqlChecker);
 			//把列表添加到hashmap去
 			sqlCheckerMap.put(key, subSqlCheckerList);
-			
 		}
-		
 		
 		// ApiId的容器转换
 		Map<String, ApiInfo> apiInfoMap = new HashMap<String, ApiInfo>();

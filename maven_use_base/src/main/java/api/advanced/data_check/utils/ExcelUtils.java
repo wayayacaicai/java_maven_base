@@ -15,7 +15,6 @@ import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Row.MissingCellPolicy;
-
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
@@ -56,7 +55,7 @@ public class ExcelUtils {
 			int colNum = firstRow.getLastCellNum(); // 得到第一行的列数
 			String[] fieldArray = new String[colNum]; // 列名的数组
 			for (int m = 0; m < colNum; m++) {
-				Cell firstRowCell = firstRow.getCell(m); // 得到列
+				Cell firstRowCell = firstRow.getCell(m, MissingCellPolicy.CREATE_NULL_AS_BLANK); // 得到列
 				firstRowCell.setCellType(CellType.STRING); // 设置cell为String类型
 				String firstRowCellValue = firstRowCell.getStringCellValue(); // 得到列值
 				// 拿到真正的列名
@@ -96,21 +95,21 @@ public class ExcelUtils {
 		return excelSheetObjectsList;
 	}
 
-
 	/**
-	 * @Desc  写回excel的进阶版
+	 * @Desc 写回excel的进阶版
 	 * @param sourceExcelPath
 	 * @param targetExcelPath
 	 * @param sheetIndex
 	 * @param allDatas
 	 */
-	public static void writeExcel(String sourceExcelPath, String targetExcelPath, int sheetIndex,List<CellData> allDatas) {
+	public static void writeExcel(String sourceExcelPath, String targetExcelPath, int sheetIndex,
+			List<CellData> allDatas) {
 		InputStream is = null;
 		Workbook workbook = null;
 		OutputStream os = null;
 		try {
-//			is = ExcelUtils.class.getResourceAsStream(sourceExcelPath);
-			is = new FileInputStream(new File(sourceExcelPath));
+			is = ExcelUtils.class.getResourceAsStream(sourceExcelPath);
+			// is = new FileInputStream(new File(sourceExcelPath));
 			workbook = WorkbookFactory.create(is);
 			Sheet sheet = workbook.getSheetAt(sheetIndex);
 
@@ -118,8 +117,8 @@ public class ExcelUtils {
 				int rowNo = cellData.getRowNo();
 				int colNo = cellData.getColNo();
 				String cellValue = cellData.getCellValue();
-				Row row = sheet.getRow(rowNo-1);
-				Cell cell = row.getCell(colNo-1, MissingCellPolicy.CREATE_NULL_AS_BLANK);
+				Row row = sheet.getRow(rowNo - 1);
+				Cell cell = row.getCell(colNo - 1, MissingCellPolicy.CREATE_NULL_AS_BLANK);
 				cell.setCellType(CellType.STRING);
 				cell.setCellValue(cellValue);
 			}
@@ -132,34 +131,42 @@ public class ExcelUtils {
 			close(is, workbook, os);
 		}
 	}
-	
-	public static void writeAllExcel(String sourceExcelPath, String targetExcelPath,List<CellData> cellDatas,List<CellData> sqlDatas) {
+
+	/**
+	 * @Desc 一次性把多个sheet的数据都进行写回
+	 * @param sourceExcelPath
+	 * @param targetExcelPath
+	 * @param cellDatas
+	 * @param sqlDatas
+	 */
+	public static void writeAllExcel(String sourceExcelPath, String targetExcelPath, List<CellData> cellDatas,
+			List<CellData> sqlDatas) {
 		InputStream is = null;
 		Workbook workbook = null;
 		OutputStream os = null;
 		try {
-//			is = ExcelUtils.class.getResourceAsStream(sourceExcelPath);
-			is = new FileInputStream(new File(sourceExcelPath));
+			is = ExcelUtils.class.getResourceAsStream(sourceExcelPath);
+			// is = new FileInputStream(new File(sourceExcelPath));
 			workbook = WorkbookFactory.create(is);
-			
+
 			Sheet sheet1 = workbook.getSheetAt(1);
 			for (CellData cellData : cellDatas) {
 				int rowNo = cellData.getRowNo();
 				int colNo = cellData.getColNo();
 				String cellValue = cellData.getCellValue();
-				Row row = sheet1.getRow(rowNo-1);
-				Cell cell = row.getCell(colNo-1, MissingCellPolicy.CREATE_NULL_AS_BLANK);
+				Row row = sheet1.getRow(rowNo - 1);
+				Cell cell = row.getCell(colNo - 1, MissingCellPolicy.CREATE_NULL_AS_BLANK);
 				cell.setCellType(CellType.STRING);
 				cell.setCellValue(cellValue);
 			}
-			
+
 			Sheet sheet2 = workbook.getSheetAt(2);
 			for (CellData cellData : sqlDatas) {
 				int rowNo = cellData.getRowNo();
 				int colNo = cellData.getColNo();
 				String cellValue = cellData.getCellValue();
-				Row row = sheet2.getRow(rowNo-1);
-				Cell cell = row.getCell(colNo-1, MissingCellPolicy.CREATE_NULL_AS_BLANK);
+				Row row = sheet2.getRow(rowNo - 1);
+				Cell cell = row.getCell(colNo - 1, MissingCellPolicy.CREATE_NULL_AS_BLANK);
 				cell.setCellType(CellType.STRING);
 				cell.setCellValue(cellValue);
 			}
@@ -172,7 +179,7 @@ public class ExcelUtils {
 			close(is, workbook, os);
 		}
 	}
-	
+
 	/**
 	 * @Desc 注意回写的时候增加了一列，所以要注意在对应对象增加相关的属性
 	 * @param sourceExcelPath
@@ -181,8 +188,9 @@ public class ExcelUtils {
 	 * @param caseId
 	 * @param cellNo
 	 * @param actualInfo
-	 * 缺陷 1.假如1000条数据每次都io读写，性能问题--读一次，写一次，收集所有响应结果
-	 * 2.如果caseId对应的一行比较靠后，出现没有必要的遍历匹配--效率低 -给一个apiCaseDetail对象，就知道哪一行
+	 *            缺陷 1.假如1000条数据每次都io读写，性能问题--读一次，写一次，收集所有响应结果
+	 *            2.如果caseId对应的一行比较靠后，出现没有必要的遍历匹配--效率低
+	 *            -给一个apiCaseDetail对象，就知道哪一行
 	 */
 	@Deprecated
 	public static void writeExcel(String sourceExcelPath, String targetExcelPath, int sheetIndex, String caseId,
@@ -242,7 +250,7 @@ public class ExcelUtils {
 			}
 		}
 	}
-	
+
 	/**
 	 * @Desc 数据回写关闭流对象
 	 * @param is

@@ -1,6 +1,3 @@
-/**
- * 
- */
 package api.advanced.data_check.utils;
 
 import java.util.HashMap;
