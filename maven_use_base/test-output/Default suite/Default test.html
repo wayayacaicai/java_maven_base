@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>11/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>28/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Apr 22 01:21:46 CST 2019</td>
+<td>Started on:</td><td>Mon Apr 22 23:08:18 CST 2019</td>
 </tr>
-<tr><td>Total time:</td><td>4 seconds (4161 ms)</td>
+<tr><td>Total time:</td><td>11 seconds (11832 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,60 +75,145 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='api.advanced.data_check.testcase.AllTestCase.post()'><b>post</b><br>Test class: api.advanced.data_check.testcase.AllTestCase<br>Parameters: ApiCaseDetail [caseId=1, apiId=1, isExcute=Y, requestData={"mobilephone":"13666666666","pwd":"123456","regname":"柠檬班"}, expectedReponseData=手机号码已被注册, actualResponseData=, apiInfo=ApiInfo [apiId=1, apiName=register, type=post, url=http://120.78.128.25:8080/futureloan/mvc/api/member/register, getRowNo()=2], beforeSqlList=[SqlChecker [sqlId=1, caseId=1, type=before, sql=select count(*) from member where MobilePhone=13666666666;, expectedResult=[{"count(*)":"0"}], actualResult=, checkResult=, getRowNo()=2]], afterSqlList=[SqlChecker [sqlId=2, caseId=1, type=after, sql=select count(*) from member where MobilePhone=13666666666;, expectedResult=[{"count(*)":"1"}], actualResult=, checkResult=, getRowNo()=3], SqlChecker [sqlId=3, caseId=1, type=after, sql=select leaveamount,Type from member where MobilePhone=13666666666;, expectedResult=[{"leaveamount":"0.00","Type":"1"}], actualResult=, checkResult=, getRowNo()=4]], getRowNo()=2]</td>
+<td title='api.advanced.data_check.testcase.AllTestCase.request()'><b>request</b><br>Test class: api.advanced.data_check.testcase.AllTestCase<br>Parameters: ApiCaseDetail [caseId=1, apiId=1, isExcute=Y, requestData={"mobilephone":"13666666666","pwd":"123456","regname":"caicai"}, expectedReponseData={"status":1,"code":"20110","data":null,"msg":"注册成功"}, actualResponseData=, sqlCheckResult=, apiInfo=ApiInfo [apiId=1, apiName=register, type=gEt, url=http://120.78.128.25:8080/futureloan/mvc/api/member/register, getRowNo()=2], beforeSqlList=[SqlChecker [sqlId=1, caseId=1, type=before, sql=select count(*) from member where MobilePhone='13666666666';, expectedResult=[{"count(*)":"0"}], actualResult=, checkResult=, getRowNo()=2]], afterSqlList=[SqlChecker [sqlId=2, caseId=1, type=after, sql=select count(*) from member where MobilePhone='13666666666';, expectedResult=[{"count(*)":"1"}], actualResult=, checkResult=, getRowNo()=3], SqlChecker [sqlId=3, caseId=1, type=after, sql=select leaveamount,Type from member where MobilePhone='13666666666';, expectedResult=[{"leaveamount":"0.00","Type":"1"}], actualResult=, checkResult=, getRowNo()=4]], getRowNo()=2]</td>
+<td></td>
+<td>1</td>
+<td>api.advanced.data_check.testcase.AllTestCase@5ebec15</td></tr>
+<tr>
+<td title='api.advanced.data_check.testcase.AllTestCase.request()'><b>request</b><br>Test class: api.advanced.data_check.testcase.AllTestCase<br>Parameters: ApiCaseDetail [caseId=2, apiId=1, isExcute=Y, requestData={"mobilephone":"13666666666","pwd":"123456","regname":"caicai"}, expectedReponseData={"status":0,"code":"20110","data":null,"msg":"手机号码已被注册"}, actualResponseData=, sqlCheckResult=, apiInfo=ApiInfo [apiId=1, apiName=register, type=gEt, url=http://120.78.128.25:8080/futureloan/mvc/api/member/register, getRowNo()=2], beforeSqlList=[SqlChecker [sqlId=4, caseId=2, type=before, sql=select count(*) from member where MobilePhone='13666666666';, expectedResult=[{"count(*)":"1"}], actualResult=, checkResult=, getRowNo()=5]], afterSqlList=null, getRowNo()=3]</td>
+<td></td>
+<td>0</td>
+<td>api.advanced.data_check.testcase.AllTestCase@5ebec15</td></tr>
+<tr>
+<td title='api.advanced.data_check.testcase.AllTestCase.request()'><b>request</b><br>Test class: api.advanced.data_check.testcase.AllTestCase<br>Parameters: ApiCaseDetail [caseId=3, apiId=1, isExcute=Y, requestData={"mobilephone":"13666666666","pwd":"","regname":"caicai"}, expectedReponseData={"status":0,"code":"20103","data":null,"msg":"密码不能为空"}, actualResponseData=, sqlCheckResult=, apiInfo=ApiInfo [apiId=1, apiName=register, type=gEt, url=http://120.78.128.25:8080/futureloan/mvc/api/member/register, getRowNo()=2], beforeSqlList=null, afterSqlList=null, getRowNo()=4]</td>
+<td></td>
+<td>0</td>
+<td>api.advanced.data_check.testcase.AllTestCase@5ebec15</td></tr>
+<tr>
+<td title='api.advanced.data_check.testcase.AllTestCase.request()'><b>request</b><br>Test class: api.advanced.data_check.testcase.AllTestCase<br>Parameters: ApiCaseDetail [caseId=4, apiId=1, isExcute=Y, requestData={"mobilephone":"","pwd":"","regname":"caicai"}, expectedReponseData={"status":0,"code":"20103","data":null,"msg":"手机号不能为空"}, actualResponseData=, sqlCheckResult=, apiInfo=ApiInfo [apiId=1, apiName=register, type=gEt, url=http://120.78.128.25:8080/futureloan/mvc/api/member/register, getRowNo()=2], beforeSqlList=null, afterSqlList=null, getRowNo()=5]</td>
+<td></td>
+<td>0</td>
+<td>api.advanced.data_check.testcase.AllTestCase@5ebec15</td></tr>
+<tr>
+<td title='api.advanced.data_check.testcase.AllTestCase.request()'><b>request</b><br>Test class: api.advanced.data_check.testcase.AllTestCase<br>Parameters: ApiCaseDetail [caseId=5, apiId=1, isExcute=N, requestData={"mobilephone":"135","pwd":"123456","regname":"caicai"}, expectedReponseData={"status":0,"code":"20109","data":null,"msg":"手机号码格式不正确"}, actualResponseData=, sqlCheckResult=, apiInfo=ApiInfo [apiId=1, apiName=register, type=gEt, url=http://120.78.128.25:8080/futureloan/mvc/api/member/register, getRowNo()=2], beforeSqlList=null, afterSqlList=null, getRowNo()=6]</td>
+<td></td>
+<td>0</td>
+<td>api.advanced.data_check.testcase.AllTestCase@5ebec15</td></tr>
+<tr>
+<td title='api.advanced.data_check.testcase.AllTestCase.request()'><b>request</b><br>Test class: api.advanced.data_check.testcase.AllTestCase<br>Parameters: ApiCaseDetail [caseId=6, apiId=1, isExcute=Y, requestData={"mobilephone":"13666666666","pwd":"123","regname":"caicai"}, expectedReponseData={"status":0,"code":"20108","data":null,"msg":"密码长度必须为6~18"}, actualResponseData=, sqlCheckResult=, apiInfo=ApiInfo [apiId=1, apiName=register, type=gEt, url=http://120.78.128.25:8080/futureloan/mvc/api/member/register, getRowNo()=2], beforeSqlList=null, afterSqlList=null, getRowNo()=7]</td>
+<td></td>
+<td>0</td>
+<td>api.advanced.data_check.testcase.AllTestCase@5ebec15</td></tr>
+<tr>
+<td title='api.advanced.data_check.testcase.AllTestCase.request()'><b>request</b><br>Test class: api.advanced.data_check.testcase.AllTestCase<br>Parameters: ApiCaseDetail [caseId=7, apiId=2, isExcute=Y, requestData={"mobilephone":"13666666666","pwd":"123456"}, expectedReponseData={"status":"1","code":"10001","data":null,"msg":"登录成功"}, actualResponseData=, sqlCheckResult=, apiInfo=ApiInfo [apiId=2, apiName=login, type=Post, url=http://120.78.128.25:8080/futureloan/mvc/api/member/login, getRowNo()=3], beforeSqlList=[SqlChecker [sqlId=5, caseId=7, type=before, sql=select count(*) from member where MobilePhone='13666666666';, expectedResult=[{"count(*)":"1"}], actualResult=, checkResult=, getRowNo()=6]], afterSqlList=null, getRowNo()=8]</td>
+<td></td>
+<td>0</td>
+<td>api.advanced.data_check.testcase.AllTestCase@5ebec15</td></tr>
+<tr>
+<td title='api.advanced.data_check.testcase.AllTestCase.request()'><b>request</b><br>Test class: api.advanced.data_check.testcase.AllTestCase<br>Parameters: ApiCaseDetail [caseId=8, apiId=2, isExcute=Y, requestData={"mobilephone":"13666666666","pwd":""}, expectedReponseData={"status":0,"code":"20103","data":null,"msg":"密码不能为空"}, actualResponseData=, sqlCheckResult=, apiInfo=ApiInfo [apiId=2, apiName=login, type=Post, url=http://120.78.128.25:8080/futureloan/mvc/api/member/login, getRowNo()=3], beforeSqlList=null, afterSqlList=null, getRowNo()=9]</td>
+<td></td>
+<td>0</td>
+<td>api.advanced.data_check.testcase.AllTestCase@5ebec15</td></tr>
+<tr>
+<td title='api.advanced.data_check.testcase.AllTestCase.request()'><b>request</b><br>Test class: api.advanced.data_check.testcase.AllTestCase<br>Parameters: ApiCaseDetail [caseId=9, apiId=2, isExcute=Y, requestData={"mobilephone":"","pwd":"123456"}, expectedReponseData={"status":"0","code":"20103",data:null,"msg":"手机号不能为空"}, actualResponseData=, sqlCheckResult=, apiInfo=ApiInfo [apiId=2, apiName=login, type=Post, url=http://120.78.128.25:8080/futureloan/mvc/api/member/login, getRowNo()=3], beforeSqlList=null, afterSqlList=null, getRowNo()=10]</td>
+<td></td>
+<td>0</td>
+<td>api.advanced.data_check.testcase.AllTestCase@5ebec15</td></tr>
+<tr>
+<td title='api.advanced.data_check.testcase.AllTestCase.request()'><b>request</b><br>Test class: api.advanced.data_check.testcase.AllTestCase<br>Parameters: ApiCaseDetail [caseId=10, apiId=2, isExcute=Y, requestData={"mobilephone":"13666666665","pwd":"123456"}, expectedReponseData={"status":"0","code":"20111",data:null,"msg":"用户名或者密码错误"}, actualResponseData=, sqlCheckResult=, apiInfo=ApiInfo [apiId=2, apiName=login, type=Post, url=http://120.78.128.25:8080/futureloan/mvc/api/member/login, getRowNo()=3], beforeSqlList=null, afterSqlList=null, getRowNo()=11]</td>
+<td></td>
+<td>0</td>
+<td>api.advanced.data_check.testcase.AllTestCase@5ebec15</td></tr>
+<tr>
+<td title='api.advanced.data_check.testcase.AllTestCase.request()'><b>request</b><br>Test class: api.advanced.data_check.testcase.AllTestCase<br>Parameters: ApiCaseDetail [caseId=11, apiId=2, isExcute=Y, requestData={"mobilephone":"13666666666","pwd":"1234567"}, expectedReponseData={"status":"0","code":"20111",data:null,"msg":"用户名或者密码错误"}, actualResponseData=, sqlCheckResult=, apiInfo=ApiInfo [apiId=2, apiName=login, type=Post, url=http://120.78.128.25:8080/futureloan/mvc/api/member/login, getRowNo()=3], beforeSqlList=null, afterSqlList=null, getRowNo()=12]</td>
+<td></td>
+<td>0</td>
+<td>api.advanced.data_check.testcase.AllTestCase@5ebec15</td></tr>
+<tr>
+<td title='api.advanced.data_check.testcase.AllTestCase.request()'><b>request</b><br>Test class: api.advanced.data_check.testcase.AllTestCase<br>Parameters: ApiCaseDetail [caseId=12, apiId=3, isExcute=Y, requestData={"mobilephone":"13666666665","amount":"100"}, expectedReponseData={"status":0,"code":"20104","data":null,"msg":"此手机号对应的会员不存在"}, actualResponseData=, sqlCheckResult=, apiInfo=ApiInfo [apiId=3, apiName=recharge, type=post, url=http://120.78.128.25:8080/futureloan/mvc/api/member/recharge, getRowNo()=4], beforeSqlList=null, afterSqlList=null, getRowNo()=13]</td>
+<td></td>
+<td>0</td>
+<td>api.advanced.data_check.testcase.AllTestCase@5ebec15</td></tr>
+<tr>
+<td title='api.advanced.data_check.testcase.AllTestCase.request()'><b>request</b><br>Test class: api.advanced.data_check.testcase.AllTestCase<br>Parameters: ApiCaseDetail [caseId=13, apiId=3, isExcute=Y, requestData={"mobilephone":"13666666666","amount":"-100"}, expectedReponseData={"status":0,"code":"20117","data":null,"msg":"请输入范围在0到50万之间的正数金额"}, actualResponseData=, sqlCheckResult=, apiInfo=ApiInfo [apiId=3, apiName=recharge, type=post, url=http://120.78.128.25:8080/futureloan/mvc/api/member/recharge, getRowNo()=4], beforeSqlList=null, afterSqlList=null, getRowNo()=14]</td>
+<td></td>
+<td>0</td>
+<td>api.advanced.data_check.testcase.AllTestCase@5ebec15</td></tr>
+<tr>
+<td title='api.advanced.data_check.testcase.AllTestCase.request()'><b>request</b><br>Test class: api.advanced.data_check.testcase.AllTestCase<br>Parameters: ApiCaseDetail [caseId=14, apiId=3, isExcute=Y, requestData={"mobilephone":"13666666666","amount":"10000"}, expectedReponseData={"status":1,"code":"10001","data":{"id":1,"regname":"caicai","pwd":"E10ADC3949BA59ABBE56E057F20F883E","mobilephone":"13666666666","leaveamount":"10000.00","type":"1","regtime":"2018-04-26 14:42:36.0"},"msg":"充值成功"}, actualResponseData=, sqlCheckResult=, apiInfo=ApiInfo [apiId=3, apiName=recharge, type=post, url=http://120.78.128.25:8080/futureloan/mvc/api/member/recharge, getRowNo()=4], beforeSqlList=[SqlChecker [sqlId=6, caseId=14, type=before, sql=select LeaveAmount from member where MobilePhone='13666666666', expectedResult=[{"LeaveAmount":"0.00"}], actualResult=, checkResult=, getRowNo()=7]], afterSqlList=[SqlChecker [sqlId=7, caseId=14, type=after, sql=select LeaveAmount from member where MobilePhone='13666666666', expectedResult=[{"LeaveAmount":"10000.00"}], actualResult=, checkResult=, getRowNo()=8]], getRowNo()=15]</td>
+<td></td>
+<td>0</td>
+<td>api.advanced.data_check.testcase.AllTestCase@5ebec15</td></tr>
+<tr>
+<td title='api.advanced.data_check.testcase.AllTestCase.request()'><b>request</b><br>Test class: api.advanced.data_check.testcase.AllTestCase<br>Parameters: ApiCaseDetail [caseId=15, apiId=3, isExcute=Y, requestData={"mobilephone":"138888","amount":"100"}, expectedReponseData={"status":0,"code":"20109","data":null,"msg":"手机号码格式不正确"}, actualResponseData=, sqlCheckResult=, apiInfo=ApiInfo [apiId=3, apiName=recharge, type=post, url=http://120.78.128.25:8080/futureloan/mvc/api/member/recharge, getRowNo()=4], beforeSqlList=null, afterSqlList=null, getRowNo()=16]</td>
+<td></td>
+<td>0</td>
+<td>api.advanced.data_check.testcase.AllTestCase@5ebec15</td></tr>
+<tr>
+<td title='api.advanced.data_check.testcase.AllTestCase.request()'><b>request</b><br>Test class: api.advanced.data_check.testcase.AllTestCase<br>Parameters: ApiCaseDetail [caseId=16, apiId=3, isExcute=Y, requestData={"mobilephone":"13666666666","amount":"abc"}, expectedReponseData={"status":0,"code":"20118","data":null,"msg":"请输入数字"}, actualResponseData=, sqlCheckResult=, apiInfo=ApiInfo [apiId=3, apiName=recharge, type=post, url=http://120.78.128.25:8080/futureloan/mvc/api/member/recharge, getRowNo()=4], beforeSqlList=null, afterSqlList=null, getRowNo()=17]</td>
+<td></td>
+<td>0</td>
+<td>api.advanced.data_check.testcase.AllTestCase@5ebec15</td></tr>
+<tr>
+<td title='api.advanced.data_check.testcase.AllTestCase.request()'><b>request</b><br>Test class: api.advanced.data_check.testcase.AllTestCase<br>Parameters: ApiCaseDetail [caseId=17, apiId=4, isExcute=Y, requestData={"mobilephone":"13666666666","amount":"-100"}, expectedReponseData={"status":0,"code":"20117","data":null,"msg":"请输入范围在0到50万之间的正数金额"}, actualResponseData=, sqlCheckResult=, apiInfo=ApiInfo [apiId=4, apiName=withdraw, type=post, url=http://120.78.128.25:8080/futureloan/mvc/api/member/withdraw, getRowNo()=5], beforeSqlList=null, afterSqlList=null, getRowNo()=18]</td>
+<td></td>
+<td>0</td>
+<td>api.advanced.data_check.testcase.AllTestCase@5ebec15</td></tr>
+<tr>
+<td title='api.advanced.data_check.testcase.AllTestCase.request()'><b>request</b><br>Test class: api.advanced.data_check.testcase.AllTestCase<br>Parameters: ApiCaseDetail [caseId=18, apiId=4, isExcute=Y, requestData={"mobilephone":"1388888000","amount":"100"}, expectedReponseData={"status":0,"code":"20109","data":null,"msg":"手机号码格式不正确"}, actualResponseData=, sqlCheckResult=, apiInfo=ApiInfo [apiId=4, apiName=withdraw, type=post, url=http://120.78.128.25:8080/futureloan/mvc/api/member/withdraw, getRowNo()=5], beforeSqlList=null, afterSqlList=null, getRowNo()=19]</td>
+<td></td>
+<td>0</td>
+<td>api.advanced.data_check.testcase.AllTestCase@5ebec15</td></tr>
+<tr>
+<td title='api.advanced.data_check.testcase.AllTestCase.request()'><b>request</b><br>Test class: api.advanced.data_check.testcase.AllTestCase<br>Parameters: ApiCaseDetail [caseId=19, apiId=4, isExcute=Y, requestData={"mobilephone":"13666666666","amount":"10000"}, expectedReponseData={"status":0,"code":"20119","data":null,"msg":"余额不足，请修改提现额度"}, actualResponseData=, sqlCheckResult=, apiInfo=ApiInfo [apiId=4, apiName=withdraw, type=post, url=http://120.78.128.25:8080/futureloan/mvc/api/member/withdraw, getRowNo()=5], beforeSqlList=null, afterSqlList=null, getRowNo()=20]</td>
 <td></td>
 <td>2</td>
-<td>api.advanced.data_check.testcase.AllTestCase@22f71333</td></tr>
+<td>api.advanced.data_check.testcase.AllTestCase@5ebec15</td></tr>
 <tr>
-<td title='api.advanced.data_check.testcase.AllTestCase.post()'><b>post</b><br>Test class: api.advanced.data_check.testcase.AllTestCase<br>Parameters: ApiCaseDetail [caseId=2, apiId=1, isExcute=Y, requestData={"mobilephone":"13666666666","pwd":"123456","regname":"柠檬班"}, expectedReponseData=手机号码已被注册, actualResponseData=, apiInfo=ApiInfo [apiId=1, apiName=register, type=post, url=http://120.78.128.25:8080/futureloan/mvc/api/member/register, getRowNo()=2], beforeSqlList=[SqlChecker [sqlId=4, caseId=2, type=before, sql=select count(*) from member where MobilePhone=13666666666;, expectedResult=[{"count(*)":"1"}], actualResult=, checkResult=, getRowNo()=5]], afterSqlList=null, getRowNo()=3]</td>
+<td title='api.advanced.data_check.testcase.AllTestCase.request()'><b>request</b><br>Test class: api.advanced.data_check.testcase.AllTestCase<br>Parameters: ApiCaseDetail [caseId=20, apiId=4, isExcute=Y, requestData={"mobilephone":"13666666666","amount":"0"}, expectedReponseData={"status":0,"code":"20117","data":null,"msg":"请输入范围在0到50万之间的正数金额"}, actualResponseData=, sqlCheckResult=, apiInfo=ApiInfo [apiId=4, apiName=withdraw, type=post, url=http://120.78.128.25:8080/futureloan/mvc/api/member/withdraw, getRowNo()=5], beforeSqlList=null, afterSqlList=null, getRowNo()=21]</td>
 <td></td>
 <td>0</td>
-<td>api.advanced.data_check.testcase.AllTestCase@22f71333</td></tr>
+<td>api.advanced.data_check.testcase.AllTestCase@5ebec15</td></tr>
 <tr>
-<td title='api.advanced.data_check.testcase.AllTestCase.post()'><b>post</b><br>Test class: api.advanced.data_check.testcase.AllTestCase<br>Parameters: ApiCaseDetail [caseId=3, apiId=1, isExcute=Y, requestData={"mobilephone":"13666666666","pwd":"","regname":"柠檬班"}, expectedReponseData=密码不能为空, actualResponseData=, apiInfo=ApiInfo [apiId=1, apiName=register, type=post, url=http://120.78.128.25:8080/futureloan/mvc/api/member/register, getRowNo()=2], beforeSqlList=null, afterSqlList=null, getRowNo()=4]</td>
+<td title='api.advanced.data_check.testcase.AllTestCase.request()'><b>request</b><br>Test class: api.advanced.data_check.testcase.AllTestCase<br>Parameters: ApiCaseDetail [caseId=21, apiId=4, isExcute=Y, requestData={"mobilephone":"13666666666","amount":"100"}, expectedReponseData={"status":1,"code":"10001","data":null,"msg":"提现成功"}, actualResponseData=, sqlCheckResult=, apiInfo=ApiInfo [apiId=4, apiName=withdraw, type=post, url=http://120.78.128.25:8080/futureloan/mvc/api/member/withdraw, getRowNo()=5], beforeSqlList=null, afterSqlList=null, getRowNo()=22]</td>
 <td></td>
 <td>0</td>
-<td>api.advanced.data_check.testcase.AllTestCase@22f71333</td></tr>
+<td>api.advanced.data_check.testcase.AllTestCase@5ebec15</td></tr>
 <tr>
-<td title='api.advanced.data_check.testcase.AllTestCase.post()'><b>post</b><br>Test class: api.advanced.data_check.testcase.AllTestCase<br>Parameters: ApiCaseDetail [caseId=4, apiId=1, isExcute=Y, requestData={"mobilephone":"","pwd":"","regname":"柠檬班"}, expectedReponseData=手机号不能为空, actualResponseData=, apiInfo=ApiInfo [apiId=1, apiName=register, type=post, url=http://120.78.128.25:8080/futureloan/mvc/api/member/register, getRowNo()=2], beforeSqlList=null, afterSqlList=null, getRowNo()=5]</td>
+<td title='api.advanced.data_check.testcase.AllTestCase.request()'><b>request</b><br>Test class: api.advanced.data_check.testcase.AllTestCase<br>Parameters: ApiCaseDetail [caseId=22, apiId=7, isExcute=Y, requestData={"memberId":"1","title":"测试新增项目","loanRate":"12","loanTerm":"3","loanDateType":"2","repaymemtWay":"11","biddingDays":"5","amount":"100000"}, expectedReponseData={"status":1,"code":"10001","data":null,"msg":"加标成功"}, actualResponseData=, sqlCheckResult=, apiInfo=ApiInfo [apiId=7, apiName=add , type=post, url=http://120.78.128.25:8080/futureloan/mvc/api/loan/add, getRowNo()=8], beforeSqlList=null, afterSqlList=null, getRowNo()=23]</td>
 <td></td>
 <td>0</td>
-<td>api.advanced.data_check.testcase.AllTestCase@22f71333</td></tr>
+<td>api.advanced.data_check.testcase.AllTestCase@5ebec15</td></tr>
 <tr>
-<td title='api.advanced.data_check.testcase.AllTestCase.post()'><b>post</b><br>Test class: api.advanced.data_check.testcase.AllTestCase<br>Parameters: ApiCaseDetail [caseId=5, apiId=1, isExcute=N, requestData={"mobilephone":"135","pwd":"123456","regname":"柠檬班"}, expectedReponseData=手机号码格式不正确, actualResponseData=, apiInfo=ApiInfo [apiId=1, apiName=register, type=post, url=http://120.78.128.25:8080/futureloan/mvc/api/member/register, getRowNo()=2], beforeSqlList=null, afterSqlList=null, getRowNo()=6]</td>
+<td title='api.advanced.data_check.testcase.AllTestCase.request()'><b>request</b><br>Test class: api.advanced.data_check.testcase.AllTestCase<br>Parameters: ApiCaseDetail [caseId=23, apiId=8, isExcute=Y, requestData={"id":"1","status":"4"}, expectedReponseData={"status":1,"code":"10001","data":null,"msg":"更新状态成功：竞标开始，当前标为竞标中状态"}, actualResponseData=, sqlCheckResult=, apiInfo=ApiInfo [apiId=8, apiName=audit, type=post, url=http://120.78.128.25:8080/futureloan/mvc/api/loan/audit, getRowNo()=9], beforeSqlList=[SqlChecker [sqlId=8, caseId=23, type=before, sql=select `Status` from loan where Id=1, expectedResult=[{"Status":"1"}], actualResult=, checkResult=, getRowNo()=9]], afterSqlList=[SqlChecker [sqlId=9, caseId=23, type=after, sql=select `Status` from loan where Id=1, expectedResult=[{"Status":"4"}], actualResult=, checkResult=, getRowNo()=10]], getRowNo()=24]</td>
 <td></td>
 <td>0</td>
-<td>api.advanced.data_check.testcase.AllTestCase@22f71333</td></tr>
+<td>api.advanced.data_check.testcase.AllTestCase@5ebec15</td></tr>
 <tr>
-<td title='api.advanced.data_check.testcase.AllTestCase.post()'><b>post</b><br>Test class: api.advanced.data_check.testcase.AllTestCase<br>Parameters: ApiCaseDetail [caseId=6, apiId=1, isExcute=Y, requestData={"mobilephone":"13666666666","pwd":"123","regname":"柠檬班"}, expectedReponseData=密码长度必须为6~18, actualResponseData=, apiInfo=ApiInfo [apiId=1, apiName=register, type=post, url=http://120.78.128.25:8080/futureloan/mvc/api/member/register, getRowNo()=2], beforeSqlList=null, afterSqlList=null, getRowNo()=7]</td>
+<td title='api.advanced.data_check.testcase.AllTestCase.request()'><b>request</b><br>Test class: api.advanced.data_check.testcase.AllTestCase<br>Parameters: ApiCaseDetail [caseId=24, apiId=6, isExcute=Y, requestData={"memberId":"1","password":"123456","loanId":"1","amount":"100"}, expectedReponseData={"status":1,"code":"10001","data":null,"msg":"竞标成功"}, actualResponseData=, sqlCheckResult=, apiInfo=ApiInfo [apiId=6, apiName=bidLoan, type=post, url=http://120.78.128.25:8080/futureloan/mvc/api/member/bidLoan, getRowNo()=7], beforeSqlList=[SqlChecker [sqlId=10, caseId=24, type=before, sql=select count(1) as loanNum from loan where id=1, expectedResult=[{"loanNum":"1"}], actualResult=, checkResult=, getRowNo()=11], SqlChecker [sqlId=11, caseId=24, type=before, sql=select LeaveAmount from member where MobilePhone='13666666666', expectedResult=[{"LeaveAmount":"10000.00"}], actualResult=, checkResult=, getRowNo()=12]], afterSqlList=[SqlChecker [sqlId=12, caseId=24, type=after, sql=select MemberID,LoanId,Amount,IsValid from invest order by id desc limit 1, expectedResult=[{"MemberID":"1","LoanId":"1","Amount":"100.00","IsValid":"1"}], actualResult=, checkResult=, getRowNo()=13], SqlChecker [sqlId=13, caseId=24, type=after, sql=select LeaveAmount from member where MobilePhone='13666666666', expectedResult=[{"LeaveAmount":"9900.00"}], actualResult=, checkResult=, getRowNo()=14]], getRowNo()=25]</td>
+<td></td>
+<td>1</td>
+<td>api.advanced.data_check.testcase.AllTestCase@5ebec15</td></tr>
+<tr>
+<td title='api.advanced.data_check.testcase.AllTestCase.request()'><b>request</b><br>Test class: api.advanced.data_check.testcase.AllTestCase<br>Parameters: ApiCaseDetail [caseId=25, apiId=6, isExcute=Y, requestData={"memberId":"1","password":"123456","loanId":"10000","amount":"100000"}, expectedReponseData={"status":0,"code":"11009","data":null,"msg":"不存在该标的"}, actualResponseData=, sqlCheckResult=, apiInfo=ApiInfo [apiId=6, apiName=bidLoan, type=post, url=http://120.78.128.25:8080/futureloan/mvc/api/member/bidLoan, getRowNo()=7], beforeSqlList=null, afterSqlList=[SqlChecker [sqlId=14, caseId=25, type=after, sql=select count(1) as loanNum from loan where id=10000, expectedResult=[{"loanNum":"0"}], actualResult=, checkResult=, getRowNo()=15]], getRowNo()=26]</td>
 <td></td>
 <td>0</td>
-<td>api.advanced.data_check.testcase.AllTestCase@22f71333</td></tr>
+<td>api.advanced.data_check.testcase.AllTestCase@5ebec15</td></tr>
 <tr>
-<td title='api.advanced.data_check.testcase.AllTestCase.post()'><b>post</b><br>Test class: api.advanced.data_check.testcase.AllTestCase<br>Parameters: ApiCaseDetail [caseId=7, apiId=2, isExcute=Y, requestData={"mobilephone":"13666666666","pwd":"123456"}, expectedReponseData=用户名或密码错误, actualResponseData=, apiInfo=ApiInfo [apiId=2, apiName=login, type=post, url=http://120.78.128.25:8080/futureloan/mvc/api/member/login, getRowNo()=3], beforeSqlList=[SqlChecker [sqlId=5, caseId=7, type=before, sql=select count(*) from member where MobilePhone=13666666666;, expectedResult=[{"count(*)":"1"}], actualResult=, checkResult=, getRowNo()=6]], afterSqlList=null, getRowNo()=8]</td>
+<td title='api.advanced.data_check.testcase.AllTestCase.request()'><b>request</b><br>Test class: api.advanced.data_check.testcase.AllTestCase<br>Parameters: ApiCaseDetail [caseId=26, apiId=10, isExcute=Y, requestData={"id":"1"}, expectedReponseData={"status":1,"code":"20405","data":null,"msg":"该项目不在核保审批或终审状态，无法生成回款计划！"}, actualResponseData=, sqlCheckResult=, apiInfo=ApiInfo [apiId=10, apiName=generateRepayments, type=post, url=http://120.78.128.25:8080/futureloan/mvc/api/loan/generateRepayments, getRowNo()=11], beforeSqlList=null, afterSqlList=[SqlChecker [sqlId=15, caseId=26, type=after, sql=select count(1) as loanNum from loan where id=1 and `Status`=5, expectedResult=[{"loanNum":"0"}], actualResult=, checkResult=, getRowNo()=16]], getRowNo()=27]</td>
 <td></td>
 <td>0</td>
-<td>api.advanced.data_check.testcase.AllTestCase@22f71333</td></tr>
+<td>api.advanced.data_check.testcase.AllTestCase@5ebec15</td></tr>
 <tr>
-<td title='api.advanced.data_check.testcase.AllTestCase.post()'><b>post</b><br>Test class: api.advanced.data_check.testcase.AllTestCase<br>Parameters: ApiCaseDetail [caseId=8, apiId=2, isExcute=Y, requestData={"mobilephone":"13666666666","pwd":""}, expectedReponseData=密码不能为空, actualResponseData=, apiInfo=ApiInfo [apiId=2, apiName=login, type=post, url=http://120.78.128.25:8080/futureloan/mvc/api/member/login, getRowNo()=3], beforeSqlList=null, afterSqlList=null, getRowNo()=9]</td>
+<td title='api.advanced.data_check.testcase.AllTestCase.request()'><b>request</b><br>Test class: api.advanced.data_check.testcase.AllTestCase<br>Parameters: ApiCaseDetail [caseId=27, apiId=8, isExcute=Y, requestData={"id":"1","status":"5"}, expectedReponseData={"status":1,"code":"10001","data":null,"msg":"更新状态成功：当前标为核保审批状态"}, actualResponseData=, sqlCheckResult=, apiInfo=ApiInfo [apiId=8, apiName=audit, type=post, url=http://120.78.128.25:8080/futureloan/mvc/api/loan/audit, getRowNo()=9], beforeSqlList=null, afterSqlList=[SqlChecker [sqlId=16, caseId=27, type=after, sql=select `Status` from loan where Id=1, expectedResult=[{"Status":"5"}], actualResult=, checkResult=, getRowNo()=17]], getRowNo()=28]</td>
 <td></td>
 <td>0</td>
-<td>api.advanced.data_check.testcase.AllTestCase@22f71333</td></tr>
+<td>api.advanced.data_check.testcase.AllTestCase@5ebec15</td></tr>
 <tr>
-<td title='api.advanced.data_check.testcase.AllTestCase.post()'><b>post</b><br>Test class: api.advanced.data_check.testcase.AllTestCase<br>Parameters: ApiCaseDetail [caseId=9, apiId=2, isExcute=Y, requestData={"mobilephone":"","pwd":"123456"}, expectedReponseData=手机号不能为空, actualResponseData=, apiInfo=ApiInfo [apiId=2, apiName=login, type=post, url=http://120.78.128.25:8080/futureloan/mvc/api/member/login, getRowNo()=3], beforeSqlList=null, afterSqlList=null, getRowNo()=10]</td>
+<td title='api.advanced.data_check.testcase.AllTestCase.request()'><b>request</b><br>Test class: api.advanced.data_check.testcase.AllTestCase<br>Parameters: ApiCaseDetail [caseId=28, apiId=10, isExcute=Y, requestData={"id":"1"}, expectedReponseData={"status":1,"code":"10001","data":[{"id":null,"investId":"1","createTime":"2018-04-27 12:24:01","terms":"1","unfinishedInterest":"1.0","unfinishedPrincipal":"0","repaymentDate":"2018-05-27 12:24:01","actualRepaymentDate":null,"status":"0"},{"id":null,"investId":"1","createTime":"2018-04-27 12:24:01","terms":"2","unfinishedInterest":"1.0","unfinishedPrincipal":"0","repaymentDate":"2018-06-27 12:24:01","actualRepaymentDate":null,"status":"0"},{"id":null,"investId":"1","createTime":"2018-04-27 12:24:01","terms":"3","unfinishedInterest":"1.0","unfinishedPrincipal":"100.00","repaymentDate":"2018-07-27 12:24:01","actualRepaymentDate":null,"status":"0"}],"msg":"生成回款计划成功"}, actualResponseData=, sqlCheckResult=, apiInfo=ApiInfo [apiId=10, apiName=generateRepayments, type=post, url=http://120.78.128.25:8080/futureloan/mvc/api/loan/generateRepayments, getRowNo()=11], beforeSqlList=[SqlChecker [sqlId=17, caseId=28, type=before, sql=select count(1) as totalNum from repayment where InvestId=1, expectedResult=[{"totalNum":"0"}], actualResult=, checkResult=, getRowNo()=18]], afterSqlList=[SqlChecker [sqlId=18, caseId=28, type=after, sql=select count(1) as totalNum from repayment where InvestId=1, expectedResult=[{"totalNum":"3"}], actualResult=, checkResult=, getRowNo()=19], SqlChecker [sqlId=19, caseId=28, type=after, sql=select Terms,UnfinishedInterest,UnfinishedPrincipal,`Status` from repayment where InvestId=1, expectedResult=[{"Terms":"1","UnfinishedInterest":"1.00","UnfinishedPrincipal":"0.00","Status":"0"},{"Terms":"2","UnfinishedInterest":"1.00","UnfinishedPrincipal":"0.00","Status":"0"},{"Terms":"3","UnfinishedInterest":"1.00","UnfinishedPrincipal":"100.00","Status":"0"}], actualResult=, checkResult=, getRowNo()=20]], getRowNo()=29]</td>
 <td></td>
 <td>0</td>
-<td>api.advanced.data_check.testcase.AllTestCase@22f71333</td></tr>
-<tr>
-<td title='api.advanced.data_check.testcase.AllTestCase.post()'><b>post</b><br>Test class: api.advanced.data_check.testcase.AllTestCase<br>Parameters: ApiCaseDetail [caseId=10, apiId=2, isExcute=Y, requestData={"mobilephone":"13666666665","pwd":"123456"}, expectedReponseData=用户名或密码错误, actualResponseData=, apiInfo=ApiInfo [apiId=2, apiName=login, type=post, url=http://120.78.128.25:8080/futureloan/mvc/api/member/login, getRowNo()=3], beforeSqlList=null, afterSqlList=null, getRowNo()=11]</td>
-<td></td>
-<td>0</td>
-<td>api.advanced.data_check.testcase.AllTestCase@22f71333</td></tr>
-<tr>
-<td title='api.advanced.data_check.testcase.AllTestCase.post()'><b>post</b><br>Test class: api.advanced.data_check.testcase.AllTestCase<br>Parameters: ApiCaseDetail [caseId=11, apiId=2, isExcute=Y, requestData={"mobilephone":"13666666666","pwd":"1234567"}, expectedReponseData=用户名或密码错误, actualResponseData=, apiInfo=ApiInfo [apiId=2, apiName=login, type=post, url=http://120.78.128.25:8080/futureloan/mvc/api/member/login, getRowNo()=3], beforeSqlList=null, afterSqlList=null, getRowNo()=12]</td>
-<td></td>
-<td>0</td>
-<td>api.advanced.data_check.testcase.AllTestCase@22f71333</td></tr>
+<td>api.advanced.data_check.testcase.AllTestCase@5ebec15</td></tr>
 </table><p>
 </body>
 </html>

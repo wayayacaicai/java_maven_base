@@ -17,9 +17,11 @@ public class ApiCaseDetail extends ExcelSheetObject {
 	// RequestData(接口请求参数)
 	private String requestData;
 	// ExpectedReponseData(期望响应数据)
-	private String expectedReponseData;
+	private String expectedResponseData;
 	// ActualReponseData(期望响应数据)
 	private String actualResponseData;
+	//SqlCheckResult(数据验证结果)
+	private String sqlCheckResult;
 	// 接口基本信息对象
 	private ApiInfo apiInfo;
 	// 前置验证的sql信息列表
@@ -59,12 +61,12 @@ public class ApiCaseDetail extends ExcelSheetObject {
 		this.requestData = requestData;
 	}
 
-	public String getExpectedReponseData() {
-		return expectedReponseData;
+	public String getExpectedResponseData() {
+		return expectedResponseData;
 	}
 
-	public void setExpectedReponseData(String expectedReponseData) {
-		this.expectedReponseData = expectedReponseData;
+	public void setExpectedResponseData(String expectedReponseData) {
+		this.expectedResponseData = expectedReponseData;
 	}
 
 	public String getActualResponseData() {
@@ -99,11 +101,20 @@ public class ApiCaseDetail extends ExcelSheetObject {
 		this.afterSqlList = afterSqlList;
 	}
 
+	public String getSqlCheckResult() {
+		return sqlCheckResult;
+	}
+
+	public void setSqlCheckResult(String sqlCheckResult) {
+		this.sqlCheckResult = sqlCheckResult;
+	}
+
 	@Override
 	public String toString() {
 		return "ApiCaseDetail [caseId=" + caseId + ", apiId=" + apiId + ", isExcute=" + isExcute + ", requestData="
-				+ requestData + ", expectedReponseData=" + expectedReponseData + ", actualResponseData="
-				+ actualResponseData + ", apiInfo=" + apiInfo + ", beforeSqlList=" + beforeSqlList + ", afterSqlList="
-				+ afterSqlList + ", getRowNo()=" + getRowNo() + "]";
+				+ requestData + ", expectedReponseData=" + expectedResponseData + ", actualResponseData="
+				+ actualResponseData + ", sqlCheckResult=" + sqlCheckResult + ", apiInfo=" + apiInfo
+				+ ", beforeSqlList=" + beforeSqlList + ", afterSqlList=" + afterSqlList + ", getRowNo()=" + getRowNo()
+				+ "]";
 	}
 }

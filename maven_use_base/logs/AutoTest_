@@ -34,3 +34,19 @@
 2019-04-22 01:02:44 method: api.advanced.data_check.utils.ExcelUtils.writeExcel(ExcelUtils.java:129) - [ ERROR ]----数据回写出现异常:null
 2019-04-22 01:03:05 method: api.advanced.data_check.utils.ExcelUtils.writeExcel(ExcelUtils.java:129) - [ ERROR ]----数据回写出现异常:null
 2019-04-22 01:14:09 method: api.advanced.data_check.utils.ExcelUtils.writeExcel(ExcelUtils.java:129) - [ ERROR ]----数据回写出现异常:null
+2019-04-22 21:03:13 method: api.advanced.data_check.testcase.AllTestCase.<clinit>(AllTestCase.java:50) - [ ERROR ]----配置文件读取出现异常null
+2019-04-22 21:03:17 method: api.advanced.data_check.utils.ExcelUtils.writeAllExcel(ExcelUtils.java:176) - [ ERROR ]----数据回写出现异常:null
+2019-04-22 21:04:31 method: api.advanced.data_check.testcase.AllTestCase.<clinit>(AllTestCase.java:50) - [ ERROR ]----配置文件读取出现异常null
+2019-04-22 21:09:05 method: api.advanced.data_check.testcase.AllTestCase.<clinit>(AllTestCase.java:50) - [ ERROR ]----配置文件读取出现异常null
+2019-04-22 21:28:03 method: api.advanced.data_check.testcase.AllTestCase.<clinit>(AllTestCase.java:50) - [ ERROR ]----配置文件读取出现异常null
+2019-04-22 21:29:38 method: api.advanced.data_check.testcase.AllTestCase.<clinit>(AllTestCase.java:50) - [ ERROR ]----配置文件读取出现异常null
+2019-04-22 21:29:38 method: api.advanced.data_check.utils.ExcelUtils.readExcel(ExcelUtils.java:91) - [ ERROR ]----操作excel反射返回List出现异常：api.advanced.data_check.pojo.ApiCaseDetail.setActualReponseData(java.lang.String)
+2019-04-22 21:33:13 method: api.advanced.data_check.testcase.AllTestCase.<clinit>(AllTestCase.java:50) - [ ERROR ]----配置文件读取出现异常null
+2019-04-22 21:33:14 method: api.advanced.data_check.utils.ExcelUtils.readExcel(ExcelUtils.java:91) - [ ERROR ]----操作excel反射返回List出现异常：api.advanced.data_check.pojo.ApiCaseDetail.setActualReponseData(java.lang.String)
+2019-04-22 21:35:45 method: api.advanced.data_check.testcase.AllTestCase.<clinit>(AllTestCase.java:50) - [ ERROR ]----配置文件读取出现异常null
+2019-04-22 21:41:05 method: api.advanced.data_check.testcase.AllTestCase.<clinit>(AllTestCase.java:51) - [ ERROR ]----配置文件读取出现异常null
+2019-04-22 22:46:11 method: api.advanced.data_check.testcase.AllTestCase.<clinit>(AllTestCase.java:52) - [ ERROR ]----配置文件读取出现异常null
+2019-04-22 23:06:10 method: api.advanced.data_check.testcase.AllTestCase.<clinit>(AllTestCase.java:52) - [ ERROR ]----配置文件读取出现异常null
+2019-04-22 23:07:55 method: api.advanced.data_check.testcase.AllTestCase.<clinit>(AllTestCase.java:52) - [ ERROR ]----配置文件读取出现异常null
+2019-04-22 23:08:06 method: api.advanced.data_check.utils.ExcelUtils.writeAllExcel(ExcelUtils.java:178) - [ ERROR ]----数据回写出现异常:target\data_check.xlsx (另一个程序正在使用此文件，进程无法访问。)
+2019-04-22 23:08:18 method: api.advanced.data_check.testcase.AllTestCase.<clinit>(AllTestCase.java:52) - [ ERROR ]----配置文件读取出现异常null

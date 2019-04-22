@@ -1,6 +1,7 @@
 package api.advanced.data_check.utils;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 
 import com.alibaba.fastjson.JSONObject;
@@ -21,6 +22,8 @@ public class DataCheckUtils {
 		if (beforeSqlList == null) {
 			return;
 		}
+		//来一个标记
+		boolean checkFlag = true;
 		// 数据验证
 		for (SqlChecker sqlChecker : beforeSqlList) {
 			// 要验证的sql
@@ -28,7 +31,7 @@ public class DataCheckUtils {
 			// 预期结果
 			String expectedResult = sqlChecker.getExpectedResult();
 			// 验证
-			List<HashMap<String, String>> actualResult = DaoUtils.sqlQuery(sql);
+			List<LinkedHashMap<String, String>> actualResult = DaoUtils.sqlQuery(sql);
 			// 把list转为json
 			String actualResultStr = JSONObject.toJSONString(actualResult);
 
@@ -40,9 +43,16 @@ public class DataCheckUtils {
 			} else {
 				// 验证不通过
 				ApiUtils.addSqlData(new CellData(sqlChecker.getRowNo(), 7, "失败"));
+				checkFlag = false;
 			}
 		}
-
+		if(checkFlag){
+			//验证通过
+			ApiUtils.addCellData(new CellData(apiCaseDetail.getRowNo(), 7, "通过"));
+		}else{
+			//验证不通过
+			ApiUtils.addCellData(new CellData(apiCaseDetail.getRowNo(), 7, "不通过"));
+		}
 	}
 
 	/**
@@ -55,6 +65,8 @@ public class DataCheckUtils {
 		if (afterSqlList == null) {
 			return;
 		}
+		//来一个标记
+		boolean checkFlag = true;
 		// 数据验证
 		for (SqlChecker sqlChecker : afterSqlList) {
 			// 要验证的sql
@@ -62,7 +74,7 @@ public class DataCheckUtils {
 			// 预期结果
 			String expectedResult = sqlChecker.getExpectedResult();
 			// 验证
-			List<HashMap<String, String>> actualResult = DaoUtils.sqlQuery(sql);
+			List<LinkedHashMap<String, String>> actualResult = DaoUtils.sqlQuery(sql);
 			// 把list转为json
 			String actualResultStr = JSONObject.toJSONString(actualResult);
 
@@ -74,7 +86,15 @@ public class DataCheckUtils {
 			} else {
 				// 验证不通过
 				ApiUtils.addSqlData(new CellData(sqlChecker.getRowNo(), 7, "失败"));
+				checkFlag = false;
 			}
+		}
+		if(checkFlag){
+			//验证通过
+			ApiUtils.addCellData(new CellData(apiCaseDetail.getRowNo(), 7, "通过"));
+		}else{
+			//验证不通过
+			ApiUtils.addCellData(new CellData(apiCaseDetail.getRowNo(), 7, "不通过"));
 		}
 	}
 }

@@ -8,13 +8,14 @@ import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map.Entry;
 import java.util.Properties;
 import java.util.Set;
 
 /**
- * @Desc:数据库工具类
+ * @Desc:数据库工具类(有序集合、用别名来)
  * @author:ZPP
  * @time:2019年3月22日 下午10:36:30
  */
@@ -126,11 +127,11 @@ public class DaoUtils {
 	 * @param params
 	 * @return
 	 */
-	public static List<HashMap<String, String>> sqlQuery(String sql, String... params) {
+	public static List<LinkedHashMap<String, String>> sqlQuery(String sql, String... params) {
 		Connection conn = null;
 		PreparedStatement pstat = null;
 		ResultSet rs = null;
-		List<HashMap<String, String>> aList = null;
+		List<LinkedHashMap<String, String>> aList = null;
 
 		try {
 			conn = getConn();
@@ -144,11 +145,13 @@ public class DaoUtils {
 
 			aList = new ArrayList<>();
 			while (rs.next()) {
-				// 用一个hashmap接收每列数据
-				HashMap<String, String> hm = new HashMap<>();
+				// 用一个LinkedHashMap接收每列数据
+				LinkedHashMap<String, String> hm = new LinkedHashMap<>();
 				for (int i = 1; i <= count; i++) {
 					// 返回的列名
-					String key = metaData.getColumnName(i);
+//					String key = metaData.getColumnName(i);
+					//得到别名
+					String key = metaData.getColumnLabel(i);
 					String value = rs.getString(i);
 					hm.put(key, value);
 				}

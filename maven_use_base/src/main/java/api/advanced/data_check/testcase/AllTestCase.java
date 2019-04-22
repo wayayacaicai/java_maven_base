@@ -9,6 +9,7 @@ import java.util.Properties;
 import org.apache.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -18,6 +19,7 @@ import api.advanced.data_check.utils.ApiUtils;
 import api.advanced.data_check.utils.DataCheckUtils;
 import api.advanced.data_check.utils.ExcelUtils;
 import api.advanced.data_check.utils.HttpUtils;
+import api.advanced.data_check.utils.ParameterUtils;
 
 
 
@@ -30,7 +32,7 @@ import api.advanced.data_check.utils.HttpUtils;
  * @time:2019年4月1日 下午9:08:57
  */
 public class AllTestCase {
-	private static String sourceExcelPath;
+	private static String streamSourceExcelPath;
 	private static String targetExcelPath;
 	private static int sheetIndex1;
 	private static int cellNo;
@@ -42,7 +44,7 @@ public class AllTestCase {
 			InputStream is = new FileInputStream(
 					new File("src/main/java/api/advanced/data_check/api_info.properties"));
 			properties.load(is);
-			sourceExcelPath = properties.getProperty("sourceExcelPath");
+			streamSourceExcelPath = properties.getProperty("streamSourceExcelPath");
 			targetExcelPath = properties.getProperty("targetExcelPath");
 			sheetIndex1 = Integer.parseInt(properties.getProperty("sheetIndex1"));
 			cellNo = Integer.parseInt(properties.getProperty("cellNo"));
@@ -51,6 +53,17 @@ public class AllTestCase {
 		}
 	}
 
+	@BeforeSuite
+	public void BeforeSuite(){
+		//参数关联明天要去搞定
+		//数据清洗(把数据库数据清除掉)
+		System.out.println("在执行用例之前");
+		ParameterUtils.addGlobalData("mobilephone", "13666666666");
+		ParameterUtils.addGlobalData("pwd", "123456");
+		ParameterUtils.addGlobalData("nickname", "caicai");
+	}
+	
+	
 	@DataProvider
 	public Object[][] getDatas() {
 		return ApiUtils.getDatas();
@@ -61,12 +74,12 @@ public class AllTestCase {
 	// 接口信息是接口测试用例的属性
 	public static void get(ApiCaseDetail apiCaseDetail) {
 		String entityStr = HttpUtils.request(apiCaseDetail);
-		Assert.assertTrue(entityStr.contains(apiCaseDetail.getExpectedReponseData()));
+		Assert.assertTrue(entityStr.contains(apiCaseDetail.getExpectedResponseData()));
 	}
 
 	
 	@Test(dataProvider = "getDatas")
-	public static void post(ApiCaseDetail apiCaseDetail) {
+	public static void request(ApiCaseDetail apiCaseDetail) {
 		//1.前置验证
 		DataCheckUtils.beforeCheck(apiCaseDetail);
 		
@@ -98,6 +111,6 @@ public class AllTestCase {
 		
 		List<CellData> cellDataList = ApiUtils.getcellDataList();
 		List<CellData> sqlCellData = ApiUtils.getSqlCellDataList();
-		ExcelUtils.writeAllExcel(sourceExcelPath,  "d:/data_check_all.xlsx",  cellDataList, sqlCellData);
+		ExcelUtils.writeAllExcel(streamSourceExcelPath, targetExcelPath,  cellDataList, sqlCellData);
 	}
 }
