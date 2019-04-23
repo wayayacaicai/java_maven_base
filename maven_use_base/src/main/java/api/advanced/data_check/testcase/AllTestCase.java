@@ -35,7 +35,6 @@ public class AllTestCase {
 	private static String streamSourceExcelPath;
 	private static String targetExcelPath;
 	private static int sheetIndex1;
-	private static int cellNo;
 	private static Logger logger = Logger.getLogger(AllTestCase.class);
 
 	static {
@@ -47,7 +46,6 @@ public class AllTestCase {
 			streamSourceExcelPath = properties.getProperty("streamSourceExcelPath");
 			targetExcelPath = properties.getProperty("targetExcelPath");
 			sheetIndex1 = Integer.parseInt(properties.getProperty("sheetIndex1"));
-			cellNo = Integer.parseInt(properties.getProperty("cellNo"));
 		} catch (Exception e) {
 			logger.error("配置文件读取出现异常" + e.getMessage());
 		}
@@ -69,15 +67,6 @@ public class AllTestCase {
 		return ApiUtils.getDatas();
 	}
 
-	// @Test(dataProvider = "getDatas")
-	// 每一个apiCaseDetail就是一条测试用例，测试用例有一条对应得接口信息
-	// 接口信息是接口测试用例的属性
-	public static void get(ApiCaseDetail apiCaseDetail) {
-		String entityStr = HttpUtils.request(apiCaseDetail);
-		Assert.assertTrue(entityStr.contains(apiCaseDetail.getExpectedResponseData()));
-	}
-
-	
 	@Test(dataProvider = "getDatas")
 	public static void request(ApiCaseDetail apiCaseDetail) {
 		//1.前置验证
@@ -92,10 +81,6 @@ public class AllTestCase {
 		CellData cellData = new CellData(apiCaseDetail.getRowNo(), 6, responseData);
 		ApiUtils.addCellData(cellData);
 		
-		// 回写数据
-//		ExcelUtils.writeExcel(sourceExcelPath, targetExcelPath, sheetIndex1, apiCaseDetail.getCaseId(), cellNo,
-//				entityStr);
-		// Assert.assertTrue(entityStr.contains(apiCaseDetail.getExpectedReponseData()));
 	}
 
 	@AfterSuite
@@ -109,7 +94,7 @@ public class AllTestCase {
 //		List<CellData> sqlCellData = ApiUtils.getSqlCellDataList();
 //		ExcelUtils.writeExcel(sourceExcelPath, "d:/data_check.xlsx", 2, sqlCellData);
 		
-		List<CellData> cellDataList = ApiUtils.getcellDataList();
+		List<CellData> cellDataList = ApiUtils.getCellDataList();
 		List<CellData> sqlCellData = ApiUtils.getSqlCellDataList();
 		ExcelUtils.writeAllExcel(streamSourceExcelPath, targetExcelPath,  cellDataList, sqlCellData);
 	}

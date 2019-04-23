@@ -172,6 +172,7 @@ public class ExcelUtils {
 				cell.setCellType(CellType.STRING);
 				cell.setCellValue(cellValue);
 			}
+			
 			os = new FileOutputStream(new File(targetExcelPath));
 			workbook.write(os);
 		} catch (Exception e) {

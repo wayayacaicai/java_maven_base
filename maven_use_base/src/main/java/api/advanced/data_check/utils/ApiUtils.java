@@ -33,7 +33,7 @@ public class ApiUtils {
 	private static int sheetIndex2;
 	private static Logger logger = Logger.getLogger(ApiUtils.class);
 
-	public static List<CellData> getcellDataList() {
+	public static List<CellData> getCellDataList() {
 		return cellDataList;
 	}
 

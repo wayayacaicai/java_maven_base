@@ -16,6 +16,10 @@ import api.advanced.data_check.pojo.SqlChecker;
  * @time:2019年4月21日 下午11:30:57
  */
 public class DataCheckUtils {
+	/**
+	 * @Desc 前置验证
+	 * @param apiCaseDetail
+	 */
 	public static void beforeCheck(ApiCaseDetail apiCaseDetail) {
 		// 获得前置验证sql列表
 		List<SqlChecker> beforeSqlList = apiCaseDetail.getBeforeSqlList();
@@ -56,7 +60,7 @@ public class DataCheckUtils {
 	}
 
 	/**
-	 * @Desc
+	 * @Desc 后置验证
 	 * @param apiCaseDetail
 	 */
 	public static void afterCheck(ApiCaseDetail apiCaseDetail) {

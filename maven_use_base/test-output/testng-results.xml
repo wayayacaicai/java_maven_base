@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" total="28" passed="28">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="11832" started-at="2019-04-22T15:08:18Z" finished-at="2019-04-22T15:08:30Z">
+  <suite name="Default suite" duration-ms="5753" started-at="2019-04-23T09:20:37Z" finished-at="2019-04-23T09:20:43Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="11832" started-at="2019-04-22T15:08:18Z" finished-at="2019-04-22T15:08:30Z">
+    <test name="Default test" duration-ms="5753" started-at="2019-04-23T09:20:37Z" finished-at="2019-04-23T09:20:43Z">
       <class name="api.advanced.data_check.testcase.AllTestCase">
-        <test-method status="PASS" signature="BeforeSuite()[pri:0, instance:api.advanced.data_check.testcase.AllTestCase@5ebec15]" name="BeforeSuite" is-config="true" duration-ms="9" started-at="2019-04-22T23:08:18Z" finished-at="2019-04-22T23:08:18Z">
+        <test-method status="PASS" signature="BeforeSuite()[pri:0, instance:api.advanced.data_check.testcase.AllTestCase@3fb6a447]" name="BeforeSuite" is-config="true" duration-ms="13" started-at="2019-04-23T17:20:37Z" finished-at="2019-04-23T17:20:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeSuite -->
-        <test-method status="PASS" signature="request(api.advanced.data_check.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_check.testcase.AllTestCase@5ebec15]" name="request" duration-ms="1837" started-at="2019-04-22T23:08:18Z" data-provider="getDatas" finished-at="2019-04-22T23:08:20Z">
+        <test-method status="PASS" signature="request(api.advanced.data_check.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_check.testcase.AllTestCase@3fb6a447]" name="request" duration-ms="1275" started-at="2019-04-23T17:20:38Z" data-provider="getDatas" finished-at="2019-04-23T17:20:39Z">
           <params>
             <param index="0">
               <value>
@@ -22,7 +22,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- request -->
-        <test-method status="PASS" signature="request(api.advanced.data_check.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_check.testcase.AllTestCase@5ebec15]" name="request" duration-ms="377" started-at="2019-04-22T23:08:20Z" data-provider="getDatas" finished-at="2019-04-22T23:08:21Z">
+        <test-method status="PASS" signature="request(api.advanced.data_check.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_check.testcase.AllTestCase@3fb6a447]" name="request" duration-ms="289" started-at="2019-04-23T17:20:39Z" data-provider="getDatas" finished-at="2019-04-23T17:20:40Z">
           <params>
             <param index="0">
               <value>
@@ -33,7 +33,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- request -->
-        <test-method status="PASS" signature="request(api.advanced.data_check.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_check.testcase.AllTestCase@5ebec15]" name="request" duration-ms="79" started-at="2019-04-22T23:08:21Z" data-provider="getDatas" finished-at="2019-04-22T23:08:21Z">
+        <test-method status="PASS" signature="request(api.advanced.data_check.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_check.testcase.AllTestCase@3fb6a447]" name="request" duration-ms="74" started-at="2019-04-23T17:20:40Z" data-provider="getDatas" finished-at="2019-04-23T17:20:40Z">
           <params>
             <param index="0">
               <value>
@@ -44,7 +44,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- request -->
-        <test-method status="PASS" signature="request(api.advanced.data_check.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_check.testcase.AllTestCase@5ebec15]" name="request" duration-ms="79" started-at="2019-04-22T23:08:21Z" data-provider="getDatas" finished-at="2019-04-22T23:08:21Z">
+        <test-method status="PASS" signature="request(api.advanced.data_check.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_check.testcase.AllTestCase@3fb6a447]" name="request" duration-ms="59" started-at="2019-04-23T17:20:40Z" data-provider="getDatas" finished-at="2019-04-23T17:20:40Z">
           <params>
             <param index="0">
               <value>
@@ -55,7 +55,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- request -->
-        <test-method status="PASS" signature="request(api.advanced.data_check.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_check.testcase.AllTestCase@5ebec15]" name="request" duration-ms="84" started-at="2019-04-22T23:08:21Z" data-provider="getDatas" finished-at="2019-04-22T23:08:21Z">
+        <test-method status="PASS" signature="request(api.advanced.data_check.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_check.testcase.AllTestCase@3fb6a447]" name="request" duration-ms="67" started-at="2019-04-23T17:20:40Z" data-provider="getDatas" finished-at="2019-04-23T17:20:40Z">
           <params>
             <param index="0">
               <value>
@@ -66,7 +66,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- request -->
-        <test-method status="PASS" signature="request(api.advanced.data_check.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_check.testcase.AllTestCase@5ebec15]" name="request" duration-ms="82" started-at="2019-04-22T23:08:21Z" data-provider="getDatas" finished-at="2019-04-22T23:08:21Z">
+        <test-method status="PASS" signature="request(api.advanced.data_check.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_check.testcase.AllTestCase@3fb6a447]" name="request" duration-ms="60" started-at="2019-04-23T17:20:40Z" data-provider="getDatas" finished-at="2019-04-23T17:20:40Z">
           <params>
             <param index="0">
               <value>
@@ -77,7 +77,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- request -->
-        <test-method status="PASS" signature="request(api.advanced.data_check.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_check.testcase.AllTestCase@5ebec15]" name="request" duration-ms="389" started-at="2019-04-22T23:08:21Z" data-provider="getDatas" finished-at="2019-04-22T23:08:21Z">
+        <test-method status="PASS" signature="request(api.advanced.data_check.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_check.testcase.AllTestCase@3fb6a447]" name="request" duration-ms="322" started-at="2019-04-23T17:20:40Z" data-provider="getDatas" finished-at="2019-04-23T17:20:40Z">
           <params>
             <param index="0">
               <value>
@@ -88,7 +88,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- request -->
-        <test-method status="PASS" signature="request(api.advanced.data_check.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_check.testcase.AllTestCase@5ebec15]" name="request" duration-ms="81" started-at="2019-04-22T23:08:21Z" data-provider="getDatas" finished-at="2019-04-22T23:08:21Z">
+        <test-method status="PASS" signature="request(api.advanced.data_check.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_check.testcase.AllTestCase@3fb6a447]" name="request" duration-ms="69" started-at="2019-04-23T17:20:40Z" data-provider="getDatas" finished-at="2019-04-23T17:20:40Z">
           <params>
             <param index="0">
               <value>
@@ -99,7 +99,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- request -->
-        <test-method status="PASS" signature="request(api.advanced.data_check.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_check.testcase.AllTestCase@5ebec15]" name="request" duration-ms="84" started-at="2019-04-22T23:08:21Z" data-provider="getDatas" finished-at="2019-04-22T23:08:22Z">
+        <test-method status="PASS" signature="request(api.advanced.data_check.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_check.testcase.AllTestCase@3fb6a447]" name="request" duration-ms="67" started-at="2019-04-23T17:20:40Z" data-provider="getDatas" finished-at="2019-04-23T17:20:40Z">
           <params>
             <param index="0">
               <value>
@@ -110,7 +110,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- request -->
-        <test-method status="PASS" signature="request(api.advanced.data_check.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_check.testcase.AllTestCase@5ebec15]" name="request" duration-ms="81" started-at="2019-04-22T23:08:22Z" data-provider="getDatas" finished-at="2019-04-22T23:08:22Z">
+        <test-method status="PASS" signature="request(api.advanced.data_check.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_check.testcase.AllTestCase@3fb6a447]" name="request" duration-ms="75" started-at="2019-04-23T17:20:40Z" data-provider="getDatas" finished-at="2019-04-23T17:20:40Z">
           <params>
             <param index="0">
               <value>
@@ -121,7 +121,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- request -->
-        <test-method status="PASS" signature="request(api.advanced.data_check.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_check.testcase.AllTestCase@5ebec15]" name="request" duration-ms="86" started-at="2019-04-22T23:08:22Z" data-provider="getDatas" finished-at="2019-04-22T23:08:22Z">
+        <test-method status="PASS" signature="request(api.advanced.data_check.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_check.testcase.AllTestCase@3fb6a447]" name="request" duration-ms="65" started-at="2019-04-23T17:20:40Z" data-provider="getDatas" finished-at="2019-04-23T17:20:40Z">
           <params>
             <param index="0">
               <value>
@@ -132,7 +132,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- request -->
-        <test-method status="PASS" signature="request(api.advanced.data_check.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_check.testcase.AllTestCase@5ebec15]" name="request" duration-ms="85" started-at="2019-04-22T23:08:22Z" data-provider="getDatas" finished-at="2019-04-22T23:08:22Z">
+        <test-method status="PASS" signature="request(api.advanced.data_check.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_check.testcase.AllTestCase@3fb6a447]" name="request" duration-ms="79" started-at="2019-04-23T17:20:40Z" data-provider="getDatas" finished-at="2019-04-23T17:20:40Z">
           <params>
             <param index="0">
               <value>
@@ -143,7 +143,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- request -->
-        <test-method status="PASS" signature="request(api.advanced.data_check.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_check.testcase.AllTestCase@5ebec15]" name="request" duration-ms="88" started-at="2019-04-22T23:08:22Z" data-provider="getDatas" finished-at="2019-04-22T23:08:22Z">
+        <test-method status="PASS" signature="request(api.advanced.data_check.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_check.testcase.AllTestCase@3fb6a447]" name="request" duration-ms="63" started-at="2019-04-23T17:20:40Z" data-provider="getDatas" finished-at="2019-04-23T17:20:41Z">
           <params>
             <param index="0">
               <value>
@@ -154,7 +154,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- request -->
-        <test-method status="PASS" signature="request(api.advanced.data_check.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_check.testcase.AllTestCase@5ebec15]" name="request" duration-ms="729" started-at="2019-04-22T23:08:22Z" data-provider="getDatas" finished-at="2019-04-22T23:08:23Z">
+        <test-method status="PASS" signature="request(api.advanced.data_check.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_check.testcase.AllTestCase@3fb6a447]" name="request" duration-ms="298" started-at="2019-04-23T17:20:41Z" data-provider="getDatas" finished-at="2019-04-23T17:20:41Z">
           <params>
             <param index="0">
               <value>
@@ -165,7 +165,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- request -->
-        <test-method status="PASS" signature="request(api.advanced.data_check.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_check.testcase.AllTestCase@5ebec15]" name="request" duration-ms="78" started-at="2019-04-22T23:08:23Z" data-provider="getDatas" finished-at="2019-04-22T23:08:23Z">
+        <test-method status="PASS" signature="request(api.advanced.data_check.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_check.testcase.AllTestCase@3fb6a447]" name="request" duration-ms="61" started-at="2019-04-23T17:20:41Z" data-provider="getDatas" finished-at="2019-04-23T17:20:41Z">
           <params>
             <param index="0">
               <value>
@@ -176,7 +176,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- request -->
-        <test-method status="PASS" signature="request(api.advanced.data_check.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_check.testcase.AllTestCase@5ebec15]" name="request" duration-ms="84" started-at="2019-04-22T23:08:23Z" data-provider="getDatas" finished-at="2019-04-22T23:08:23Z">
+        <test-method status="PASS" signature="request(api.advanced.data_check.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_check.testcase.AllTestCase@3fb6a447]" name="request" duration-ms="71" started-at="2019-04-23T17:20:41Z" data-provider="getDatas" finished-at="2019-04-23T17:20:41Z">
           <params>
             <param index="0">
               <value>
@@ -187,7 +187,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- request -->
-        <test-method status="PASS" signature="request(api.advanced.data_check.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_check.testcase.AllTestCase@5ebec15]" name="request" duration-ms="94" started-at="2019-04-22T23:08:23Z" data-provider="getDatas" finished-at="2019-04-22T23:08:23Z">
+        <test-method status="PASS" signature="request(api.advanced.data_check.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_check.testcase.AllTestCase@3fb6a447]" name="request" duration-ms="66" started-at="2019-04-23T17:20:41Z" data-provider="getDatas" finished-at="2019-04-23T17:20:41Z">
           <params>
             <param index="0">
               <value>
@@ -198,7 +198,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- request -->
-        <test-method status="PASS" signature="request(api.advanced.data_check.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_check.testcase.AllTestCase@5ebec15]" name="request" duration-ms="195" started-at="2019-04-22T23:08:23Z" data-provider="getDatas" finished-at="2019-04-22T23:08:23Z">
+        <test-method status="PASS" signature="request(api.advanced.data_check.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_check.testcase.AllTestCase@3fb6a447]" name="request" duration-ms="79" started-at="2019-04-23T17:20:41Z" data-provider="getDatas" finished-at="2019-04-23T17:20:41Z">
           <params>
             <param index="0">
               <value>
@@ -209,7 +209,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- request -->
-        <test-method status="PASS" signature="request(api.advanced.data_check.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_check.testcase.AllTestCase@5ebec15]" name="request" duration-ms="2031" started-at="2019-04-22T23:08:23Z" data-provider="getDatas" finished-at="2019-04-22T23:08:25Z">
+        <test-method status="PASS" signature="request(api.advanced.data_check.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_check.testcase.AllTestCase@3fb6a447]" name="request" duration-ms="81" started-at="2019-04-23T17:20:41Z" data-provider="getDatas" finished-at="2019-04-23T17:20:41Z">
           <params>
             <param index="0">
               <value>
@@ -220,7 +220,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- request -->
-        <test-method status="PASS" signature="request(api.advanced.data_check.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_check.testcase.AllTestCase@5ebec15]" name="request" duration-ms="84" started-at="2019-04-22T23:08:25Z" data-provider="getDatas" finished-at="2019-04-22T23:08:25Z">
+        <test-method status="PASS" signature="request(api.advanced.data_check.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_check.testcase.AllTestCase@3fb6a447]" name="request" duration-ms="77" started-at="2019-04-23T17:20:41Z" data-provider="getDatas" finished-at="2019-04-23T17:20:41Z">
           <params>
             <param index="0">
               <value>
@@ -231,7 +231,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- request -->
-        <test-method status="PASS" signature="request(api.advanced.data_check.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_check.testcase.AllTestCase@5ebec15]" name="request" duration-ms="114" started-at="2019-04-22T23:08:25Z" data-provider="getDatas" finished-at="2019-04-22T23:08:25Z">
+        <test-method status="PASS" signature="request(api.advanced.data_check.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_check.testcase.AllTestCase@3fb6a447]" name="request" duration-ms="74" started-at="2019-04-23T17:20:41Z" data-provider="getDatas" finished-at="2019-04-23T17:20:41Z">
           <params>
             <param index="0">
               <value>
@@ -242,7 +242,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- request -->
-        <test-method status="PASS" signature="request(api.advanced.data_check.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_check.testcase.AllTestCase@5ebec15]" name="request" duration-ms="100" started-at="2019-04-22T23:08:25Z" data-provider="getDatas" finished-at="2019-04-22T23:08:25Z">
+        <test-method status="PASS" signature="request(api.advanced.data_check.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_check.testcase.AllTestCase@3fb6a447]" name="request" duration-ms="70" started-at="2019-04-23T17:20:41Z" data-provider="getDatas" finished-at="2019-04-23T17:20:41Z">
           <params>
             <param index="0">
               <value>
@@ -253,7 +253,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- request -->
-        <test-method status="PASS" signature="request(api.advanced.data_check.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_check.testcase.AllTestCase@5ebec15]" name="request" duration-ms="742" started-at="2019-04-22T23:08:25Z" data-provider="getDatas" finished-at="2019-04-22T23:08:26Z">
+        <test-method status="PASS" signature="request(api.advanced.data_check.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_check.testcase.AllTestCase@3fb6a447]" name="request" duration-ms="315" started-at="2019-04-23T17:20:41Z" data-provider="getDatas" finished-at="2019-04-23T17:20:42Z">
           <params>
             <param index="0">
               <value>
@@ -264,7 +264,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- request -->
-        <test-method status="PASS" signature="request(api.advanced.data_check.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_check.testcase.AllTestCase@5ebec15]" name="request" duration-ms="1368" started-at="2019-04-22T23:08:26Z" data-provider="getDatas" finished-at="2019-04-22T23:08:27Z">
+        <test-method status="PASS" signature="request(api.advanced.data_check.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_check.testcase.AllTestCase@3fb6a447]" name="request" duration-ms="610" started-at="2019-04-23T17:20:42Z" data-provider="getDatas" finished-at="2019-04-23T17:20:42Z">
           <params>
             <param index="0">
               <value>
@@ -275,7 +275,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- request -->
-        <test-method status="PASS" signature="request(api.advanced.data_check.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_check.testcase.AllTestCase@5ebec15]" name="request" duration-ms="395" started-at="2019-04-22T23:08:27Z" data-provider="getDatas" finished-at="2019-04-22T23:08:28Z">
+        <test-method status="PASS" signature="request(api.advanced.data_check.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_check.testcase.AllTestCase@3fb6a447]" name="request" duration-ms="61" started-at="2019-04-23T17:20:42Z" data-provider="getDatas" finished-at="2019-04-23T17:20:42Z">
           <params>
             <param index="0">
               <value>
@@ -286,7 +286,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- request -->
-        <test-method status="PASS" signature="request(api.advanced.data_check.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_check.testcase.AllTestCase@5ebec15]" name="request" duration-ms="387" started-at="2019-04-22T23:08:28Z" data-provider="getDatas" finished-at="2019-04-22T23:08:28Z">
+        <test-method status="PASS" signature="request(api.advanced.data_check.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_check.testcase.AllTestCase@3fb6a447]" name="request" duration-ms="68" started-at="2019-04-23T17:20:42Z" data-provider="getDatas" finished-at="2019-04-23T17:20:42Z">
           <params>
             <param index="0">
               <value>
@@ -297,7 +297,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- request -->
-        <test-method status="PASS" signature="request(api.advanced.data_check.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_check.testcase.AllTestCase@5ebec15]" name="request" duration-ms="391" started-at="2019-04-22T23:08:28Z" data-provider="getDatas" finished-at="2019-04-22T23:08:29Z">
+        <test-method status="PASS" signature="request(api.advanced.data_check.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_check.testcase.AllTestCase@3fb6a447]" name="request" duration-ms="70" started-at="2019-04-23T17:20:42Z" data-provider="getDatas" finished-at="2019-04-23T17:20:43Z">
           <params>
             <param index="0">
               <value>
@@ -308,7 +308,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- request -->
-        <test-method status="PASS" signature="request(api.advanced.data_check.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_check.testcase.AllTestCase@5ebec15]" name="request" duration-ms="992" started-at="2019-04-22T23:08:29Z" data-provider="getDatas" finished-at="2019-04-22T23:08:30Z">
+        <test-method status="PASS" signature="request(api.advanced.data_check.pojo.ApiCaseDetail)[pri:0, instance:api.advanced.data_check.testcase.AllTestCase@3fb6a447]" name="request" duration-ms="324" started-at="2019-04-23T17:20:43Z" data-provider="getDatas" finished-at="2019-04-23T17:20:43Z">
           <params>
             <param index="0">
               <value>
@@ -319,7 +319,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- request -->
-        <test-method status="PASS" signature="afterSuite()[pri:0, instance:api.advanced.data_check.testcase.AllTestCase@5ebec15]" name="afterSuite" is-config="true" duration-ms="135" started-at="2019-04-22T23:08:30Z" finished-at="2019-04-22T23:08:30Z">
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:api.advanced.data_check.testcase.AllTestCase@3fb6a447]" name="afterSuite" is-config="true" duration-ms="275" started-at="2019-04-23T17:20:43Z" finished-at="2019-04-23T17:20:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
