@@ -7,6 +7,7 @@ import java.util.Map;
 import java.util.Set;
 
 import org.apache.http.Header;
+import org.apache.http.HeaderElement;
 import org.apache.http.HttpRequest;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
@@ -27,6 +28,10 @@ import api.teachers.day09.section01.pojo.HeaderOptObject;
 
 /**
  * http发包工具类
+ * 
+ * 	[{"parameterName":"memberId","jsonPath":"$.data.id"},
+ * {"parameterName":"leaveAmount","jsonPath":"$.data.leaveamount"}
+ * ]
  * @author happy
  * @date 2019年3月30日
  * @desc 
@@ -43,7 +48,9 @@ public class HttpUtils {
 	 * @return
 	 */
 	public static String get(ApiCaseDetail apiCaseDetail) {
-		Map<String, String> parametersMap = (Map<String, String>) JSONObject.parse(apiCaseDetail.getRequestData());
+		//发起请求之前，先进行参数替换
+		String replacedRequestData = ParameterUtils.getReplacedStr(apiCaseDetail.getRequestData());
+		Map<String, String> parametersMap = (Map<String, String>) JSONObject.parse(replacedRequestData);
 		String baseUrl = apiCaseDetail.getApiInfo().getUrl();
 
 		return get(baseUrl, parametersMap,apiCaseDetail);
@@ -78,9 +85,10 @@ public class HttpUtils {
 			//get请求实例化
 			HttpGet get = new HttpGet(baseUrl + "?" + encodeParamStr);
 			
-			handleReqHeader(get,apiCaseDetail);
+			if (!StringUtils.isEmpty(apiCaseDetail.getReqHeader())) {
+				handleReqHeader(get,apiCaseDetail);
+			}
 			
-//			get.setHeader("Cookie", "JSESSIONID=4F641F2D1A8066981BCB0380AC4CAFB0;");
 			//准备发包客户端
 			CloseableHttpClient httpClient = HttpClients.createDefault();
 			//获得相应
@@ -91,9 +99,9 @@ public class HttpUtils {
 			}
 			//拿到响应后，首先要看当前测试用例是否需要提取响应头部的信息
 			//如果RespHeader为空，就不需要提取，否则需要提取
-//			if (apiCaseDetail.getRespHeader() !=null && apiCaseDetail.getRespHeader().length()>0) {
-//				handleRespHeader(response,apiCaseDetail);
-//			}
+			if (!StringUtils.isEmpty(apiCaseDetail.getRespHeader() )) {
+				handleRespHeader(response,apiCaseDetail);
+			}
 			
 			//返回相应体
 			return EntityUtils.toString(response.getEntity());
@@ -103,42 +111,64 @@ public class HttpUtils {
 		return "";
 	}
 
-	//设值header
+	/**
+	 * 现在除了正常的发包，还要做两件事情
+	 * 1：在发包前，设置请求头（必须的响应头，提现、充值接口需要设值Cookie的请求头，值为会话id）
+	 * 2：在发包后，获取响应头信息(Set-Cookie：会话id)
+	 * @param request
+	 * @param apiCaseDetail
+	 */
+	/**
+	 * 设值header
+	 * @param request
+	 * @param apiCaseDetail
+	 */
 	private static void handleReqHeader(HttpRequest request, ApiCaseDetail apiCaseDetail) {
-//		get.setHeader(name, value);
-		/*String reqHeader = apiCaseDetail.getReqHeader();
+		//获得要设置请求头的描述信息
+		String reqHeader = apiCaseDetail.getReqHeader();
+		//封装成java的对象
 		List<HeaderOptObject> headerOptObjects = JSONObject.parseArray(reqHeader, HeaderOptObject.class);
+		
 		for (HeaderOptObject headerOptObject : headerOptObjects) {
+			//要设置的请求头的名称
 			String headerName = headerOptObject.getHeaderName();
+			//全局数据池中的参数名
 			String paramName = headerOptObject.getParamName();
+			//获取全局数据池中对应参数名的值
 			String headerValue = ParameterUtils.getGlobalData(paramName);
 			//设置到请求
 			request.setHeader(headerName, headerValue);
-		}*/
+		}
 	}
 
-	//处理响应头部信息的提取
+	/**
+	 * 处理响应头部信息的提取
+	 * @param response 响应对象
+	 * @param apiCaseDetail 当前的接口测试用例信息
+	 */
 	private static void handleRespHeader(CloseableHttpResponse response, ApiCaseDetail apiCaseDetail) {
-		/*String respHeaderStr = apiCaseDetail.getRespHeader();
+		//[{"headerName":"Set-Cookie","paramName":"cookie"}]
+		String respHeaderStr = apiCaseDetail.getRespHeader();
+		//发射封装对对象
 		List<HeaderOptObject> headerOptObjects = JSONObject.parseArray(respHeaderStr, HeaderOptObject.class);
+		
 		for (HeaderOptObject headerOptObject : headerOptObjects) {
 			//要提取的header的name
-			String headerName = headerOptObject.getHeaderName();
+			String headerName = headerOptObject.getHeaderName(); //Set-Cookie
 			//要设值到全局数据池的key
 			String paramName = headerOptObject.getParamName();
 			
-			//从response对象的响应头信息中提取出对应的header
-			Header[] headers = response.getHeaders(headerName);
-			for (Header header : headers) {
-				System.out.println(header.getName() + "--->" + header.getValue());
-				if (header.getName().equals(headerName)) {
-					//设值到全局的数据池
-					ParameterUtils.addGlobalData(paramName, header.getValue());
-					break;
-				}
-			}
-			
-		}*/
+			//得到第一个Header
+			Header firstHeader = response.getFirstHeader(headerName);
+			//Set-Cookie: JSESSIONID=AB5157AFEE38D9DBE7C83ACF30DBFD9A; Path=/futureloan; HttpOnly
+//			JSESSIONID=AB5157AFEE38D9DBE7C83ACF30DBFD9A; Path=/futureloan; HttpOnly
+			HeaderElement[] headerElements = firstHeader.getElements();
+			HeaderElement firstHeaderElement = headerElements[0];
+			//回头要设置到其他接口中间的请求头Cookie对应的时:携带cookie
+			String cookieValue = firstHeaderElement.getName() +"=" + firstHeaderElement.getValue();
+			//保存到全局数据池
+			ParameterUtils.addGlobalData(paramName, cookieValue);
+		}
 	}
 
 	/**
@@ -147,7 +177,9 @@ public class HttpUtils {
 	 * @return
 	 */
 	public static String post(ApiCaseDetail apiCaseDetail) {
-		Map<String, String> parametersMap = (Map<String, String>) JSONObject.parse(apiCaseDetail.getRequestData());
+		//发起请求前，先进行参数的替换
+		String replacedRequestData = ParameterUtils.getReplacedStr(apiCaseDetail.getRequestData());
+		Map<String, String> parametersMap = (Map<String, String>) JSONObject.parse(replacedRequestData);
 		String baseUrl = apiCaseDetail.getApiInfo().getUrl();
 		return post(baseUrl, parametersMap,apiCaseDetail);
 	}
@@ -174,19 +206,15 @@ public class HttpUtils {
 			}
 			post.setEntity(new UrlEncodedFormEntity(parameters));
 			
-			//设置header
-//			if (apiCaseDetail.getReqHeader() 不为空  不为空白 不为空格) {
-			handleReqHeader(post, apiCaseDetail);
-//			}
+			if (!StringUtils.isEmpty(apiCaseDetail.getReqHeader())) {
+				handleReqHeader(post,apiCaseDetail);
+			}
 
 			CloseableHttpClient httpClient = HttpClients.createDefault();
 			CloseableHttpResponse response = httpClient.execute(post);
-//			if (apiCaseDetail.getRespHeader() !=null && apiCaseDetail.getRespHeader().length()>0) {
-//				handleRespHeader(response,apiCaseDetail);
-//			}
-			Header[] headers = response.getAllHeaders();
-			for (Header header : headers) {
-				System.out.println(header.getName() + "--->" + header.getValue());
+			
+			if (!StringUtils.isEmpty(apiCaseDetail.getRespHeader() )) {
+				handleRespHeader(response,apiCaseDetail);
 			}
 			
 			return EntityUtils.toString(response.getEntity());

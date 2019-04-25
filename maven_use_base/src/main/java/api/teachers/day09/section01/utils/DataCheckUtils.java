@@ -1,10 +1,8 @@
 package api.teachers.day09.section01.utils;
 
-import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 
-import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import api.teachers.day09.section01.pojo.ApiCaseDetail;
 import api.teachers.day09.section01.pojo.CellData;
@@ -28,7 +26,9 @@ public class DataCheckUtils {
 		//数据验证
 		for (SqlChecker sqlChecker : sqlCheckerList) {
 			//要验证的sql
-			String sql = sqlChecker.getSql();
+			String sql = ParameterUtils.getReplacedStr(sqlChecker.getSql());
+			System.out.println("--------------------------");
+			System.out.println(sql);
 			//预期结果
 			String expectedResult = sqlChecker.getExpectedResult();
 			//验证
@@ -68,7 +68,7 @@ public class DataCheckUtils {
 		//数据验证
 		for (SqlChecker sqlChecker : sqlCheckerList) {
 			//要验证的sql
-			String sql = sqlChecker.getSql();
+			String sql = ParameterUtils.getReplacedStr(sqlChecker.getSql());
 			//预期结果
 			String expectedResult = sqlChecker.getExpectedResult();
 			//验证

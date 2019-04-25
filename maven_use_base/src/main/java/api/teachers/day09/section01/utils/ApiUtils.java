@@ -5,17 +5,21 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.alibaba.fastjson.JSONObject;
+import com.jayway.jsonpath.Configuration;
+import com.jayway.jsonpath.JsonPath;
 import api.teachers.day09.section01.pojo.ApiCaseDetail;
 import api.teachers.day09.section01.pojo.ApiInfo;
 import api.teachers.day09.section01.pojo.CellData;
+import api.teachers.day09.section01.pojo.ExtractRespDataObject;
 import api.teachers.day09.section01.pojo.SqlChecker;
 
 public class ApiUtils {
 	
-	//保存要写的数据的容器
+	//保存要回写到测试用例详细信息sheet的数据容器
 	public static List<CellData> cellDataList = new ArrayList<CellData>();
+	//保存要回写到sql验证sheet的数据容器
 	public static List<CellData> sqlCellDataList = new ArrayList<CellData>();
-	
 	
 	public static List<CellData> getSqlCellDataList() {
 		return sqlCellDataList;
@@ -42,9 +46,6 @@ public class ApiUtils {
 	public static void addCellData(CellData cellData) {
 		cellDataList.add(cellData);
 	}
-	
-
-
 
 	/**
 	 * 封装数据提供者需要的二维数组对象
@@ -57,7 +58,6 @@ public class ApiUtils {
 		List<ApiInfo> apiInfoList = (List<ApiInfo>) ExcelUtils.readExcel("/api_test_case_01.xlsx", 0, ApiInfo.class);
 		//读取所有的数据验证的信息
 		List<SqlChecker> sqlCheckerList = (List<SqlChecker>) ExcelUtils.readExcel("/api_test_case_01.xlsx", 2, SqlChecker.class);
-		
 		//整理数据验证的信息，不同的case的前置、后置sql放不同的列表去
 		Map<String, List<SqlChecker>> sqlCheckerMap = new HashMap<String, List<SqlChecker>>();
 		//循环每一个数据验证信息
@@ -103,6 +103,32 @@ public class ApiUtils {
 			datas[i] = itemArray;
 		}
 		return datas;
+	}
+
+	/**
+	 * 从响应体中间提取出数据，保存到全局数据池
+	 * @param entityStr
+	 * @param apiCaseDetail
+	 */
+	public static void extractRespData(String entityStr, ApiCaseDetail apiCaseDetail) {
+		//提取的响应头的信息描述
+		String extractRespData = apiCaseDetail.getExtractRespData();
+		if (StringUtils.isEmpty(extractRespData)) {
+			return;
+		}
+		List<ExtractRespDataObject> extractRespDataObjects = JSONObject.parseArray(extractRespData, ExtractRespDataObject.class);
+		for (ExtractRespDataObject extractRespDataObject : extractRespDataObjects) {
+			//参数名--》设值回全局数据池
+			String parameterName  =extractRespDataObject.getParameterName();
+			//jsonPath--》提取的规则
+			String jsonPath = extractRespDataObject.getJsonPath();
+			//一次性解析，这样后续不用重复去解析json
+			Object document = Configuration.defaultConfiguration().jsonProvider().parse(entityStr);
+			//提取出来的值
+			Object extractObject = JsonPath.read(document, jsonPath);
+			//设值回全局数据池
+			ParameterUtils.addGlobalData(parameterName, extractObject.toString());
+		}
 	}
 
 }

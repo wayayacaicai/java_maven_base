@@ -3,7 +3,13 @@ package api.teachers.day09.section01.pojo;
 import java.util.List;
 
 import com.alibaba.fastjson.JSONObject;
-
+/**
+ * 提取响应头部信息或者设置请求头部信息的对应的pojo类
+ * @author happy
+ * @date 2019年4月24日
+ * @desc 
+ * @email
+ */
 public class HeaderOptObject {
 	
 //	[{"headerName":"Set-Cookie","paramName":"cookie"},{"headerName":"rememberMe","paramName":"rememberMe"}]
@@ -41,7 +47,7 @@ public class HeaderOptObject {
 		//解析这个字符串到一个一个的对象去
 		List<HeaderOptObject> headerOptObjects = JSONObject.parseArray(jsonStr, HeaderOptObject.class);
 		for (HeaderOptObject headerOptObject : headerOptObjects) {
-			System.out.println(headerOptObject.getHeaderName() + "---" + headerOptObject.getParamName());
+			System.out.println(headerOptObject);
 		}
 	}
 }

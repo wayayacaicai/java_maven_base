@@ -38,7 +38,7 @@ public class ApiCaseDetail extends ExcelSheetObject {
 	private String extractRespData;
 	
 //	RespKeyInfo(提取响应数据)
-	private String respKeyInfo;
+	private String assertKeyInfo;
 
 
 
@@ -157,12 +157,12 @@ public class ApiCaseDetail extends ExcelSheetObject {
 		this.extractRespData = extractRespData;
 	}
 
-	public String getRespKeyInfo() {
-		return respKeyInfo;
+	public String getAssertKeyInfo() {
+		return assertKeyInfo;
 	}
 
-	public void setRespKeyInfo(String respKeyInfo) {
-		this.respKeyInfo = respKeyInfo;
+	public void setAssertKeyInfo(String assertKeyInfo) {
+		this.assertKeyInfo = assertKeyInfo;
 	}
 
 	@Override
@@ -170,8 +170,9 @@ public class ApiCaseDetail extends ExcelSheetObject {
 		return "ApiCaseDetail [caseId=" + caseId + ", apiId=" + apiId + ", isExcute=" + isExcute + ", requestData="
 				+ requestData + ", expectedReponseData=" + expectedReponseData + ", ActualReponseData="
 				+ ActualReponseData + ", sqlCheckResult=" + sqlCheckResult + ", reqHeader=" + reqHeader
-				+ ", respHeader=" + respHeader + ", extractRespData=" + extractRespData + ", respKeyInfo=" + respKeyInfo
-				+ ", apiInfo=" + apiInfo + ", beforeSqlList=" + beforeSqlList + ", afterSqlList=" + afterSqlList
-				+ ", getRowNo()=" + getRowNo() + "]";
+				+ ", respHeader=" + respHeader + ", extractRespData=" + extractRespData + ", assertKeyInfo="
+				+ assertKeyInfo + ", apiInfo=" + apiInfo + ", beforeSqlList=" + beforeSqlList + ", afterSqlList="
+				+ afterSqlList + ", getRowNo()=" + getRowNo() + "]";
 	}
+
 }
