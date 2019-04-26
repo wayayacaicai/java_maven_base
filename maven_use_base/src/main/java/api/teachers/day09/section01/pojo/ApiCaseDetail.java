@@ -21,10 +21,8 @@ public class ApiCaseDetail extends ExcelSheetObject {
 	private String requestData;
 	//	ExpectedReponseData(期望响应数据)
 	private String expectedReponseData;
-
 	//	ActualReponseData(实际响应数据)
 	private String ActualReponseData;
-	
 	//SqlCheckResult(数据验证结果:所有的sql验证通过则写回成功，否则写回失败)
 	private String sqlCheckResult;
 	
