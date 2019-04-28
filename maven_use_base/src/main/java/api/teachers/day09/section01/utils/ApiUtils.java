@@ -111,7 +111,7 @@ public class ApiUtils {
 	 * @param apiCaseDetail
 	 */
 	public static void extractRespData(String entityStr, ApiCaseDetail apiCaseDetail) {
-		//提取的响应头的信息描述
+		//提取的响应数据规则的字符串形式
 		String extractRespData = apiCaseDetail.getExtractRespData();
 		if (StringUtils.isEmpty(extractRespData)) {
 			return;

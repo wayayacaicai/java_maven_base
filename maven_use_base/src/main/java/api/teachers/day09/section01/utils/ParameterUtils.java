@@ -73,7 +73,7 @@ public class ParameterUtils {
 				"	 \"type\":\"1\",\"regtime\":\"2019-04-20 11:39:05.0\"},\r\n" + 
 				"	 \"msg\":\"充值成功\"}";
 		Object document = Configuration.defaultConfiguration().jsonProvider().parse(jsonStr);
-		Object idStr = JsonPath.read(document, "$.data.regtime");
+		Object idStr = JsonPath.read(document, "$.msg");
 		System.out.println(idStr);
 	}
 
