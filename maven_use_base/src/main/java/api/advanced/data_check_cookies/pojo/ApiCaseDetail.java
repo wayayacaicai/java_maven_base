@@ -22,6 +22,14 @@ public class ApiCaseDetail extends ExcelSheetObject {
 	private String actualResponseData;
 	//SqlCheckResult(数据验证结果)
 	private String sqlCheckResult;
+	//ReqHeader(设置Header)	
+	private String reqHeader;
+	//RespHeader(提取Header数据)
+	private String respHeader;
+	//ExtractRespData(提取响应数据)	
+	private String extractRespData;
+	//AssertKeyInfo(关键信息断言)
+	private String assertKeyInfo;
 	// 接口基本信息对象
 	private ApiInfo apiInfo;
 	// 前置验证的sql信息列表
@@ -109,12 +117,46 @@ public class ApiCaseDetail extends ExcelSheetObject {
 		this.sqlCheckResult = sqlCheckResult;
 	}
 
+	public String getReqHeader() {
+		return reqHeader;
+	}
+
+	public void setReqHeader(String reqHeader) {
+		this.reqHeader = reqHeader;
+	}
+
+	public String getRespHeader() {
+		return respHeader;
+	}
+
+	public void setRespHeader(String respHeader) {
+		this.respHeader = respHeader;
+	}
+
+	public String getExtractRespData() {
+		return extractRespData;
+	}
+
+	public void setExtractRespData(String extractRespData) {
+		this.extractRespData = extractRespData;
+	}
+
+	public String getAssertKeyInfo() {
+		return assertKeyInfo;
+	}
+
+	public void setAssertKeyInfo(String assertKeyInfo) {
+		this.assertKeyInfo = assertKeyInfo;
+	}
+
 	@Override
 	public String toString() {
 		return "ApiCaseDetail [caseId=" + caseId + ", apiId=" + apiId + ", isExcute=" + isExcute + ", requestData="
-				+ requestData + ", expectedReponseData=" + expectedResponseData + ", actualResponseData="
-				+ actualResponseData + ", sqlCheckResult=" + sqlCheckResult + ", apiInfo=" + apiInfo
-				+ ", beforeSqlList=" + beforeSqlList + ", afterSqlList=" + afterSqlList + ", getRowNo()=" + getRowNo()
-				+ "]";
+				+ requestData + ", expectedResponseData=" + expectedResponseData + ", actualResponseData="
+				+ actualResponseData + ", sqlCheckResult=" + sqlCheckResult + ", reqHeader=" + reqHeader
+				+ ", respHeader=" + respHeader + ", extractRespData=" + extractRespData + ", assertKeyInfo="
+				+ assertKeyInfo + ", apiInfo=" + apiInfo + ", beforeSqlList=" + beforeSqlList + ", afterSqlList="
+				+ afterSqlList + ", getRowNo()=" + getRowNo() + "]";
 	}
+
 }

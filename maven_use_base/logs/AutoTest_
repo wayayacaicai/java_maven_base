@@ -50,3 +50,10 @@
 2019-04-22 23:07:55 method: api.advanced.data_check.testcase.AllTestCase.<clinit>(AllTestCase.java:52) - [ ERROR ]----配置文件读取出现异常null
 2019-04-22 23:08:06 method: api.advanced.data_check.utils.ExcelUtils.writeAllExcel(ExcelUtils.java:178) - [ ERROR ]----数据回写出现异常:target\data_check.xlsx (另一个程序正在使用此文件，进程无法访问。)
 2019-04-22 23:08:18 method: api.advanced.data_check.testcase.AllTestCase.<clinit>(AllTestCase.java:52) - [ ERROR ]----配置文件读取出现异常null
+2019-04-29 16:10:44 method: api.advanced.data_check_cookies.utils.ExcelUtils.readExcel(ExcelUtils.java:93) - [ ERROR ]----操作excel反射返回List出现异常：null
+2019-04-29 16:10:50 method: api.advanced.data_check_cookies.utils.ExcelUtils.writeAllExcel(ExcelUtils.java:179) - [ ERROR ]----数据回写出现异常:target\data_check_cookies.xlsx (另一个程序正在使用此文件，进程无法访问。)
+2019-04-29 16:11:59 method: api.advanced.data_check_cookies.utils.ExcelUtils.readExcel(ExcelUtils.java:93) - [ ERROR ]----操作excel反射返回List出现异常：null
+2019-04-29 16:12:54 method: api.advanced.data_check_cookies.utils.ExcelUtils.readExcel(ExcelUtils.java:93) - [ ERROR ]----操作excel反射返回List出现异常：null
+2019-04-29 16:15:45 method: api.advanced.data_check_cookies.utils.ExcelUtils.readExcel(ExcelUtils.java:93) - [ ERROR ]----操作excel反射返回List出现异常：null
+2019-04-29 16:22:47 method: api.advanced.data_check_cookies.utils.ExcelUtils.readExcel(ExcelUtils.java:93) - [ ERROR ]----操作excel反射返回List出现异常：null
+2019-04-29 16:25:50 method: api.advanced.data_check_cookies.utils.ExcelUtils.readExcel(ExcelUtils.java:93) - [ ERROR ]----操作excel反射返回List出现异常：null

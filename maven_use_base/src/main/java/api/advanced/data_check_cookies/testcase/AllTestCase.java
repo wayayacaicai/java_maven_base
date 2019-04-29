@@ -41,7 +41,7 @@ public class AllTestCase {
 		try {
 			Properties properties = new Properties();
 			InputStream is = new FileInputStream(
-					new File("src/main/java/api/advanced/data_check/api_info.properties"));
+					new File("src/main/java/api/advanced/data_check_cookies/api_info.properties"));
 			properties.load(is);
 			streamSourceExcelPath = properties.getProperty("streamSourceExcelPath");
 			targetExcelPath = properties.getProperty("targetExcelPath");
@@ -97,5 +97,6 @@ public class AllTestCase {
 		List<CellData> cellDataList = ApiUtils.getCellDataList();
 		List<CellData> sqlCellData = ApiUtils.getSqlCellDataList();
 		ExcelUtils.writeAllExcel(streamSourceExcelPath, targetExcelPath,  cellDataList, sqlCellData);
+		System.out.println("用例写入结束");
 	}
 }

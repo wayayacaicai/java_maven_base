@@ -53,7 +53,7 @@ public class ApiUtils {
 		try {
 			Properties properties = new Properties();
 			InputStream is = new FileInputStream(
-					new File("src/main/java/api/advanced/data_check/api_info.properties"));
+					new File("src/main/java/api/advanced/data_check_cookies/api_info.properties"));
 			properties.load(is);
 			streamSourceExcelPath = properties.getProperty("streamSourceExcelPath");
 			sheetIndex0 = Integer.parseInt(properties.getProperty("sheetIndex0"));
