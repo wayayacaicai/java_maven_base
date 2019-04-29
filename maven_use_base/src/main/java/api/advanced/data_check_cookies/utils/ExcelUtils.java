@@ -82,8 +82,8 @@ public class ExcelUtils {
 					String setMethod = "set" + currentFieldName; // 拿到set方法
 					Method method = clazz.getMethod(setMethod, String.class); // 获得对应的方法
 					//单元格的值是有参数的，先进行正则匹配和参数替换
-					String replacedStr = ParameterUtils.getReplacedStr(cellValue); 
-					method.invoke(excelSheetObject, replacedStr); // 反射调用方法，完成对象的属性设置
+//					String replacedStr = ParameterUtils.getReplacedStr(cellValue); 
+					method.invoke(excelSheetObject, cellValue); // 反射调用方法，完成对象的属性设置
 				}
 				// 反射型的
 				excelSheetObjectsList.add(excelSheetObject);
