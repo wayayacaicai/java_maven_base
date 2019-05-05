@@ -33,5 +33,14 @@ public class AssertUtils {
 			Assert.assertEquals(extractObject.toString(), expectedValue);
 		}
 	}
+	
+	public static void main(String[] args) {
+		String info = "{\"jsonPath\":\"$.msg\",\"expectedValue\":\"注册成功1111111\"}";
+		//一次性解析，这样后续不用重复去解析json
+		Object document = Configuration.defaultConfiguration().jsonProvider().parse(info);
+		//提取出来的值
+		Object extractObject = JsonPath.read(document, "$.jsonPath");
+		System.out.println(extractObject.toString());
+	}
 
 }

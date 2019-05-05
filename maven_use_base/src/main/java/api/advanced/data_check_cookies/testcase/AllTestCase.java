@@ -15,7 +15,8 @@ import org.testng.annotations.Test;
 
 import api.advanced.data_check_cookies.pojo.ApiCaseDetail;
 import api.advanced.data_check_cookies.pojo.CellData;
-import api.advanced.data_check_cookies.utils.ApiUtils;
+import api.advanced.data_check_cookies.utils.ApiHandleUtils;
+import api.advanced.data_check_cookies.utils.ApiDataProviderUtils;
 import api.advanced.data_check_cookies.utils.DataCheckUtils;
 import api.advanced.data_check_cookies.utils.ExcelUtils;
 import api.advanced.data_check_cookies.utils.HttpUtils;
@@ -64,7 +65,7 @@ public class AllTestCase {
 	
 	@DataProvider
 	public Object[][] getDatas() {
-		return ApiUtils.getDatas();
+		return ApiDataProviderUtils.getDatas();
 	}
 
 	@Test(dataProvider = "getDatas")
@@ -74,12 +75,18 @@ public class AllTestCase {
 		
 		String responseData = HttpUtils.request(apiCaseDetail);
 		
+		//提取响应数据
+		ApiHandleUtils.extractResponseData(responseData,apiCaseDetail);
+		
 		//2.后置验证
 		DataCheckUtils.afterCheck(apiCaseDetail);
 		
 		//收集数据
 		CellData cellData = new CellData(apiCaseDetail.getRowNo(), 6, responseData);
-		ApiUtils.addCellData(cellData);
+		ApiDataProviderUtils.addCellData(cellData);
+		
+		//断言响应结果
+		ApiHandleUtils.assertResult(responseData,apiCaseDetail);
 		
 	}
 
@@ -94,8 +101,8 @@ public class AllTestCase {
 //		List<CellData> sqlCellData = ApiUtils.getSqlCellDataList();
 //		ExcelUtils.writeExcel(sourceExcelPath, "d:/data_check.xlsx", 2, sqlCellData);
 		
-		List<CellData> cellDataList = ApiUtils.getCellDataList();
-		List<CellData> sqlCellData = ApiUtils.getSqlCellDataList();
+		List<CellData> cellDataList = ApiDataProviderUtils.getCellDataList();
+		List<CellData> sqlCellData = ApiDataProviderUtils.getSqlCellDataList();
 		ExcelUtils.writeAllExcel(streamSourceExcelPath, targetExcelPath,  cellDataList, sqlCellData);
 		System.out.println("用例写入结束");
 	}
