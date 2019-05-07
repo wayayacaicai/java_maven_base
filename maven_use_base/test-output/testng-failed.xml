@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="api.retry.Get">
+      <class name="api.advanced.data_check_cookies.testcase.AllTestCase">
         <methods>
-          <include name="get" invocation-numbers="0 1 2 3"/>
+          <include name="request" invocation-numbers="0 20"/>
+          <include name="BeforeSuite"/>
+          <include name="afterSuite"/>
         </methods>
-      </class> <!-- api.retry.Get -->
+      </class> <!-- api.advanced.data_check_cookies.testcase.AllTestCase -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

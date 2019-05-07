@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="false">
+	<test name="Invest">
+		<classes>
+			<class name="com.testng.Invest_Forward_Test" />
+			<class name="com.testng.Invest_Reverse_Test" />
+			
+			<class name="com.testng.NoNormalMethod" />
+			<class name="com.testng.DataProviderTest" />
+		</classes>
+	</test> <!-- Test -->
+	
+</suite> <!-- Suite -->

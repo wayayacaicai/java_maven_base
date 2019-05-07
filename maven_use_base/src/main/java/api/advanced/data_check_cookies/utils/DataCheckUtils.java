@@ -40,22 +40,22 @@ public class DataCheckUtils {
 			String actualResultStr = JSONObject.toJSONString(actualResult);
 
 			// 添加实际结果到回写的数据容器
-			ApiUtils.addSqlData(new CellData(sqlChecker.getRowNo(), 6, actualResultStr));
+			ApiDataProviderUtils.addSqlData(new CellData(sqlChecker.getRowNo(), 6, actualResultStr));
 			if (actualResultStr.equals(expectedResult)) {
 				// 验证通过
-				ApiUtils.addSqlData(new CellData(sqlChecker.getRowNo(), 7, "成功"));
+				ApiDataProviderUtils.addSqlData(new CellData(sqlChecker.getRowNo(), 7, "成功"));
 			} else {
 				// 验证不通过
-				ApiUtils.addSqlData(new CellData(sqlChecker.getRowNo(), 7, "失败"));
+				ApiDataProviderUtils.addSqlData(new CellData(sqlChecker.getRowNo(), 7, "失败"));
 				checkFlag = false;
 			}
 		}
 		if(checkFlag){
 			//验证通过
-			ApiUtils.addCellData(new CellData(apiCaseDetail.getRowNo(), 7, "通过"));
+			ApiDataProviderUtils.addCellData(new CellData(apiCaseDetail.getRowNo(), 7, "通过"));
 		}else{
 			//验证不通过
-			ApiUtils.addCellData(new CellData(apiCaseDetail.getRowNo(), 7, "不通过"));
+			ApiDataProviderUtils.addCellData(new CellData(apiCaseDetail.getRowNo(), 7, "不通过"));
 		}
 	}
 
@@ -83,22 +83,22 @@ public class DataCheckUtils {
 			String actualResultStr = JSONObject.toJSONString(actualResult);
 
 			// 添加实际结果到回写的数据容器
-			ApiUtils.addSqlData(new CellData(sqlChecker.getRowNo(), 6, actualResultStr));
+			ApiDataProviderUtils.addSqlData(new CellData(sqlChecker.getRowNo(), 6, actualResultStr));
 			if (actualResultStr.equals(expectedResult)) {
 				// 验证通过
-				ApiUtils.addSqlData(new CellData(sqlChecker.getRowNo(), 7, "成功"));
+				ApiDataProviderUtils.addSqlData(new CellData(sqlChecker.getRowNo(), 7, "成功"));
 			} else {
 				// 验证不通过
-				ApiUtils.addSqlData(new CellData(sqlChecker.getRowNo(), 7, "失败"));
+				ApiDataProviderUtils.addSqlData(new CellData(sqlChecker.getRowNo(), 7, "失败"));
 				checkFlag = false;
 			}
 		}
 		if(checkFlag){
 			//验证通过
-			ApiUtils.addCellData(new CellData(apiCaseDetail.getRowNo(), 7, "通过"));
+			ApiDataProviderUtils.addCellData(new CellData(apiCaseDetail.getRowNo(), 7, "通过"));
 		}else{
 			//验证不通过
-			ApiUtils.addCellData(new CellData(apiCaseDetail.getRowNo(), 7, "不通过"));
+			ApiDataProviderUtils.addCellData(new CellData(apiCaseDetail.getRowNo(), 7, "不通过"));
 		}
 	}
 }
