@@ -27,7 +27,7 @@ import com.alibaba.fastjson.JSONObject;
 
 import api.advanced.data_check_cookies.pojo.ApiCaseDetail;
 import api.advanced.data_check_cookies.pojo.HeaderOperateObject;
-import api.teachers.day09.section01.utils.ParameterUtils;
+import api.advanced.data_check_cookies.utils.ParameterUtils;
 
 /**
  * @Desc:请求工具类
@@ -96,18 +96,33 @@ public class HttpUtils {
 			// 需要设置到全局池中的key
 			String paramName = headerOperateObject.getParamName();
 
+			Header[] headers = response.getHeaders(headerName);
+			for (Header header : headers) {
+//				System.out.println(header.getName() + "--->" + header.getValue());
+				if(header.getValue().contains("HttpOnly")){
+					//value的子元素
+					HeaderElement[] elements = header.getElements();
+					//value的子元素第一个
+					HeaderElement firstHeaderElement = elements[0];
+					//组装出有用的cookie值
+					String cookieValue = firstHeaderElement.getName() + "=" + firstHeaderElement.getValue();
+					System.out.println(cookieValue);
+					ParameterUtils.addGlobalData(paramName, cookieValue);
+				}
+			}
+					
 			// 得到第一个Header
-			Header firstHeader = response.getFirstHeader(headerName);
+//			Header firstHeader = response.getFirstHeader(headerName);
 			// Set-Cookie: JSESSIONID=AB5157AFEE38D9DBE7C83ACF30DBFD9A;
 			// Path=/futureloan; HttpOnly
 			// JSESSIONID=AB5157AFEE38D9DBE7C83ACF30DBFD9A; Path=/futureloan;
 			// HttpOnly
-			HeaderElement[] elements = firstHeader.getElements();
-			HeaderElement firstHeaderElement = elements[0];
+//			HeaderElement[] elements = firstHeader.getElements();
+//			HeaderElement firstHeaderElement = elements[0];
 			// 回头要设置到其他接口中间的请求头Cookie对应的时:携带cookie
-			String cookieValue = firstHeaderElement.getName() + "=" + firstHeaderElement.getValue();
+//			String cookieValue = firstHeaderElement.getName() + "=" + firstHeaderElement.getValue();
 			// 保存到全局数据池
-			ParameterUtils.addGlobalData(paramName, cookieValue);
+//			ParameterUtils.addGlobalData(paramName, cookieValue);
 		}
 	}
 
@@ -211,10 +226,10 @@ public class HttpUtils {
 		// 返回响应值
 		String responseData = null;
 		if ("get".equalsIgnoreCase(type)) {
-			logger.info("发起get请求" + apiCaseDetail.getApiId());
+//			logger.info("发起get请求" + apiCaseDetail.getApiId());
 			responseData = get(apiCaseDetail);
 		} else if ("post".equalsIgnoreCase(type)) {
-			logger.info("发起post请求" + apiCaseDetail.getApiId());
+//			logger.info("发起post请求" + apiCaseDetail.getApiId());
 			responseData = post(apiCaseDetail);
 		} else {
 			System.out.println("没有执行get或者post请求！");
