@@ -64,5 +64,4 @@ public class TestBase {
   public void afterSuite() {
 	  System.out.println("Invest_Forward_Test.afterSuite()");
   }
-
 }
