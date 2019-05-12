@@ -1,59 +1,9 @@
-2019-04-22 00:13:01 method: api.advanced.data_check.utils.ExcelUtils.readExcel(ExcelUtils.java:92) - [ ERROR ]----操作excel反射返回List出现异常：null
-2019-04-22 00:13:01 method: api.advanced.data_check.utils.ExcelUtils.readExcel(ExcelUtils.java:92) - [ ERROR ]----操作excel反射返回List出现异常：null
-2019-04-22 00:13:01 method: api.advanced.data_check.utils.ExcelUtils.readExcel(ExcelUtils.java:92) - [ ERROR ]----操作excel反射返回List出现异常：null
-2019-04-22 00:13:01 method: api.advanced.data_check.utils.ExcelUtils.writeExcel(ExcelUtils.java:129) - [ ERROR ]----数据回写出现异常:src\main\resources\data_re_write_base1.xlsx (系统找不到指定的文件。)
-2019-04-22 00:13:01 method: api.advanced.data_check.utils.ExcelUtils.writeExcel(ExcelUtils.java:129) - [ ERROR ]----数据回写出现异常:src\main\resources\data_re_write_base1.xlsx (系统找不到指定的文件。)
-2019-04-22 00:14:35 method: api.advanced.data_check.utils.ExcelUtils.readExcel(ExcelUtils.java:92) - [ ERROR ]----操作excel反射返回List出现异常：null
-2019-04-22 00:14:35 method: api.advanced.data_check.utils.ExcelUtils.readExcel(ExcelUtils.java:92) - [ ERROR ]----操作excel反射返回List出现异常：null
-2019-04-22 00:14:35 method: api.advanced.data_check.utils.ExcelUtils.readExcel(ExcelUtils.java:92) - [ ERROR ]----操作excel反射返回List出现异常：null
-2019-04-22 00:14:35 method: api.advanced.data_check.utils.ExcelUtils.writeExcel(ExcelUtils.java:129) - [ ERROR ]----数据回写出现异常:src\main\resources\data_re_write_base1.xlsx (系统找不到指定的文件。)
-2019-04-22 00:14:35 method: api.advanced.data_check.utils.ExcelUtils.writeExcel(ExcelUtils.java:129) - [ ERROR ]----数据回写出现异常:src\main\resources\data_re_write_base1.xlsx (系统找不到指定的文件。)
-2019-04-22 00:17:03 method: api.advanced.data_check.utils.ExcelUtils.writeExcel(ExcelUtils.java:129) - [ ERROR ]----数据回写出现异常:src\main\resources\data_re_write_base1.xlsx (系统找不到指定的文件。)
-2019-04-22 00:17:03 method: api.advanced.data_check.utils.ExcelUtils.writeExcel(ExcelUtils.java:129) - [ ERROR ]----数据回写出现异常:src\main\resources\data_re_write_base1.xlsx (系统找不到指定的文件。)
-2019-04-22 00:17:17 method: api.advanced.data_check.utils.ExcelUtils.readExcel(ExcelUtils.java:92) - [ ERROR ]----操作excel反射返回List出现异常：null
-2019-04-22 00:17:17 method: api.advanced.data_check.utils.ExcelUtils.readExcel(ExcelUtils.java:92) - [ ERROR ]----操作excel反射返回List出现异常：null
-2019-04-22 00:17:17 method: api.advanced.data_check.utils.ExcelUtils.readExcel(ExcelUtils.java:92) - [ ERROR ]----操作excel反射返回List出现异常：null
-2019-04-22 00:17:17 method: api.advanced.data_check.utils.ExcelUtils.writeExcel(ExcelUtils.java:129) - [ ERROR ]----数据回写出现异常:src\main\resources\data_re_write_base1.xlsx (系统找不到指定的文件。)
-2019-04-22 00:17:17 method: api.advanced.data_check.utils.ExcelUtils.writeExcel(ExcelUtils.java:129) - [ ERROR ]----数据回写出现异常:src\main\resources\data_re_write_base1.xlsx (系统找不到指定的文件。)
-2019-04-22 00:18:31 method: api.advanced.data_check.utils.ExcelUtils.readExcel(ExcelUtils.java:92) - [ ERROR ]----操作excel反射返回List出现异常：null
-2019-04-22 00:18:31 method: api.advanced.data_check.utils.ExcelUtils.readExcel(ExcelUtils.java:92) - [ ERROR ]----操作excel反射返回List出现异常：null
-2019-04-22 00:18:31 method: api.advanced.data_check.utils.ExcelUtils.readExcel(ExcelUtils.java:92) - [ ERROR ]----操作excel反射返回List出现异常：null
-2019-04-22 00:18:31 method: api.advanced.data_check.utils.ExcelUtils.writeExcel(ExcelUtils.java:129) - [ ERROR ]----数据回写出现异常:src\main\resources\data_re_write_base1.xlsx (系统找不到指定的文件。)
-2019-04-22 00:18:31 method: api.advanced.data_check.utils.ExcelUtils.writeExcel(ExcelUtils.java:129) - [ ERROR ]----数据回写出现异常:src\main\resources\data_re_write_base1.xlsx (系统找不到指定的文件。)
-2019-04-22 00:24:41 method: api.advanced.data_check.utils.ExcelUtils.readExcel(ExcelUtils.java:92) - [ ERROR ]----操作excel反射返回List出现异常：api.advanced.data_check.pojo.SqlChecker.setSqlId(java.lang.String)
-2019-04-22 00:27:01 method: api.advanced.data_check.utils.ExcelUtils.writeExcel(ExcelUtils.java:129) - [ ERROR ]----数据回写出现异常:null
-2019-04-22 00:29:58 method: api.advanced.data_check.utils.ExcelUtils.writeExcel(ExcelUtils.java:129) - [ ERROR ]----数据回写出现异常:null
-2019-04-22 00:32:34 method: api.advanced.data_check.utils.ExcelUtils.writeExcel(ExcelUtils.java:129) - [ ERROR ]----数据回写出现异常:null
-2019-04-22 00:34:44 method: api.advanced.data_check.utils.ExcelUtils.writeExcel(ExcelUtils.java:129) - [ ERROR ]----数据回写出现异常:null
-2019-04-22 00:37:27 method: api.advanced.data_check.utils.ExcelUtils.writeExcel(ExcelUtils.java:129) - [ ERROR ]----数据回写出现异常:null
-2019-04-22 00:39:21 method: api.advanced.data_check.utils.ExcelUtils.writeExcel(ExcelUtils.java:129) - [ ERROR ]----数据回写出现异常:null
-2019-04-22 00:40:59 method: api.advanced.data_check.utils.ExcelUtils.writeExcel(ExcelUtils.java:129) - [ ERROR ]----数据回写出现异常:null
-2019-04-22 00:42:00 method: api.advanced.data_check.utils.ExcelUtils.writeExcel(ExcelUtils.java:129) - [ ERROR ]----数据回写出现异常:null
-2019-04-22 00:45:09 method: api.advanced.data_check.utils.ExcelUtils.writeExcel(ExcelUtils.java:129) - [ ERROR ]----数据回写出现异常:null
-2019-04-22 00:55:19 method: api.advanced.data_check.utils.ExcelUtils.writeExcel(ExcelUtils.java:129) - [ ERROR ]----数据回写出现异常:null
-2019-04-22 01:02:44 method: api.advanced.data_check.utils.ExcelUtils.writeExcel(ExcelUtils.java:129) - [ ERROR ]----数据回写出现异常:null
-2019-04-22 01:03:05 method: api.advanced.data_check.utils.ExcelUtils.writeExcel(ExcelUtils.java:129) - [ ERROR ]----数据回写出现异常:null
-2019-04-22 01:14:09 method: api.advanced.data_check.utils.ExcelUtils.writeExcel(ExcelUtils.java:129) - [ ERROR ]----数据回写出现异常:null
-2019-04-22 21:03:13 method: api.advanced.data_check.testcase.AllTestCase.<clinit>(AllTestCase.java:50) - [ ERROR ]----配置文件读取出现异常null
-2019-04-22 21:03:17 method: api.advanced.data_check.utils.ExcelUtils.writeAllExcel(ExcelUtils.java:176) - [ ERROR ]----数据回写出现异常:null
-2019-04-22 21:04:31 method: api.advanced.data_check.testcase.AllTestCase.<clinit>(AllTestCase.java:50) - [ ERROR ]----配置文件读取出现异常null
-2019-04-22 21:09:05 method: api.advanced.data_check.testcase.AllTestCase.<clinit>(AllTestCase.java:50) - [ ERROR ]----配置文件读取出现异常null
-2019-04-22 21:28:03 method: api.advanced.data_check.testcase.AllTestCase.<clinit>(AllTestCase.java:50) - [ ERROR ]----配置文件读取出现异常null
-2019-04-22 21:29:38 method: api.advanced.data_check.testcase.AllTestCase.<clinit>(AllTestCase.java:50) - [ ERROR ]----配置文件读取出现异常null
-2019-04-22 21:29:38 method: api.advanced.data_check.utils.ExcelUtils.readExcel(ExcelUtils.java:91) - [ ERROR ]----操作excel反射返回List出现异常：api.advanced.data_check.pojo.ApiCaseDetail.setActualReponseData(java.lang.String)
-2019-04-22 21:33:13 method: api.advanced.data_check.testcase.AllTestCase.<clinit>(AllTestCase.java:50) - [ ERROR ]----配置文件读取出现异常null
-2019-04-22 21:33:14 method: api.advanced.data_check.utils.ExcelUtils.readExcel(ExcelUtils.java:91) - [ ERROR ]----操作excel反射返回List出现异常：api.advanced.data_check.pojo.ApiCaseDetail.setActualReponseData(java.lang.String)
-2019-04-22 21:35:45 method: api.advanced.data_check.testcase.AllTestCase.<clinit>(AllTestCase.java:50) - [ ERROR ]----配置文件读取出现异常null
-2019-04-22 21:41:05 method: api.advanced.data_check.testcase.AllTestCase.<clinit>(AllTestCase.java:51) - [ ERROR ]----配置文件读取出现异常null
-2019-04-22 22:46:11 method: api.advanced.data_check.testcase.AllTestCase.<clinit>(AllTestCase.java:52) - [ ERROR ]----配置文件读取出现异常null
-2019-04-22 23:06:10 method: api.advanced.data_check.testcase.AllTestCase.<clinit>(AllTestCase.java:52) - [ ERROR ]----配置文件读取出现异常null
-2019-04-22 23:07:55 method: api.advanced.data_check.testcase.AllTestCase.<clinit>(AllTestCase.java:52) - [ ERROR ]----配置文件读取出现异常null
-2019-04-22 23:08:06 method: api.advanced.data_check.utils.ExcelUtils.writeAllExcel(ExcelUtils.java:178) - [ ERROR ]----数据回写出现异常:target\data_check.xlsx (另一个程序正在使用此文件，进程无法访问。)
-2019-04-22 23:08:18 method: api.advanced.data_check.testcase.AllTestCase.<clinit>(AllTestCase.java:52) - [ ERROR ]----配置文件读取出现异常null
-2019-04-29 16:10:44 method: api.advanced.data_check_cookies.utils.ExcelUtils.readExcel(ExcelUtils.java:93) - [ ERROR ]----操作excel反射返回List出现异常：null
-2019-04-29 16:10:50 method: api.advanced.data_check_cookies.utils.ExcelUtils.writeAllExcel(ExcelUtils.java:179) - [ ERROR ]----数据回写出现异常:target\data_check_cookies.xlsx (另一个程序正在使用此文件，进程无法访问。)
-2019-04-29 16:11:59 method: api.advanced.data_check_cookies.utils.ExcelUtils.readExcel(ExcelUtils.java:93) - [ ERROR ]----操作excel反射返回List出现异常：null
-2019-04-29 16:12:54 method: api.advanced.data_check_cookies.utils.ExcelUtils.readExcel(ExcelUtils.java:93) - [ ERROR ]----操作excel反射返回List出现异常：null
-2019-04-29 16:15:45 method: api.advanced.data_check_cookies.utils.ExcelUtils.readExcel(ExcelUtils.java:93) - [ ERROR ]----操作excel反射返回List出现异常：null
-2019-04-29 16:22:47 method: api.advanced.data_check_cookies.utils.ExcelUtils.readExcel(ExcelUtils.java:93) - [ ERROR ]----操作excel反射返回List出现异常：null
-2019-04-29 16:25:50 method: api.advanced.data_check_cookies.utils.ExcelUtils.readExcel(ExcelUtils.java:93) - [ ERROR ]----操作excel反射返回List出现异常：null
+2019-05-11 10:52:25 method: api.advanced.data_check_cookies.utils.HttpUtils.get(HttpUtils.java:78) - [ ERROR ]----������get������ó����쳣Connect to 192.168.0.99:9000 [/192.168.0.99] failed: Connection timed out: connect
+2019-05-11 10:52:47 method: api.advanced.data_check_cookies.utils.HttpUtils.get(HttpUtils.java:78) - [ ERROR ]----������get������ó����쳣Connect to 192.168.0.99:9000 [/192.168.0.99] failed: Connection timed out: connect
+2019-05-11 10:54:09 method: api.advanced.data_check_cookies.utils.HttpUtils.get(HttpUtils.java:78) - [ ERROR ]----������get������ó����쳣Connect to localhost:80 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+2019-05-11 10:54:12 method: api.advanced.data_check_cookies.utils.HttpUtils.get(HttpUtils.java:78) - [ ERROR ]----������get������ó����쳣Connect to localhost:80 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+2019-05-11 10:54:14 method: api.advanced.data_check_cookies.utils.HttpUtils.get(HttpUtils.java:78) - [ ERROR ]----������get������ó����쳣Connect to localhost:80 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+2019-05-11 10:54:16 method: api.advanced.data_check_cookies.utils.HttpUtils.get(HttpUtils.java:78) - [ ERROR ]----������get������ó����쳣Connect to localhost:80 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+2019-05-11 10:54:18 method: api.advanced.data_check_cookies.utils.HttpUtils.get(HttpUtils.java:78) - [ ERROR ]----������get������ó����쳣Connect to localhost:80 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+2019-05-11 10:54:20 method: api.advanced.data_check_cookies.utils.HttpUtils.get(HttpUtils.java:78) - [ ERROR ]----������get������ó����쳣Connect to localhost:80 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+2019-05-11 10:54:22 method: api.advanced.data_check_cookies.utils.HttpUtils.post(HttpUtils.java:187) - [ ERROR ]----������post������ó����쳣Connect to localhost:80 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect

@@ -33,11 +33,11 @@ public class Locate_Method_01 extends BaseBrowserAttrs{
 		System.out.println(element_03.getAttribute("autocomplete"));
 		
 		//3：linkText -->完整的超链接文本
-		WebElement element_04 = driver.findElement(By.linkText("百度一下"));
+		WebElement element_04 = driver.findElement(By.linkText("新闻"));
 		System.out.println(element_04.getAttribute("class"));
 		
 		//4:partialLinkText -->部分的超链接文本
-		WebElement element_05 = driver.findElement(By.partialLinkText("一下"));
+		WebElement element_05 = driver.findElement(By.partialLinkText("闻"));
 		System.out.println(element_05.getAttribute("class"));
 		
 		//5:tagName-->标签名

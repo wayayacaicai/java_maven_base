@@ -45,7 +45,8 @@ public class WebDriverUtils {
 	/**
 	 * 其他
 	 * */
-	private static final String FIREFOX_BROWSER_PATH = "D:\\normal_soft\\browser\\firefox46.0\\firefox.exe";
+	private static final String FIREFOX_BROWSER_PATH = "D:\\normal_soft\\Browser\\FireFox\\fire46.0.1\\firefox.exe";
+//	private static final String FIREFOX_BROWSER_PATH = "D:\\normal_soft\\browser\\firefox46.0\\firefox.exe";
 	private static final String INIT_URL = "http://www.baidu.com";
 	/**
 	 * @Desc 获取浏览器的驱动
@@ -89,9 +90,14 @@ public class WebDriverUtils {
 	
 	
 	public static void main(String[] args) {
-		String driverPath = "src/main/resources/drivers/company/MicrosoftWebDriver.exe";
-		WebDriver driver = getWebDriver("edge", "2.x", driverPath);
-		driver.get("http://www.baidu.com");
+		
+//		private static final String CHROME_DRIVER_PATH = "src/main/resources/drivers/company/chromedriver.exe";
+//		private static final String IE_DRIVER_PATH = "src/main/resources/drivers/company/IEDriverServer.exe";
+//		private static final String EDGE_DRIVER_PATH = "src/main/resources/drivers/company/MicrosoftWebDriver.exe";
+//		private static final String FIREFOX_DRIVER_PATH = "src/main/resources/drivers/company/geckodriver.exe";
+		String driverPath = "src/main/resources/drivers/company/chromedriver.exe";
+		WebDriver driver = getWebDriver("chrome", "2.x", driverPath);
+		driver.get("http://www.hao123.com");
 		driver.quit();
 	}
 }

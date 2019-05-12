@@ -9,15 +9,4 @@
       <class name="web.base02.Locate_Method_01"/>
     </classes>
   </test> <!-- Web_Auto_Test -->
-  <test name="Web_Auto_Test(failed)">
-    <classes>
-      <class name="web.base02.Locate_Method_01">
-        <methods>
-          <include name="afterTestSuite"/>
-          <include name="test_case_02"/>
-          <include name="beforeTestSuite"/>
-        </methods>
-      </class> <!-- web.base02.Locate_Method_01 -->
-    </classes>
-  </test> <!-- Web_Auto_Test(failed) -->
 </suite> <!-- Failed suite [All_Test_Suite] -->

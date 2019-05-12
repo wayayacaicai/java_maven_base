@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Api_Auto_Test" parallel="none">
+  <test name="All_Test">
+    <classes>
+      <class name="api_auto_test.testcase.AllTestCase"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
