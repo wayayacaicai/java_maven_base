@@ -6,7 +6,8 @@
     <classes>
      <!--  <class name="web.base02.New_Test_Case_01"/> -->
      <!--  <class name="web.base02.New_Test_Case_02"/> -->
-      <class name="web.base02.Locate_Method_01"/>
+     <!--  <class name="web.base02.Locate_Method_01"/> -->
+     <class name="web.base02.New_Test_Case03"/>
     </classes>
   </test> <!-- Test -->
   
