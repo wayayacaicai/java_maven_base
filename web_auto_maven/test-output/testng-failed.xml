@@ -9,15 +9,4 @@
       <class name="web.base02.New_Test_Case03"/>
     </classes>
   </test> <!-- Web_Auto_Test -->
-  <test name="Web_Auto_Test(failed)">
-    <classes>
-      <class name="web.base02.New_Test_Case03">
-        <methods>
-          <include name="test_case_06"/>
-          <include name="afterTestSuite"/>
-          <include name="beforeTestSuite"/>
-        </methods>
-      </class> <!-- web.base02.New_Test_Case03 -->
-    </classes>
-  </test> <!-- Web_Auto_Test(failed) -->
 </suite> <!-- Failed suite [All_Test_Suite] -->
