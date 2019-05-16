@@ -6,7 +6,7 @@
   <parameter name="browserType" value="chrome"/>
   <test name="Web_Auto_Test">
     <classes>
-      <class name="web.base02.New_Test_Case03"/>
+      <class name="web.base04.New_Test_Case03"/>
     </classes>
   </test> <!-- Web_Auto_Test -->
 </suite> <!-- Failed suite [All_Test_Suite] -->

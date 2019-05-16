@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="All_Test_Suite" duration-ms="12225" started-at="2019-05-14T07:06:02Z" finished-at="2019-05-14T07:06:14Z">
+  <suite name="All_Test_Suite" duration-ms="8203" started-at="2019-05-16T08:44:50Z" finished-at="2019-05-16T08:44:58Z">
     <groups>
     </groups>
-    <test name="Web_Auto_Test" duration-ms="12225" started-at="2019-05-14T07:06:02Z" finished-at="2019-05-14T07:06:14Z">
-      <class name="web.base02.New_Test_Case03">
-        <test-method status="PASS" signature="beforeTestSuite(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:web.base02.New_Test_Case03@13a57a3b]" name="beforeTestSuite" is-config="true" duration-ms="3562" started-at="2019-05-14T15:05:59Z" finished-at="2019-05-14T15:06:02Z">
+    <test name="Web_Auto_Test" duration-ms="8203" started-at="2019-05-16T08:44:50Z" finished-at="2019-05-16T08:44:58Z">
+      <class name="web.base04.New_Test_Case03">
+        <test-method status="PASS" signature="beforeTestSuite(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:web.base04.New_Test_Case03@6276ae34]" name="beforeTestSuite" is-config="true" duration-ms="3851" started-at="2019-05-16T16:44:46Z" finished-at="2019-05-16T16:44:50Z">
           <params>
             <param index="0">
               <value>
@@ -28,15 +28,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTestSuite -->
-        <test-method status="PASS" signature="test_case_06()[pri:0, instance:web.base02.New_Test_Case03@13a57a3b]" name="test_case_06" duration-ms="12214" started-at="2019-05-14T15:06:02Z" finished-at="2019-05-14T15:06:14Z">
+        <test-method status="PASS" signature="test_case_06()[pri:0, instance:web.base04.New_Test_Case03@6276ae34]" name="test_case_06" duration-ms="8189" started-at="2019-05-16T16:44:50Z" finished-at="2019-05-16T16:44:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_case_06 -->
-        <test-method status="PASS" signature="afterTestSuite()[pri:0, instance:web.base02.New_Test_Case03@13a57a3b]" name="afterTestSuite" is-config="true" duration-ms="6069" started-at="2019-05-14T15:06:14Z" finished-at="2019-05-14T15:06:20Z">
+        <test-method status="PASS" signature="afterTestSuite()[pri:0, instance:web.base04.New_Test_Case03@6276ae34]" name="afterTestSuite" is-config="true" duration-ms="6415" started-at="2019-05-16T16:44:58Z" finished-at="2019-05-16T16:45:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTestSuite -->
-      </class> <!-- web.base02.New_Test_Case03 -->
+      </class> <!-- web.base04.New_Test_Case03 -->
     </test> <!-- Web_Auto_Test -->
   </suite> <!-- All_Test_Suite -->
 </testng-results>
