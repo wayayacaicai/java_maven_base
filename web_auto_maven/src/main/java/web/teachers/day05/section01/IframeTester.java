@@ -14,7 +14,7 @@ import org.testng.annotations.Test;
 
 public class IframeTester{
 	public static void main(String[] args) throws InterruptedException {
-		System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "src/main/resources/drivers/company/chromedriver.exe");
 		ChromeDriver driver = new ChromeDriver();
 		
 		driver.get("http://test.lemonban.com/lmcanon_web_auto/mng/login.html");
