@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="6" passed="6">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="1199" started-at="2019-05-20T08:52:37Z" finished-at="2019-05-20T08:52:38Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="1199" started-at="2019-05-20T08:52:37Z" finished-at="2019-05-20T08:52:38Z">
+      <class name="base02.section01.HttpUtilsTest">
+        <test-method status="PASS" signature="get(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:base02.section01.HttpUtilsTest@61443d8f]" name="get" duration-ms="827" started-at="2019-05-20T16:52:37Z" data-provider="getDatas" finished-at="2019-05-20T16:52:38Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[13699999999]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[123456]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[手机号码已被注册]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- get -->
+        <test-method status="PASS" signature="get(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:base02.section01.HttpUtilsTest@61443d8f]" name="get" duration-ms="71" started-at="2019-05-20T16:52:38Z" data-provider="getDatas" finished-at="2019-05-20T16:52:38Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1369999999]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[123456]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[手机号码格式不正确]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- get -->
+        <test-method status="PASS" signature="get(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:base02.section01.HttpUtilsTest@61443d8f]" name="get" duration-ms="64" started-at="2019-05-20T16:52:38Z" data-provider="getDatas" finished-at="2019-05-20T16:52:38Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[13699999999]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[12345]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[密码长度必须为6~18]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- get -->
+        <test-method status="PASS" signature="post(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:base02.section01.HttpUtilsTest@61443d8f]" name="post" duration-ms="76" started-at="2019-05-20T16:52:38Z" data-provider="getDatas" finished-at="2019-05-20T16:52:38Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[13699999999]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[123456]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[手机号码已被注册]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- post -->
+        <test-method status="PASS" signature="post(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:base02.section01.HttpUtilsTest@61443d8f]" name="post" duration-ms="63" started-at="2019-05-20T16:52:38Z" data-provider="getDatas" finished-at="2019-05-20T16:52:38Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1369999999]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[123456]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[手机号码格式不正确]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- post -->
+        <test-method status="PASS" signature="post(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:base02.section01.HttpUtilsTest@61443d8f]" name="post" duration-ms="72" started-at="2019-05-20T16:52:38Z" data-provider="getDatas" finished-at="2019-05-20T16:52:38Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[13699999999]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[12345]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[密码长度必须为6~18]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- post -->
+      </class> <!-- base02.section01.HttpUtilsTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

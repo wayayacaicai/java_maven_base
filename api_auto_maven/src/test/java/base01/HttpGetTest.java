@@ -18,7 +18,7 @@ public class HttpGetTest {
 	public static void main(String[] args){
 		try {
 			//接口地址
-			String url = "http://120.78.128.25:8080/futureloan/mvc/api/member/register?mobilephone=&pwd=";
+			String url = "http://120.78.128.25:8080/futureloan/mvc/api/member/register?mobilephone=13699999999&pwd=123456";
 			//get请求
 			HttpGet get = new HttpGet(url);
 			//客户端
@@ -41,7 +41,6 @@ public class HttpGetTest {
 			HttpEntity entity = response.getEntity();
 			String entityStr = EntityUtils.toString(entity);
 			System.out.println(entityStr);
-	
 		} catch (Exception e) {			
 			e.printStackTrace();
 		}

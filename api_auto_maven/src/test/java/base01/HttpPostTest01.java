@@ -6,6 +6,7 @@ import java.util.List;
 
 import org.apache.http.Header;
 import org.apache.http.HttpEntity;
+import org.apache.http.NameValuePair;
 import org.apache.http.StatusLine;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
@@ -28,7 +29,7 @@ public class HttpPostTest01 {
 			//post请求
 			HttpPost post = new HttpPost(url);
 			//post请求体设置
-			List<BasicNameValuePair> postEntity = new ArrayList<>();
+			List<NameValuePair> postEntity = new ArrayList<>();
 			postEntity.add(new BasicNameValuePair("mobilephone", "123"));
 			postEntity.add(new BasicNameValuePair("pwd", "123"));
 			UrlEncodedFormEntity urlEncodedFormEntity = new UrlEncodedFormEntity(postEntity);
