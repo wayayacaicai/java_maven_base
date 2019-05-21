@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" total="6" passed="6">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="1199" started-at="2019-05-20T08:52:37Z" finished-at="2019-05-20T08:52:38Z">
+  <suite name="Default suite" duration-ms="1180" started-at="2019-05-21T07:44:21Z" finished-at="2019-05-21T07:44:22Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="1199" started-at="2019-05-20T08:52:37Z" finished-at="2019-05-20T08:52:38Z">
-      <class name="base02.section01.HttpUtilsTest">
-        <test-method status="PASS" signature="get(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:base02.section01.HttpUtilsTest@61443d8f]" name="get" duration-ms="827" started-at="2019-05-20T16:52:37Z" data-provider="getDatas" finished-at="2019-05-20T16:52:38Z">
+    <test name="Default test" duration-ms="1180" started-at="2019-05-21T07:44:21Z" finished-at="2019-05-21T07:44:22Z">
+      <class name="base02.section02.HttpUtilsTest">
+        <test-method status="PASS" signature="get(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:base02.section02.HttpUtilsTest@61443d8f]" name="get" duration-ms="831" started-at="2019-05-21T15:44:21Z" data-provider="getDatas" finished-at="2019-05-21T15:44:22Z">
           <params>
             <param index="0">
               <value>
@@ -28,7 +28,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- get -->
-        <test-method status="PASS" signature="get(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:base02.section01.HttpUtilsTest@61443d8f]" name="get" duration-ms="71" started-at="2019-05-20T16:52:38Z" data-provider="getDatas" finished-at="2019-05-20T16:52:38Z">
+        <test-method status="PASS" signature="get(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:base02.section02.HttpUtilsTest@61443d8f]" name="get" duration-ms="65" started-at="2019-05-21T15:44:22Z" data-provider="getDatas" finished-at="2019-05-21T15:44:22Z">
           <params>
             <param index="0">
               <value>
@@ -49,7 +49,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- get -->
-        <test-method status="PASS" signature="get(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:base02.section01.HttpUtilsTest@61443d8f]" name="get" duration-ms="64" started-at="2019-05-20T16:52:38Z" data-provider="getDatas" finished-at="2019-05-20T16:52:38Z">
+        <test-method status="PASS" signature="get(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:base02.section02.HttpUtilsTest@61443d8f]" name="get" duration-ms="67" started-at="2019-05-21T15:44:22Z" data-provider="getDatas" finished-at="2019-05-21T15:44:22Z">
           <params>
             <param index="0">
               <value>
@@ -70,7 +70,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- get -->
-        <test-method status="PASS" signature="post(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:base02.section01.HttpUtilsTest@61443d8f]" name="post" duration-ms="76" started-at="2019-05-20T16:52:38Z" data-provider="getDatas" finished-at="2019-05-20T16:52:38Z">
+        <test-method status="PASS" signature="post(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:base02.section02.HttpUtilsTest@61443d8f]" name="post" duration-ms="69" started-at="2019-05-21T15:44:22Z" data-provider="getDatas" finished-at="2019-05-21T15:44:22Z">
           <params>
             <param index="0">
               <value>
@@ -91,7 +91,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- post -->
-        <test-method status="PASS" signature="post(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:base02.section01.HttpUtilsTest@61443d8f]" name="post" duration-ms="63" started-at="2019-05-20T16:52:38Z" data-provider="getDatas" finished-at="2019-05-20T16:52:38Z">
+        <test-method status="PASS" signature="post(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:base02.section02.HttpUtilsTest@61443d8f]" name="post" duration-ms="59" started-at="2019-05-21T15:44:22Z" data-provider="getDatas" finished-at="2019-05-21T15:44:22Z">
           <params>
             <param index="0">
               <value>
@@ -112,7 +112,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- post -->
-        <test-method status="PASS" signature="post(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:base02.section01.HttpUtilsTest@61443d8f]" name="post" duration-ms="72" started-at="2019-05-20T16:52:38Z" data-provider="getDatas" finished-at="2019-05-20T16:52:38Z">
+        <test-method status="PASS" signature="post(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:base02.section02.HttpUtilsTest@61443d8f]" name="post" duration-ms="61" started-at="2019-05-21T15:44:22Z" data-provider="getDatas" finished-at="2019-05-21T15:44:22Z">
           <params>
             <param index="0">
               <value>
@@ -133,7 +133,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- post -->
-      </class> <!-- base02.section01.HttpUtilsTest -->
+      </class> <!-- base02.section02.HttpUtilsTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
