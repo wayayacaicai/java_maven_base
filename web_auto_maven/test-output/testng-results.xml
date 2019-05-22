@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="1" failed="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="All_Test_Suite" duration-ms="8203" started-at="2019-05-16T08:44:50Z" finished-at="2019-05-16T08:44:58Z">
+  <suite name="All_Test_Suite" duration-ms="49" started-at="2019-05-22T14:34:17Z" finished-at="2019-05-22T14:34:17Z">
     <groups>
     </groups>
-    <test name="Web_Auto_Test" duration-ms="8203" started-at="2019-05-16T08:44:50Z" finished-at="2019-05-16T08:44:58Z">
-      <class name="web.base04.New_Test_Case03">
-        <test-method status="PASS" signature="beforeTestSuite(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:web.base04.New_Test_Case03@6276ae34]" name="beforeTestSuite" is-config="true" duration-ms="3851" started-at="2019-05-16T16:44:46Z" finished-at="2019-05-16T16:44:50Z">
+    <test name="Web_Auto_Test" duration-ms="49" started-at="2019-05-22T14:34:17Z" finished-at="2019-05-22T14:34:17Z">
+      <class name="web.base07.testcase.Lemon_Test_Case">
+        <test-method status="PASS" signature="beforeTestSuite(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:web.base07.testcase.Lemon_Test_Case@d041cf]" name="beforeTestSuite" is-config="true" duration-ms="3147" started-at="2019-05-22T22:34:14Z" finished-at="2019-05-22T22:34:17Z">
           <params>
             <param index="0">
               <value>
@@ -28,15 +28,46 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTestSuite -->
-        <test-method status="PASS" signature="test_case_06()[pri:0, instance:web.base04.New_Test_Case03@6276ae34]" name="test_case_06" duration-ms="8189" started-at="2019-05-16T16:44:50Z" finished-at="2019-05-16T16:44:58Z">
+        <test-method status="SKIP" signature="register_failure_test_case(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:web.base07.testcase.Lemon_Test_Case@d041cf]" name="register_failure_test_case" duration-ms="0" started-at="2019-05-22T22:34:17Z" data-provider="data" finished-at="2019-05-22T22:34:17Z">
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[Can't invoke method public java.lang.Object[][] web.base07.testcase.DataProviderClass.registerData() on this instance of class web.base07.testcase.Lemon_Test_Case due to class mismatch]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: Can't invoke method public java.lang.Object[][] web.base07.testcase.DataProviderClass.registerData() on this instance of class web.base07.testcase.Lemon_Test_Case due to class mismatch
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:75)
+	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:137)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:430)
+	at org.testng.internal.Invoker.handleParameters(Invoker.java:1274)
+	at org.testng.internal.Invoker.createParameters(Invoker.java:989)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1079)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test_case_06 -->
-        <test-method status="PASS" signature="afterTestSuite()[pri:0, instance:web.base04.New_Test_Case03@6276ae34]" name="afterTestSuite" is-config="true" duration-ms="6415" started-at="2019-05-16T16:44:58Z" finished-at="2019-05-16T16:45:05Z">
+        </test-method> <!-- register_failure_test_case -->
+        <test-method status="PASS" signature="afterTestSuite()[pri:0, instance:web.base07.testcase.Lemon_Test_Case@d041cf]" name="afterTestSuite" is-config="true" duration-ms="6453" started-at="2019-05-22T22:34:17Z" finished-at="2019-05-22T22:34:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTestSuite -->
-      </class> <!-- web.base04.New_Test_Case03 -->
+      </class> <!-- web.base07.testcase.Lemon_Test_Case -->
     </test> <!-- Web_Auto_Test -->
   </suite> <!-- All_Test_Suite -->
 </testng-results>

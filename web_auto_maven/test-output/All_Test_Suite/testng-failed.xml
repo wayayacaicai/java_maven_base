@@ -6,7 +6,18 @@
   <parameter name="browserType" value="chrome"/>
   <test name="Web_Auto_Test">
     <classes>
-      <class name="web.base04.New_Test_Case03"/>
+      <class name="web.base07.testcase.Lemon_Test_Case"/>
     </classes>
   </test> <!-- Web_Auto_Test -->
+  <test name="Web_Auto_Test(failed)">
+    <classes>
+      <class name="web.base07.testcase.Lemon_Test_Case">
+        <methods>
+          <include name="afterTestSuite"/>
+          <include name="register_failure_test_case"/>
+          <include name="beforeTestSuite"/>
+        </methods>
+      </class> <!-- web.base07.testcase.Lemon_Test_Case -->
+    </classes>
+  </test> <!-- Web_Auto_Test(failed) -->
 </suite> <!-- Failed suite [All_Test_Suite] -->
