@@ -6,18 +6,23 @@
   <parameter name="browserType" value="chrome"/>
   <test name="Web_Auto_Test">
     <classes>
-      <class name="web.base07.testcase.Lemon_Test_Case"/>
+      <class name="web.base08.testcase.register.Register_Failure_Test_Case"/>
+      <class name="web.base08.testcase.register.Register_Success_Test_Case"/>
     </classes>
   </test> <!-- Web_Auto_Test -->
   <test name="Web_Auto_Test(failed)">
     <classes>
-      <class name="web.base07.testcase.Lemon_Test_Case">
+      <class name="web.base08.testcase.register.Register_Success_Test_Case">
+        <methods>
+          <include name="register_success_test_case" invocation-numbers="0 1 2"/>
+        </methods>
+      </class> <!-- web.base08.testcase.register.Register_Success_Test_Case -->
+      <class name="web.base08.testcase.register.Register_Failure_Test_Case">
         <methods>
           <include name="afterTestSuite"/>
-          <include name="register_failure_test_case"/>
           <include name="beforeTestSuite"/>
         </methods>
-      </class> <!-- web.base07.testcase.Lemon_Test_Case -->
+      </class> <!-- web.base08.testcase.register.Register_Failure_Test_Case -->
     </classes>
   </test> <!-- Web_Auto_Test(failed) -->
 </suite> <!-- Failed suite [All_Test_Suite] -->

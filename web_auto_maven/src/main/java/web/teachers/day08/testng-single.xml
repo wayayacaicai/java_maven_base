@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="web_auto_suite" parallel="false">
+	<test name="all_test">
+		<classes>
+			<class name="web.teachers.day08.testcase.regsiter.Register_Failure_Test_Case" />
+			<class name="web.teachers.day08.testcase.regsiter.Register_Success_Test_Case" />
+		</classes>
+	</test> <!-- Test -->
+
+	<!-- browserType的取值只限：ie 、 chrome、firefox、edge、safari、opera -->
+	<parameter name="browserType" value="chrome"></parameter>
+	<!-- seleniumVersion指代的是selenium的版本，只限：2.x、3.x,4.x -->
+	<parameter name="seleniumVersion" value="2.x"></parameter>
+
+	<!-- ie的驱动路径 -->
+	<!-- <parameter name="driverExePath" value="src/test/resources/driver/IEDriverServer.exe"></parameter> -->
+	<!-- chrome的驱动路径 -->
+	<parameter name="driverExePath" value="src/main/resources/drivers/company/chromedriver.exe"></parameter>
+	
+	<!-- firefox的驱动路径 -->
+	<!-- <parameter name="driverExePath" value="src/test/resources/driver/geckodriver.exe"></parameter> -->
+	<!-- edge的驱动路径 -->
+	<!-- <parameter name="driverExePath" value="src/test/resources/driver/MicrosoftWebDriver.exe"></parameter> -->
+
+</suite> <!-- Suite -->

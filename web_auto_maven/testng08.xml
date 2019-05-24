@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All_Test_Suite" parallel="false">
+
+  <test name="Web_Auto_Test">
+    <classes>
+     <!--  <class name="web.base02.New_Test_Case_01"/> -->
+     <!--  <class name="web.base02.New_Test_Case_02"/> -->
+     <!--  <class name="web.base02.Locate_Method_01"/> -->
+     <class name="web.base08.testcase.register.Register_Failure_Test_Case"/>
+     <class name="web.base08.testcase.register.Register_Success_Test_Case"/>
+    </classes>
+  </test> <!-- Test -->
+  
+  
+  
+  
+  
+  
+  
+  <!-- browserType的取值只限：ie 、 chrome、firefox、edge、safari、opera -->
+  <parameter name="browserType" value="chrome"></parameter>
+  
+  <!-- seleniumVersion指代的是selenium的版本，只限：2.x、3.x,4.x -->
+  <parameter name="seleniumVersion" value="2.x"></parameter>
+  
+  <!--chrome的驱动路径 -->
+  <parameter name="driverPath" value="src/main/resources/drivers/company/chromedriver.exe"></parameter>
+  <!--ie的驱动路径 -->
+  <!-- <parameter name="driverPath" value="src/main/resources/drivers/company/IEDriverServer.exe"></parameter> -->
+  <!--firefox的驱动路径 -->
+  <!-- <parameter name="driverPath" value="src/main/resources/drivers/company/geckodriver.exe"></parameter> -->
+  <!--edge的驱动路径 -->
+  <!-- <parameter name="driverPath" value="src/main/resources/drivers/company/MicrosoftWebDriver.exe"></parameter> -->
+  
+</suite> <!-- Suite -->

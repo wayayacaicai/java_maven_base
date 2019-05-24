@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [web_auto_suite]">
+  <parameter name="seleniumVersion" value="2.x"/>
+  <parameter name="browserType" value="chrome"/>
+  <parameter name="driverExePath" value="src/main/resources/drivers/company/chromedriver.exe"/>
+  <test name="all_test">
+    <classes>
+      <class name="web.teachers.day08.testcase.regsiter.Register_Failure_Test_Case"/>
+      <class name="web.teachers.day08.testcase.regsiter.Register_Success_Test_Case"/>
+    </classes>
+  </test> <!-- all_test -->
+  <test name="all_test(failed)">
+    <classes>
+      <class name="web.teachers.day08.testcase.regsiter.Register_Success_Test_Case">
+        <methods>
+          <include name="register_success_test_case" invocation-numbers="0 1 2"/>
+        </methods>
+      </class> <!-- web.teachers.day08.testcase.regsiter.Register_Success_Test_Case -->
+      <class name="web.teachers.day08.testcase.regsiter.Register_Failure_Test_Case">
+        <methods>
+          <include name="beforeSuite"/>
+          <include name="afterSuite"/>
+        </methods>
+      </class> <!-- web.teachers.day08.testcase.regsiter.Register_Failure_Test_Case -->
+    </classes>
+  </test> <!-- all_test(failed) -->
+</suite> <!-- Failed suite [web_auto_suite] -->
