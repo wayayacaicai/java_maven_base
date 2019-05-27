@@ -1,35 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="8" passed="8">
+<testng-results skipped="0" failed="0" total="10" passed="10">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="1851" started-at="2019-05-22T08:24:22Z" finished-at="2019-05-22T08:24:23Z">
+  <suite name="Default suite" duration-ms="3061" started-at="2019-05-27T08:47:00Z" finished-at="2019-05-27T08:47:03Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="1851" started-at="2019-05-22T08:24:22Z" finished-at="2019-05-22T08:24:23Z">
-      <class name="base02.section02.ExcelUtilsTest">
-        <test-method status="PASS" signature="get(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:base02.section02.ExcelUtilsTest@61443d8f]" name="get" duration-ms="827" started-at="2019-05-22T16:24:22Z" data-provider="apitest" finished-at="2019-05-22T16:24:23Z">
+    <test name="Default test" duration-ms="3061" started-at="2019-05-27T08:47:00Z" finished-at="2019-05-27T08:47:03Z">
+      <class name="base03.ExcelUtilsTest">
+        <test-method status="PASS" signature="get(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:base03.ExcelUtilsTest@7006c658]" name="get" duration-ms="1316" started-at="2019-05-27T16:47:00Z" data-provider="apitest" finished-at="2019-05-27T16:47:02Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[http://120.78.128.25:8080/futureloan/mvc/api/member/register]]>
+                <![CDATA[http://120.78.128.25:8080/futureloan/mvc/api%20/member/register]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[13888888888]]>
+                <![CDATA[{"mobilephone":"13783948731","pwd":"123456","regname":"caicai"}]]>
               </value>
             </param>
             <param index="2">
-              <value>
-                <![CDATA[123456]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[a]]>
-              </value>
-            </param>
-            <param index="4">
               <value>
                 <![CDATA[手机号码已被注册]]>
               </value>
@@ -38,29 +28,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- get -->
-        <test-method status="PASS" signature="get(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:base02.section02.ExcelUtilsTest@61443d8f]" name="get" duration-ms="61" started-at="2019-05-22T16:24:23Z" data-provider="apitest" finished-at="2019-05-22T16:24:23Z">
+        <test-method status="PASS" signature="get(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:base03.ExcelUtilsTest@7006c658]" name="get" duration-ms="529" started-at="2019-05-27T16:47:02Z" data-provider="apitest" finished-at="2019-05-27T16:47:02Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[http://120.78.128.25:8080/futureloan/mvc/api/member/register]]>
+                <![CDATA[http://120.78.128.25:8080/futureloan/mvc/api%20/member/register]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[lemon]]>
+                <![CDATA[{"mobilephone":"lemon","pwd":"123456","regname":"caicai" }]]>
               </value>
             </param>
             <param index="2">
-              <value>
-                <![CDATA[123456]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[a]]>
-              </value>
-            </param>
-            <param index="4">
               <value>
                 <![CDATA[手机号码格式不正确]]>
               </value>
@@ -69,29 +49,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- get -->
-        <test-method status="PASS" signature="get(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:base02.section02.ExcelUtilsTest@61443d8f]" name="get" duration-ms="67" started-at="2019-05-22T16:24:23Z" data-provider="apitest" finished-at="2019-05-22T16:24:23Z">
+        <test-method status="PASS" signature="get(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:base03.ExcelUtilsTest@7006c658]" name="get" duration-ms="77" started-at="2019-05-27T16:47:02Z" data-provider="apitest" finished-at="2019-05-27T16:47:02Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[http://120.78.128.25:8080/futureloan/mvc/api/member/register]]>
+                <![CDATA[http://120.78.128.25:8080/futureloan/mvc/api%20/member/register]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[13888888888]]>
+                <![CDATA[{"mobilephone":"13783948731","pwd":"12345","regname":"caicai" }]]>
               </value>
             </param>
             <param index="2">
-              <value>
-                <![CDATA[12345]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[a]]>
-              </value>
-            </param>
-            <param index="4">
               <value>
                 <![CDATA[密码长度必须为6~18]]>
               </value>
@@ -100,60 +70,61 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- get -->
-        <test-method status="PASS" signature="get(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:base02.section02.ExcelUtilsTest@61443d8f]" name="get" duration-ms="70" started-at="2019-05-22T16:24:23Z" data-provider="apitest" finished-at="2019-05-22T16:24:23Z">
+        <test-method status="PASS" signature="get(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:base03.ExcelUtilsTest@7006c658]" name="get" duration-ms="68" started-at="2019-05-27T16:47:02Z" data-provider="apitest" finished-at="2019-05-27T16:47:02Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[http://120.78.128.25:8080/futureloan/mvc/api/member/register]]>
+                <![CDATA[http://120.78.128.25:8080/futureloan/mvc/api/member/login]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[13888888888]]>
+                <![CDATA[{"mobilephone":"13783948731","pwd":"123456"}]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[1231231111213123fdsfsdfsdfsdfsdfs123123123123131]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[a]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[密码长度必须为6~18]]>
+                <![CDATA[登录成功]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- get -->
-        <test-method status="PASS" signature="post(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:base02.section02.ExcelUtilsTest@61443d8f]" name="post" duration-ms="68" started-at="2019-05-22T16:24:23Z" data-provider="apitest" finished-at="2019-05-22T16:24:23Z">
+        <test-method status="PASS" signature="get(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:base03.ExcelUtilsTest@7006c658]" name="get" duration-ms="70" started-at="2019-05-27T16:47:02Z" data-provider="apitest" finished-at="2019-05-27T16:47:02Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[http://120.78.128.25:8080/futureloan/mvc/api/member/register]]>
+                <![CDATA[http://120.78.128.25:8080/futureloan/mvc/api/member/login]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[13888888888]]>
+                <![CDATA[{"mobilephone":"13666666666","pwd":"1234567"}]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[123456]]>
+                <![CDATA[用户名或密码错误]]>
               </value>
             </param>
-            <param index="3">
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- get -->
+        <test-method status="PASS" signature="post(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:base03.ExcelUtilsTest@7006c658]" name="post" duration-ms="83" started-at="2019-05-27T16:47:02Z" data-provider="apitest" finished-at="2019-05-27T16:47:03Z">
+          <params>
+            <param index="0">
               <value>
-                <![CDATA[a]]>
+                <![CDATA[http://120.78.128.25:8080/futureloan/mvc/api%20/member/register]]>
               </value>
             </param>
-            <param index="4">
+            <param index="1">
+              <value>
+                <![CDATA[{"mobilephone":"13783948731","pwd":"123456","regname":"caicai"}]]>
+              </value>
+            </param>
+            <param index="2">
               <value>
                 <![CDATA[手机号码已被注册]]>
               </value>
@@ -162,29 +133,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- post -->
-        <test-method status="PASS" signature="post(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:base02.section02.ExcelUtilsTest@61443d8f]" name="post" duration-ms="65" started-at="2019-05-22T16:24:23Z" data-provider="apitest" finished-at="2019-05-22T16:24:23Z">
+        <test-method status="PASS" signature="post(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:base03.ExcelUtilsTest@7006c658]" name="post" duration-ms="69" started-at="2019-05-27T16:47:03Z" data-provider="apitest" finished-at="2019-05-27T16:47:03Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[http://120.78.128.25:8080/futureloan/mvc/api/member/register]]>
+                <![CDATA[http://120.78.128.25:8080/futureloan/mvc/api%20/member/register]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[lemon]]>
+                <![CDATA[{"mobilephone":"lemon","pwd":"123456","regname":"caicai" }]]>
               </value>
             </param>
             <param index="2">
-              <value>
-                <![CDATA[123456]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[a]]>
-              </value>
-            </param>
-            <param index="4">
               <value>
                 <![CDATA[手机号码格式不正确]]>
               </value>
@@ -193,29 +154,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- post -->
-        <test-method status="PASS" signature="post(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:base02.section02.ExcelUtilsTest@61443d8f]" name="post" duration-ms="60" started-at="2019-05-22T16:24:23Z" data-provider="apitest" finished-at="2019-05-22T16:24:23Z">
+        <test-method status="PASS" signature="post(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:base03.ExcelUtilsTest@7006c658]" name="post" duration-ms="78" started-at="2019-05-27T16:47:03Z" data-provider="apitest" finished-at="2019-05-27T16:47:03Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[http://120.78.128.25:8080/futureloan/mvc/api/member/register]]>
+                <![CDATA[http://120.78.128.25:8080/futureloan/mvc/api%20/member/register]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[13888888888]]>
+                <![CDATA[{"mobilephone":"13783948731","pwd":"12345","regname":"caicai" }]]>
               </value>
             </param>
             <param index="2">
-              <value>
-                <![CDATA[12345]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[a]]>
-              </value>
-            </param>
-            <param index="4">
               <value>
                 <![CDATA[密码长度必须为6~18]]>
               </value>
@@ -224,38 +175,49 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- post -->
-        <test-method status="PASS" signature="post(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:base02.section02.ExcelUtilsTest@61443d8f]" name="post" duration-ms="60" started-at="2019-05-22T16:24:23Z" data-provider="apitest" finished-at="2019-05-22T16:24:23Z">
+        <test-method status="PASS" signature="post(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:base03.ExcelUtilsTest@7006c658]" name="post" duration-ms="78" started-at="2019-05-27T16:47:03Z" data-provider="apitest" finished-at="2019-05-27T16:47:03Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[http://120.78.128.25:8080/futureloan/mvc/api/member/register]]>
+                <![CDATA[http://120.78.128.25:8080/futureloan/mvc/api/member/login]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[13888888888]]>
+                <![CDATA[{"mobilephone":"13783948731","pwd":"123456"}]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[1231231111213123fdsfsdfsdfsdfsdfs123123123123131]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[a]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[密码长度必须为6~18]]>
+                <![CDATA[登录成功]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- post -->
-      </class> <!-- base02.section02.ExcelUtilsTest -->
+        <test-method status="PASS" signature="post(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:base03.ExcelUtilsTest@7006c658]" name="post" duration-ms="69" started-at="2019-05-27T16:47:03Z" data-provider="apitest" finished-at="2019-05-27T16:47:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[http://120.78.128.25:8080/futureloan/mvc/api/member/login]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[{"mobilephone":"13666666666","pwd":"1234567"}]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[用户名或密码错误]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- post -->
+      </class> <!-- base03.ExcelUtilsTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
