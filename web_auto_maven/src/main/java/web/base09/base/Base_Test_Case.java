@@ -10,52 +10,48 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Parameters;
 
-import web.teachers.day09.pojo.Locator;
-import web.teachers.day09.util.PagesUtils;
-import web.teachers.day09.util.WebAutoUtil;
+import web.base08.util.WebDriverUtils;
+import web.base09.pojo.Locator;
+import web.base09.util.PagesUtils;
+
 
 
 /**
- * 基础测试类（基类）
- * @author happy
- * @date 2019年5月9日
- * @desc 
- * @email
+ * @Desc:基础用例模板
+ * @author:zpp 
+ * @time:2019年5月10日 下午4:47:46
  */
 public abstract class Base_Test_Case {
-	private static WebDriver driver;
-
+	private static WebDriver driver; //保持全局只有一个驱动类对象
+	
 	@BeforeSuite
-	@Parameters(value = { "browserType", "seleniumVersion", "driverExePath" })
-	public void beforeSuite(String browserType, String seleniumVersion, String driverExePath) {
-		driver = WebAutoUtil.openBrowser(browserType, seleniumVersion, driverExePath);
+	@Parameters(value = {"browserType","seleniumVersion","driverPath"})
+	public void beforeTestSuite(String browserType,String seleniumVersion,String driverPath){
+		driver = WebDriverUtils.getWebDriver(browserType, seleniumVersion, driverPath);
 	}
-
+	
 	@AfterSuite
-	public void afterSuite() {
-		//线程等待5s后
+	public void afterTestSuite(){
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
-			//日志
-			//			e.printStackTrace();
+			e.printStackTrace();
 		}
-		//关闭浏览器
 		driver.quit();
 	}
-
+	
 	/**
-	 * 打开某一个页面
-	 * @param pageUrl 页面的url
-	 */
-	public void to(String pageUrl) {
+	 * 访问一个页面
+	 * */
+	public void toPage(String pageUrl){
 		driver.get(pageUrl);
 	}
-
+	
 	/**
-	 * 单击某个元素
+	 * @Desc 单击某个元素
+	 * @param by
 	 */
-	public void click(By by) {
+	public void click(By by){
 		getElement(by).click();
 	}
 	
@@ -65,17 +61,20 @@ public abstract class Base_Test_Case {
 	public void click(String locatorName) {
 		getElement(locatorName).click();
 	}
+	
 	/**
 	 * 单击某个元素
 	 */
 	public void click(String pageName,String locatorName) {
 		getElement(pageName, locatorName).click();
 	}
-
+	
 	/**
-	 * 往某个元素输入内容
+	 * @Desc 往某个元素输入内容
+	 * @param by
+	 * @param content
 	 */
-	public void type(By by, String content) {
+	public void type(By by, String content){
 		getElement(by).sendKeys(content);
 	}
 	
@@ -93,23 +92,21 @@ public abstract class Base_Test_Case {
 		getElement(pageName, locatorName).sendKeys(content);
 	}
 	
-
-
-
 	/**
-	 * 获取某个元素的文本内容
+	 * @Desc 获取某个元素的文本内容
 	 * @param by
 	 * @return
 	 */
-	public String getText(By by) {
+	public String getTextInfo(By by){
 		return getElement(by).getText();
 	}
+	
 	/**
 	 * 获取某个元素的文本内容
 	 * @param by
 	 * @return
 	 */
-	public String getText(String locatorName) {
+	public String getTextInfo(String locatorName) {
 		return getElement(locatorName).getText();
 	}
 	
@@ -118,32 +115,72 @@ public abstract class Base_Test_Case {
 	 * @param by
 	 * @return
 	 */
-	public String getText(String pageName,String locatorName) {
+	public String getTextInfo(String pageName,String locatorName) {
 		return getElement(pageName, locatorName).getText();
 	}
-
+	
 	/**
-	 * 智能等待获取元素的方法
-	 * @param by 定位方式、定位器（locator）
+	 * @Desc 智能等待元素的获取元素(设置默认的等待时间)
+	 * @param by
+	 * @return
 	 */
-	public WebElement getElement(By by) {
-		WebDriverWait wait = new WebDriverWait(driver, 5);
-		WebElement element = wait.until(new ExpectedCondition<WebElement>() {
-			@Override
-			public WebElement apply(WebDriver input) {
-				return driver.findElement(by);
-			}
-
-		});
-
+	public WebElement getElement(By by){
+		int times = 5;
+		WebElement element = getElement(by,times);
 		return element;
 	}
-
+	
+	
 	/**
-	 * 智能等待获取元素的方法
-	 * @param by 定位方式、定位器（locator）
+	 * @Desc 智能等待元素的获取元素(设置默认的等待时间)
+	 * @param pageName
+	 * @param locatorName
+	 * @return
 	 */
-	public WebElement getElement(String pageName, String locatorName) {
+	public WebElement getElement(String pageName, String locatorName){
+		int times = 5;
+		WebElement element = getElement(pageName,locatorName,times);
+		return element;
+	}
+	
+	
+	/**
+	 * @Desc 智能等待元素的获取元素(设置默认的等待时间)
+	 * @param locatorName
+	 * @return
+	 */
+	public WebElement getElement(String locatorName){
+		int times = 5;
+		WebElement element = getElement(locatorName,times);
+		return element;
+	}
+	
+	/**
+	 * @Desc 智能等待元素的获取元素(自己设置等待时间)
+	 * @param by
+	 * @param times
+	 * @return
+	 */
+	public WebElement getElement(By by,int times){
+		WebDriverWait wait = new WebDriverWait(driver, times);
+		WebElement element = wait.until(new ExpectedCondition<WebElement>() {
+			@Override
+			public WebElement apply(WebDriver arg0) {	
+				return driver.findElement(by);
+			}
+		});
+		return element;
+	}
+	
+	
+	/**
+	 * @Desc 智能等待元素的获取元素(自己设置等待时间)
+	 * @param pageName
+	 * @param locatorName
+	 * @param times
+	 * @return
+	 */
+	public WebElement getElement(String pageName, String locatorName,int times) {
 		//获得该页面该元素的定位信息
 		Locator locator = PagesUtils.getAllLocatorsByPageName(pageName).get(locatorName);
 		//定位的方式
@@ -151,7 +188,7 @@ public abstract class Base_Test_Case {
 		//定位的值
 		String value = locator.getValue();
 
-		WebDriverWait wait = new WebDriverWait(driver, 5);
+		WebDriverWait wait = new WebDriverWait(driver, times);
 		WebElement element = wait.until(new ExpectedCondition<WebElement>() {
 			@Override
 			public WebElement apply(WebDriver input) {
@@ -181,11 +218,15 @@ public abstract class Base_Test_Case {
 		return element;
 	}
 	
+	
+	
 	/**
-	 * 智能等待获取元素的方法
-	 * @param by 定位方式、定位器（locator）
+	 * @Desc 智能等待元素的获取元素(自己设置等待时间)
+	 * @param locatorName
+	 * @param times
+	 * @return
 	 */
-	public WebElement getElement(String locatorName) {
+	public WebElement getElement(String locatorName,int times) {
 		//根据类和pages.xml中间页面命名规则获得页面名称
 		String className = this.getClass().getSimpleName();
 		String pageName = className.substring(0,className.indexOf("_"));
@@ -196,7 +237,7 @@ public abstract class Base_Test_Case {
 		//定位的值
 		String value = locator.getValue();
 
-		WebDriverWait wait = new WebDriverWait(driver, 5);
+		WebDriverWait wait = new WebDriverWait(driver, times);
 		WebElement element = wait.until(new ExpectedCondition<WebElement>() {
 			@Override
 			public WebElement apply(WebDriver input) {
@@ -225,8 +266,25 @@ public abstract class Base_Test_Case {
 
 		return element;
 	}
-
-
+	
+	
+	/**
+	 * @Desc 智能等待元素的获取布尔值(传入文本值比较)
+	 * @param by
+	 * @param text
+	 * @return
+	 */
+	public boolean getElementBoolean(By by,String text){
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+		Boolean flag = wait.until(new ExpectedCondition<Boolean>() {
+			@Override
+			public Boolean apply(WebDriver arg0) {	
+				return text.equals(driver.findElement(by).getText());
+			}
+		});
+		return flag;
+	}
+	
 	/**
 	 * 等待元素可被点击
 	 * @param by
@@ -236,6 +294,4 @@ public abstract class Base_Test_Case {
 		ExpectedConditions.elementToBeClickable(by);
 		return driver.findElement(by);
 	}
-	
-
 }

@@ -16,7 +16,7 @@ import web.base07.util.WebDriverUtils;
  * @author:zpp 
  * @time:2019年5月10日 下午4:47:46
  */
-public abstract class BaseBrowserAttrs {
+public abstract class Base_Test_Case {
 	private static WebDriver driver; //保持全局只有一个驱动类对象
 	
 	@BeforeSuite

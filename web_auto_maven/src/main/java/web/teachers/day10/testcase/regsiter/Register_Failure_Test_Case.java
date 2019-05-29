@@ -1,13 +1,9 @@
-package web.base09.testcase.regsiter;
+package web.teachers.day10.testcase.regsiter;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import web.base09.base.Base_Test_Case1;
-
-
-
-
+import web.teachers.day10.base.Base_Test_Case;
 
 
 
@@ -17,7 +13,7 @@ import web.base09.base.Base_Test_Case1;
  * @desc 
  * @email
  */
-public class Register_Failure_Test_Case extends Base_Test_Case1 {
+public class Register_Failure_Test_Case extends Base_Test_Case {
 	/**
 	 * @param mobilePhone
 	 * @param pwd

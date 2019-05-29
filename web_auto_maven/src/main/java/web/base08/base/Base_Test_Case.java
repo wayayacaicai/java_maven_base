@@ -1,4 +1,4 @@
-package web.base04;
+package web.base08.base;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -9,22 +9,25 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Parameters;
 
+import web.base08.util.WebDriverUtils;
+
+
 /**
  * @Desc:基础用例模板
  * @author:zpp 
  * @time:2019年5月10日 下午4:47:46
  */
-public abstract class BaseBrowserAttrs {
-	private static WebDriver driver;
+public abstract class Base_Test_Case {
+	private static WebDriver driver; //保持全局只有一个驱动类对象
 	
 	@BeforeSuite
 	@Parameters(value = {"browserType","seleniumVersion","driverPath"})
-	public static void beforeTestSuite(String browserType,String seleniumVersion,String driverPath){
+	public void beforeTestSuite(String browserType,String seleniumVersion,String driverPath){
 		driver = WebDriverUtils.getWebDriver(browserType, seleniumVersion, driverPath);
 	}
 	
 	@AfterSuite
-	public static void afterTestSuite(){
+	public void afterTestSuite(){
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -34,16 +37,9 @@ public abstract class BaseBrowserAttrs {
 	}
 	
 	/**
-	 * 返回一个浏览器驱动对象
-	 * */
-	public static WebDriver getWebDriver(){
-		return driver;
-	}
-	
-	/**
 	 * 访问一个页面
 	 * */
-	public static void toPage(String pageUrl){
+	public void toPage(String pageUrl){
 		driver.get(pageUrl);
 	}
 	
@@ -51,7 +47,7 @@ public abstract class BaseBrowserAttrs {
 	 * @Desc 点击某个元素
 	 * @param by
 	 */
-	public static void click(By by){
+	public void click(By by){
 		getElement(by).click();
 	}
 	
@@ -60,7 +56,7 @@ public abstract class BaseBrowserAttrs {
 	 * @param by
 	 * @param content
 	 */
-	public static void type(By by, String content){
+	public void type(By by, String content){
 		getElement(by).sendKeys(content);
 	}
 	
@@ -69,7 +65,7 @@ public abstract class BaseBrowserAttrs {
 	 * @param by
 	 * @return
 	 */
-	public static String getTextInfo(By by){
+	public String getTextInfo(By by){
 		return getElement(by).getText();
 	}
 	
@@ -78,8 +74,8 @@ public abstract class BaseBrowserAttrs {
 	 * @param by
 	 * @return
 	 */
-	public static WebElement getElement(By by){
-		int times = 10;
+	public WebElement getElement(By by){
+		int times = 5;
 		WebElement element = getElement(by,times);
 		return element;
 	}
@@ -90,7 +86,7 @@ public abstract class BaseBrowserAttrs {
 	 * @param times
 	 * @return
 	 */
-	public static WebElement getElement(By by,int times){
+	public WebElement getElement(By by,int times){
 		WebDriverWait wait = new WebDriverWait(driver, times);
 		WebElement element = wait.until(new ExpectedCondition<WebElement>() {
 			@Override
@@ -101,14 +97,13 @@ public abstract class BaseBrowserAttrs {
 		return element;
 	}
 	
-	
 	/**
 	 * @Desc 智能等待元素的获取布尔值(传入文本值比较)
 	 * @param by
 	 * @param text
 	 * @return
 	 */
-	public static boolean getElementBoolean(By by,String text){
+	public boolean getElementBoolean(By by,String text){
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		Boolean flag = wait.until(new ExpectedCondition<Boolean>() {
 			@Override

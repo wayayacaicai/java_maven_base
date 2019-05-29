@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page pageName="WithDraw">
+	<locator name="手机号输入框" by="id" value="mobilephone"></locator>
+	<locator name="密码输入框" by="cssSelector" value="input[type='password']"></locator>
+	<locator name="登录按钮" by="id" value="login"></locator>
+	<locator name="重置按钮" by="xpath" value="//*[@id='loginForm']/div[4]/div/input[2]"></locator>
+	<locator name="提示信息元素" by="className" value="tips" displayed="true" delay="5"></locator>
+</page>

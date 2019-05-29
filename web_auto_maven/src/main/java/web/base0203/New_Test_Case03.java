@@ -19,7 +19,7 @@ import org.testng.annotations.Test;
  * @author:zpp 
  * @time:2019年5月13日 下午5:19:02
  */
-public class New_Test_Case03 extends BaseBrowserAttrs{
+public class New_Test_Case03 extends Base_Test_Case{
 	private static Logger logger = Logger.getLogger(New_Test_Case03.class);
 	
 	//登陆成功，显示等待

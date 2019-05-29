@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page pageName="Register"><!-- 一个页面 -->
+	<!-- 一个一个的元素定位信息 -->
+	<locator name="手机号码输入框" by="id" value="mobilephone" delay="5"></locator>
+	<locator name="密码输入框" by="id" value="password"></locator>
+	<locator name="重复密码输入框" by="id" value="pwdconfirm"></locator>
+	<locator name="验证码输入框" by="id" value="verifycode"></locator>
+	<locator name="注册按钮" by="id" value="signup-button" clickable="true"  delay="5"></locator>
+	<locator name="重置按钮" by="name" value="reset"></locator>
+	<locator name="提示信息元素" by="className" value="tips" displayed="true" delay="10"></locator>
+</page>

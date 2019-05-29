@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import web.base08.base.BaseBrowserAttrs;
+import web.base08.base.Base_Test_Case;
 
 
 
@@ -16,7 +16,7 @@ import web.base08.base.BaseBrowserAttrs;
  * @desc 注册功能正向测试用例
  * @email
  */
-public class Register_Success_Test_Case extends BaseBrowserAttrs {
+public class Register_Success_Test_Case extends Base_Test_Case {
 	/**
 	 * 注册成功后，跳转到登录页面
 	 * 	断言：

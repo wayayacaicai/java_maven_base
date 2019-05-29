@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import web.base07.base.BaseBrowserAttrs;
+import web.base07.base.Base_Test_Case;
 
 /**
  * @author happy
@@ -12,7 +12,7 @@ import web.base07.base.BaseBrowserAttrs;
  * @desc
  * @email
  */
-public class Lemon_Test_Case extends BaseBrowserAttrs {
+public class Lemon_Test_Case extends Base_Test_Case {
 	/**
 	 * @param mobilePhone
 	 * @param pwd

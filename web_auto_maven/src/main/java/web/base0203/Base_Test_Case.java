@@ -10,7 +10,7 @@ import org.testng.annotations.Parameters;
  * @author:zpp 
  * @time:2019年5月10日 下午4:47:46
  */
-public abstract class BaseBrowserAttrs {
+public abstract class Base_Test_Case {
 	private static WebDriver driver;
 	
 	@BeforeSuite

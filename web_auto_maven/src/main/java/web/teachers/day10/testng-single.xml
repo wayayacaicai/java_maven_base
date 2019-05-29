@@ -3,8 +3,8 @@
 <suite name="web_auto_suite" parallel="false">
 	<test name="all_test">
 		<classes>
-			<class name="com.lemon.web.auto.day09.testcase.regsiter.Register_Failure_Test_Case" />
-			<class name="com.lemon.web.auto.day09.testcase.regsiter.Register_Success_Test_Case" />
+			<class name="com.lemon.web.auto.day10.testcase.regsiter.Register_Failure_Test_Case" />
+			<class name="com.lemon.web.auto.day10.testcase.regsiter.Register_Success_Test_Case" />
 		</classes>
 	</test> <!-- Test -->
 

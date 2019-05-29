@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import web.base08.base.BaseBrowserAttrs;
+import web.base08.base.Base_Test_Case;
 
 
 
@@ -19,7 +19,7 @@ import web.base08.base.BaseBrowserAttrs;
  * @desc 
  * @email
  */
-public class Register_Failure_Test_Case extends BaseBrowserAttrs {
+public class Register_Failure_Test_Case extends Base_Test_Case {
 	/**
 	 * @param mobilePhone
 	 * @param pwd

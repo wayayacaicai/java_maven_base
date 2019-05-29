@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
-public class Locate_Method_01 extends BaseBrowserAttrs{
+public class Locate_Method_01 extends Base_Test_Case{
 //	@Test
 	public void test_case_01(){
 		toPage("http://www.baidu.com");

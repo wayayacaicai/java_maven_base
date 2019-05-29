@@ -1,16 +1,10 @@
-package web.base09.testcase.regsiter;
+package web.teachers.day10.testcase.regsiter;
 
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import web.base09.base.Base_Test_Case1;
-
-
-
-
-
-
+import web.teachers.day10.base.Base_Test_Case;
 
 
 
@@ -24,7 +18,7 @@ import web.base09.base.Base_Test_Case1;
  *  List
  *  Map:A树  苹果A
  */
-public class Register_Success_Test_Case extends Base_Test_Case1 {
+public class Register_Success_Test_Case extends Base_Test_Case {
 	
 	private static final String REGISTER_PAGE_NAME = "注册页面";
 	private static final String LOGIN_PAGE_NAME = "登录页面";
