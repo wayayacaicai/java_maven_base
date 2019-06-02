@@ -6,7 +6,7 @@ package base05.pojo;
  * @time:2019年5月31日 上午10:22:29
  */
 public abstract class BaseExcelSheet {
-	//行号
+	//行号 1-based
 	private int rowNo;
 
 	public int getRowNo() {

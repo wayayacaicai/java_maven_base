@@ -8,7 +8,6 @@ import org.testng.annotations.DataProvider;
 
 import base05.pojo.ApiCaseDetail;
 import base05.pojo.ApiInfo;
-import base05.pojo.BaseExcelSheet;
 
 /**
  * @Desc:数据提供的工具类 
@@ -24,8 +23,8 @@ public class DataProviderUtils {
 	 */
 	@DataProvider(name="apitest")
 	public static Object[][] getDatas(){
-		List<ApiCaseDetail> apiCaseDetailList = (List<ApiCaseDetail>) ExcelUtils.readExcel("/base05/testcase_reflect.xlsx", 1, ApiCaseDetail.class);
-		List<ApiInfo> apiInfoList = (List<ApiInfo>) ExcelUtils.readExcel("/base05/testcase_reflect.xlsx", 0, ApiInfo.class);
+		List<ApiCaseDetail> apiCaseDetailList = (List<ApiCaseDetail>) ExcelUtils.readExcel("/base05/testcase.xlsx", 1, ApiCaseDetail.class);
+		List<ApiInfo> apiInfoList = (List<ApiInfo>) ExcelUtils.readExcel("/base05/testcase.xlsx", 0, ApiInfo.class);
 		Map<String, ApiInfo> apiInfoMap = new HashMap<>(); //容器转换，性能优化
 		for (ApiInfo apiInfo : apiInfoList) {
 			apiInfoMap.put(apiInfo.getApiId(), apiInfo);

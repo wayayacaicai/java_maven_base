@@ -1,7 +1,11 @@
 package base05.utils;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.OutputStream;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
@@ -27,6 +31,7 @@ public class ExcelUtils {
 	 * @Desc 读取
 	 * @return
 	 */
+	@Deprecated
 	public static Object[][] readExcel(String excelPath,int index){
 		InputStream is = null;
 		Workbook workbook = null;
@@ -59,7 +64,10 @@ public class ExcelUtils {
 	}
 	
 	/**
-	 * @Desc 读取,字节码对象定义泛型，限制约束条件
+	 * @Desc 读取,字节码对象定义泛型，限制约束条件，并且设置了行号
+	 * @param excelPath
+	 * @param index
+	 * @param clazz
 	 * @return
 	 */
 	public static List<? extends BaseExcelSheet> readExcel(String excelPath,int index,Class<? extends BaseExcelSheet> clazz){
@@ -90,6 +98,7 @@ public class ExcelUtils {
 				Row row = sheet.getRow(i);
 				BaseExcelSheet baseExcelSheet = clazz.newInstance(); //创建一个对象来存取每列数据
 				
+				baseExcelSheet.setRowNo(i + 1); //设置行号
 				for(int j=0;j<cellNum;j++){
 					Cell cell = row.getCell(j, MissingCellPolicy.CREATE_NULL_AS_BLANK);
 					cell.setCellType(CellType.STRING);
@@ -108,7 +117,79 @@ public class ExcelUtils {
 		}
 		return aList;
 	}
+	
+	/**
+	 * @Desc 回写入excel，有性能缺陷，没执行一个用例就要重新读写存取
+	 * @param srcExcelPath
+	 * @param destExcelPath
+	 * @param sheetIndex
+	 * @param caseId
+	 * @param cellNo
+	 * @param keyValue
+	 */
+	public static void writeExcel(String srcExcelPath,String destExcelPath,int sheetIndex,String caseId,int cellNo,String keyValue){
+		InputStream is = null;
+		Workbook workbook = null;
+		OutputStream os = null;
+		try {
+			is = new FileInputStream(new File(srcExcelPath));
+			workbook = WorkbookFactory.create(is);
+			Sheet sheet = workbook.getSheetAt(sheetIndex);
+			
+			//遍历所有的行，拿到每行的caseId这列的内容和传入进来的caseId匹配
+			//如果匹配上了，就结束循环，否则继续循环匹配
+			int lastRowNum = sheet.getLastRowNum();
+			for(int i=1;i<=lastRowNum;i++){
+				Row row = sheet.getRow(i);
+				Cell cell = row.getCell(0, MissingCellPolicy.CREATE_NULL_AS_BLANK);
+				cell.setCellType(CellType.STRING);
+				String firstCellValue = cell.getStringCellValue();
+				if(firstCellValue.equals(caseId)){
+					Cell actualCell = row.getCell(cellNo-1, MissingCellPolicy.CREATE_NULL_AS_BLANK);
+					actualCell.setCellValue(keyValue);
+					break;
+				}
+			}
+			os = new FileOutputStream(new File(destExcelPath));
+			workbook.write(os);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally{
+			close(is, workbook, os);
+		}
+	}
 
+	/**
+	 * @Desc 写入excel数据的流关闭
+	 * @param is
+	 * @param workbook
+	 * @param os
+	 */
+	private static void close(InputStream is, Workbook workbook, OutputStream os) {
+		if(os != null){
+			try {
+				os.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+		if(workbook != null){
+			try {
+				workbook.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+		if(is != null){
+			try {
+				is.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+	
+	
 	/**
 	 * @Desc 读取excel数据的流关闭
 	 * @param is
@@ -132,7 +213,7 @@ public class ExcelUtils {
 	}
 	
 	public static void main(String[] args) {
-		String excelPath = "/base05/testcase_reflect.xlsx";
+		String excelPath = "/base05/testcase.xlsx";
 		List<ApiCaseDetail> readExcel = (List<ApiCaseDetail>) readExcel(excelPath,1,ApiCaseDetail.class);
 		for (ApiCaseDetail apiCaseDetail : readExcel) {
 			System.out.println(apiCaseDetail);

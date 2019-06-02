@@ -1,11 +1,12 @@
 package base05.test;
 
 import org.testng.Assert;
-import org.testng.annotations.DataProvider;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.Test;
 
 import base05.pojo.ApiCaseDetail;
 import base05.utils.DataProviderUtils;
+import base05.utils.ExcelUtils;
 import base05.utils.HttpUtils;
 
 /**
@@ -18,11 +19,22 @@ public class ExcelUtilsTest {
 	public void get(ApiCaseDetail apiCaseDetail){
 		String actualResult = HttpUtils.get(apiCaseDetail);
 		Assert.assertTrue(actualResult.contains(apiCaseDetail.getExpectedReponseData()));
+		
+		//一直在重新生成新的excel，并且覆盖原来的excel，所以最后只能生成最后一个用例的结果
+//		ExcelUtils.writeExcel("src/test/resources/base05/testcase.xlsx", "target/testcase_write.xlsx", 1, apiCaseDetail.getCaseId(), 6, actualResult);
+		
+		//要用同一个excel来重复接收，因为这个方法写入一次要进行一次io操作（对这个excel）
+		ExcelUtils.writeExcel("target/base05/testcase.xlsx", "target/base05/testcase.xlsx", 1, apiCaseDetail.getCaseId(), 6, actualResult);
 	}
 	
-	@Test(dataProvider="apitest",dataProviderClass=DataProviderUtils.class)
+	//@Test(dataProvider="apitest",dataProviderClass=DataProviderUtils.class)
 	public void post(ApiCaseDetail apiCaseDetail){
 		String actualResult = HttpUtils.post(apiCaseDetail);
 		Assert.assertTrue(actualResult.contains(apiCaseDetail.getExpectedReponseData()));
+	}
+	
+	@AfterSuite
+	public void afterSuite(){
+		//一次性回写数据，在执行测试用例之前做一个收集
 	}
 }

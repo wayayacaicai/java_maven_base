@@ -19,6 +19,8 @@ public class ApiCaseDetail extends BaseExcelSheet{
 	//ActualReponseData(期望响应数据)
 	private String actualReponseData;
 	
+	//关联上apiInfo对象
+	private ApiInfo apiInfo;
 	
 	public String getActualReponseData() {
 		return actualReponseData;
@@ -26,9 +28,6 @@ public class ApiCaseDetail extends BaseExcelSheet{
 	public void setActualReponseData(String actualReponseData) {
 		this.actualReponseData = actualReponseData;
 	}
-	//关联上apiInfo对象
-	private ApiInfo apiInfo;
-	
 	
 	public String getCaseId() {
 		return caseId;
