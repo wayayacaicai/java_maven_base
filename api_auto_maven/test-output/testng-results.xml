@@ -2,137 +2,137 @@
 <testng-results skipped="0" failed="0" total="28" passed="28">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="9439" started-at="2019-06-17T13:45:09Z" finished-at="2019-06-17T13:45:18Z">
+  <suite name="Suite" duration-ms="12733" started-at="2019-07-07T09:22:17Z" finished-at="2019-07-07T09:22:30Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="9439" started-at="2019-06-17T13:45:09Z" finished-at="2019-06-17T13:45:18Z">
-      <class name="base09.test.ExcelUtilsTest">
-        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:base09.test.ExcelUtilsTest@34033bd0]" name="beforeSuite" is-config="true" duration-ms="8" started-at="2019-06-17T21:45:09Z" finished-at="2019-06-17T21:45:09Z">
+    <test name="Test" duration-ms="12733" started-at="2019-07-07T09:22:17Z" finished-at="2019-07-07T09:22:30Z">
+      <class name="base10.test.ExcelUtilsTest">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:base10.test.ExcelUtilsTest@34033bd0]" name="beforeSuite" is-config="true" duration-ms="4478" started-at="2019-07-07T17:22:12Z" finished-at="2019-07-07T17:22:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="get(base09.pojo.ApiCaseDetail)[pri:0, instance:base09.test.ExcelUtilsTest@34033bd0]" name="get" duration-ms="2167" started-at="2019-06-17T21:45:09Z" data-provider="apitest" finished-at="2019-06-17T21:45:12Z">
+        <test-method status="PASS" signature="get(base10.pojo.ApiCaseDetail)[pri:0, instance:base10.test.ExcelUtilsTest@34033bd0]" name="get" duration-ms="3458" started-at="2019-07-07T17:22:17Z" data-provider="apitest" finished-at="2019-07-07T17:22:21Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[ApiCaseDetail [caseId=1, apiId=1, isExcute=Y, requestData={"mobilephone":"13999888819","pwd":"123456","regname":"test"}, expectedResponseData={"status":1,"code":"20110","data":null,"msg":"注册成功"}, actualResponseData=, sqlCheckResult=, reqHeader=, respHeader=, extractRespData=, assertKeyInfo=[{"jsonPath":"$.msg","expectedValue":"注册成功"},{"jsonPath":"$.code","expectedValue":"10001"}], apiInfo=ApiInfo [apiId=1, apiName=register, type=gEt, url=http://localhost:9000/futureloan/mvc/api/member/register, getRowNo()=2], beforeSqlCheckerList=[SqlChecker [sqlId=1, caseId=1, type=before, sql=select count(*) from member where MobilePhone='13999888819';, expectedResult=[{"count(*)":"0"}], actualResult=, checkResult=, getRowNo()=2]], afterSqlCheckerList=[SqlChecker [sqlId=2, caseId=1, type=after, sql=select count(*) from member where MobilePhone='13999888819';, expectedResult=[{"count(*)":"1"}], actualResult=, checkResult=, getRowNo()=3], SqlChecker [sqlId=3, caseId=1, type=after, sql=select leaveamount,Type from member where MobilePhone='13999888819';, expectedResult=[{"leaveamount":"0.00","Type":"1"}], actualResult=, checkResult=, getRowNo()=4]], getRowNo()=2]]]>
+                <![CDATA[ApiCaseDetail [caseId=1, apiId=1, isExcute=Y, requestData={"mobilephone":"${mobilephone}","pwd":"${pwd}","regname":"${nickname}"}, expectedResponseData={"status":1,"code":"20110","data":null,"msg":"注册成功"}, actualResponseData=, sqlCheckResult=, reqHeader=, respHeader=, extractRespData=, assertKeyInfo=[{"jsonPath":"$.msg","expectedValue":"注册成功"},{"jsonPath":"$.code","expectedValue":"10001"}], apiInfo=ApiInfo [apiId=1, apiName=register, type=gEt, url=http://localhost:9000/futureloan/mvc/api/member/register, getRowNo()=2], beforeSqlCheckerList=[SqlChecker [sqlId=1, caseId=1, type=before, sql=select count(*) from member where MobilePhone='${mobilephone}';, expectedResult=[{"count(*)":"0"}], actualResult=, checkResult=, getRowNo()=2]], afterSqlCheckerList=[SqlChecker [sqlId=2, caseId=1, type=after, sql=select count(*) from member where MobilePhone='${mobilephone}';, expectedResult=[{"count(*)":"1"}], actualResult=, checkResult=, getRowNo()=3], SqlChecker [sqlId=3, caseId=1, type=after, sql=select leaveamount,Type from member where MobilePhone='${mobilephone}';, expectedResult=[{"leaveamount":"0.00","Type":"1"}], actualResult=, checkResult=, getRowNo()=4]], getRowNo()=2]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- get -->
-        <test-method status="PASS" signature="get(base09.pojo.ApiCaseDetail)[pri:0, instance:base09.test.ExcelUtilsTest@34033bd0]" name="get" duration-ms="312" started-at="2019-06-17T21:45:12Z" data-provider="apitest" finished-at="2019-06-17T21:45:12Z">
+        <test-method status="PASS" signature="get(base10.pojo.ApiCaseDetail)[pri:0, instance:base10.test.ExcelUtilsTest@34033bd0]" name="get" duration-ms="874" started-at="2019-07-07T17:22:21Z" data-provider="apitest" finished-at="2019-07-07T17:22:22Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[ApiCaseDetail [caseId=2, apiId=1, isExcute=Y, requestData={"mobilephone":"13999888819","pwd":"123456","regname":"test"}, expectedResponseData={"status":0,"code":"20110","data":null,"msg":"手机号码已被注册"}, actualResponseData=, sqlCheckResult=, reqHeader=, respHeader=, extractRespData=, assertKeyInfo=[{"jsonPath":"$.msg","expectedValue":"手机号码已被注册"}], apiInfo=ApiInfo [apiId=1, apiName=register, type=gEt, url=http://localhost:9000/futureloan/mvc/api/member/register, getRowNo()=2], beforeSqlCheckerList=[SqlChecker [sqlId=4, caseId=2, type=before, sql=select count(*) from member where MobilePhone='13999888819';, expectedResult=[{"count(*)":"1"}], actualResult=, checkResult=, getRowNo()=5]], afterSqlCheckerList=null, getRowNo()=3]]]>
+                <![CDATA[ApiCaseDetail [caseId=2, apiId=1, isExcute=Y, requestData={"mobilephone":"${mobilephone}","pwd":"${pwd}","regname":"${nickname}"}, expectedResponseData={"status":0,"code":"20110","data":null,"msg":"手机号码已被注册"}, actualResponseData=, sqlCheckResult=, reqHeader=, respHeader=, extractRespData=, assertKeyInfo=[{"jsonPath":"$.msg","expectedValue":"手机号码已被注册"}], apiInfo=ApiInfo [apiId=1, apiName=register, type=gEt, url=http://localhost:9000/futureloan/mvc/api/member/register, getRowNo()=2], beforeSqlCheckerList=[SqlChecker [sqlId=4, caseId=2, type=before, sql=select count(*) from member where MobilePhone='${mobilephone}';, expectedResult=[{"count(*)":"1"}], actualResult=, checkResult=, getRowNo()=5]], afterSqlCheckerList=null, getRowNo()=3]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- get -->
-        <test-method status="PASS" signature="get(base09.pojo.ApiCaseDetail)[pri:0, instance:base09.test.ExcelUtilsTest@34033bd0]" name="get" duration-ms="9" started-at="2019-06-17T21:45:12Z" data-provider="apitest" finished-at="2019-06-17T21:45:12Z">
+        <test-method status="PASS" signature="get(base10.pojo.ApiCaseDetail)[pri:0, instance:base10.test.ExcelUtilsTest@34033bd0]" name="get" duration-ms="8" started-at="2019-07-07T17:22:22Z" data-provider="apitest" finished-at="2019-07-07T17:22:22Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[ApiCaseDetail [caseId=3, apiId=1, isExcute=Y, requestData={"mobilephone":"13999888819","pwd":"","regname":"test"}, expectedResponseData={"status":0,"code":"20103","data":null,"msg":"密码不能为空"}, actualResponseData=, sqlCheckResult=, reqHeader=, respHeader=, extractRespData=, assertKeyInfo=[{"jsonPath":"$.msg","expectedValue":"密码不能为空"}], apiInfo=ApiInfo [apiId=1, apiName=register, type=gEt, url=http://localhost:9000/futureloan/mvc/api/member/register, getRowNo()=2], beforeSqlCheckerList=null, afterSqlCheckerList=null, getRowNo()=4]]]>
+                <![CDATA[ApiCaseDetail [caseId=3, apiId=1, isExcute=Y, requestData={"mobilephone":"${mobilephone}","pwd":"","regname":"${nickname}"}, expectedResponseData={"status":0,"code":"20103","data":null,"msg":"密码不能为空"}, actualResponseData=, sqlCheckResult=, reqHeader=, respHeader=, extractRespData=, assertKeyInfo=[{"jsonPath":"$.msg","expectedValue":"密码不能为空"}], apiInfo=ApiInfo [apiId=1, apiName=register, type=gEt, url=http://localhost:9000/futureloan/mvc/api/member/register, getRowNo()=2], beforeSqlCheckerList=null, afterSqlCheckerList=null, getRowNo()=4]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- get -->
-        <test-method status="PASS" signature="get(base09.pojo.ApiCaseDetail)[pri:0, instance:base09.test.ExcelUtilsTest@34033bd0]" name="get" duration-ms="7" started-at="2019-06-17T21:45:12Z" data-provider="apitest" finished-at="2019-06-17T21:45:12Z">
+        <test-method status="PASS" signature="get(base10.pojo.ApiCaseDetail)[pri:0, instance:base10.test.ExcelUtilsTest@34033bd0]" name="get" duration-ms="5" started-at="2019-07-07T17:22:22Z" data-provider="apitest" finished-at="2019-07-07T17:22:22Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[ApiCaseDetail [caseId=4, apiId=1, isExcute=Y, requestData={"mobilephone":"","pwd":"","regname":"test"}, expectedResponseData={"status":0,"code":"20103","data":null,"msg":"手机号不能为空"}, actualResponseData=, sqlCheckResult=, reqHeader=, respHeader=, extractRespData=, assertKeyInfo=[{"jsonPath":"$.msg","expectedValue":"手机号不能为空"}], apiInfo=ApiInfo [apiId=1, apiName=register, type=gEt, url=http://localhost:9000/futureloan/mvc/api/member/register, getRowNo()=2], beforeSqlCheckerList=null, afterSqlCheckerList=null, getRowNo()=5]]]>
+                <![CDATA[ApiCaseDetail [caseId=4, apiId=1, isExcute=Y, requestData={"mobilephone":"","pwd":"","regname":"${nickname}"}, expectedResponseData={"status":0,"code":"20103","data":null,"msg":"手机号不能为空"}, actualResponseData=, sqlCheckResult=, reqHeader=, respHeader=, extractRespData=, assertKeyInfo=[{"jsonPath":"$.msg","expectedValue":"手机号不能为空"}], apiInfo=ApiInfo [apiId=1, apiName=register, type=gEt, url=http://localhost:9000/futureloan/mvc/api/member/register, getRowNo()=2], beforeSqlCheckerList=null, afterSqlCheckerList=null, getRowNo()=5]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- get -->
-        <test-method status="PASS" signature="get(base09.pojo.ApiCaseDetail)[pri:0, instance:base09.test.ExcelUtilsTest@34033bd0]" name="get" duration-ms="9" started-at="2019-06-17T21:45:12Z" data-provider="apitest" finished-at="2019-06-17T21:45:12Z">
+        <test-method status="PASS" signature="get(base10.pojo.ApiCaseDetail)[pri:0, instance:base10.test.ExcelUtilsTest@34033bd0]" name="get" duration-ms="5" started-at="2019-07-07T17:22:22Z" data-provider="apitest" finished-at="2019-07-07T17:22:22Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[ApiCaseDetail [caseId=5, apiId=1, isExcute=N, requestData={"mobilephone":"135","pwd":"123456","regname":"test"}, expectedResponseData={"status":0,"code":"20109","data":null,"msg":"手机号码格式不正确"}, actualResponseData=, sqlCheckResult=, reqHeader=, respHeader=, extractRespData=, assertKeyInfo=[{"jsonPath":"$.msg","expectedValue":"手机号码格式不正确"}], apiInfo=ApiInfo [apiId=1, apiName=register, type=gEt, url=http://localhost:9000/futureloan/mvc/api/member/register, getRowNo()=2], beforeSqlCheckerList=null, afterSqlCheckerList=null, getRowNo()=6]]]>
+                <![CDATA[ApiCaseDetail [caseId=5, apiId=1, isExcute=N, requestData={"mobilephone":"135","pwd":"${pwd}","regname":"${nickname}"}, expectedResponseData={"status":0,"code":"20109","data":null,"msg":"手机号码格式不正确"}, actualResponseData=, sqlCheckResult=, reqHeader=, respHeader=, extractRespData=, assertKeyInfo=[{"jsonPath":"$.msg","expectedValue":"手机号码格式不正确"}], apiInfo=ApiInfo [apiId=1, apiName=register, type=gEt, url=http://localhost:9000/futureloan/mvc/api/member/register, getRowNo()=2], beforeSqlCheckerList=null, afterSqlCheckerList=null, getRowNo()=6]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- get -->
-        <test-method status="PASS" signature="get(base09.pojo.ApiCaseDetail)[pri:0, instance:base09.test.ExcelUtilsTest@34033bd0]" name="get" duration-ms="8" started-at="2019-06-17T21:45:12Z" data-provider="apitest" finished-at="2019-06-17T21:45:12Z">
+        <test-method status="PASS" signature="get(base10.pojo.ApiCaseDetail)[pri:0, instance:base10.test.ExcelUtilsTest@34033bd0]" name="get" duration-ms="6" started-at="2019-07-07T17:22:22Z" data-provider="apitest" finished-at="2019-07-07T17:22:22Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[ApiCaseDetail [caseId=6, apiId=1, isExcute=Y, requestData={"mobilephone":"13999888819","pwd":"123","regname":"test"}, expectedResponseData={"status":0,"code":"20108","data":null,"msg":"密码长度必须为6~18"}, actualResponseData=, sqlCheckResult=, reqHeader=, respHeader=, extractRespData=, assertKeyInfo=[{"jsonPath":"$.msg","expectedValue":"密码长度必须为6~18"}], apiInfo=ApiInfo [apiId=1, apiName=register, type=gEt, url=http://localhost:9000/futureloan/mvc/api/member/register, getRowNo()=2], beforeSqlCheckerList=null, afterSqlCheckerList=null, getRowNo()=7]]]>
+                <![CDATA[ApiCaseDetail [caseId=6, apiId=1, isExcute=Y, requestData={"mobilephone":"${mobilephone}","pwd":"123","regname":"${nickname}"}, expectedResponseData={"status":0,"code":"20108","data":null,"msg":"密码长度必须为6~18"}, actualResponseData=, sqlCheckResult=, reqHeader=, respHeader=, extractRespData=, assertKeyInfo=[{"jsonPath":"$.msg","expectedValue":"密码长度必须为6~18"}], apiInfo=ApiInfo [apiId=1, apiName=register, type=gEt, url=http://localhost:9000/futureloan/mvc/api/member/register, getRowNo()=2], beforeSqlCheckerList=null, afterSqlCheckerList=null, getRowNo()=7]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- get -->
-        <test-method status="PASS" signature="get(base09.pojo.ApiCaseDetail)[pri:0, instance:base09.test.ExcelUtilsTest@34033bd0]" name="get" duration-ms="403" started-at="2019-06-17T21:45:12Z" data-provider="apitest" finished-at="2019-06-17T21:45:12Z">
+        <test-method status="PASS" signature="get(base10.pojo.ApiCaseDetail)[pri:0, instance:base10.test.ExcelUtilsTest@34033bd0]" name="get" duration-ms="594" started-at="2019-07-07T17:22:22Z" data-provider="apitest" finished-at="2019-07-07T17:22:22Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[ApiCaseDetail [caseId=7, apiId=2, isExcute=Y, requestData={"mobilephone":"13999888819","pwd":"123456"}, expectedResponseData={"status":"1","code":"10001","data":null,"msg":"登录成功"}, actualResponseData=, sqlCheckResult=, reqHeader=, respHeader=[{"headerName":"Set-Cookie","paramName":"cookie"}], extractRespData=, assertKeyInfo=[{"jsonPath":"$.msg","expectedValue":"登录成功"}], apiInfo=ApiInfo [apiId=2, apiName=login, type=Post, url=http://localhost:9000/futureloan/mvc/api/member/login, getRowNo()=3], beforeSqlCheckerList=[SqlChecker [sqlId=5, caseId=7, type=before, sql=select count(*) from member where MobilePhone='13999888819';, expectedResult=[{"count(*)":"1"}], actualResult=, checkResult=, getRowNo()=6]], afterSqlCheckerList=null, getRowNo()=8]]]>
+                <![CDATA[ApiCaseDetail [caseId=7, apiId=2, isExcute=Y, requestData={"mobilephone":"${mobilephone}","pwd":"${pwd}"}, expectedResponseData={"status":"1","code":"10001","data":null,"msg":"登录成功"}, actualResponseData=, sqlCheckResult=, reqHeader=, respHeader=[{"headerName":"Set-Cookie","paramName":"cookie"}], extractRespData=, assertKeyInfo=[{"jsonPath":"$.msg","expectedValue":"登录成功"}], apiInfo=ApiInfo [apiId=2, apiName=login, type=Post, url=http://localhost:9000/futureloan/mvc/api/member/login, getRowNo()=3], beforeSqlCheckerList=[SqlChecker [sqlId=5, caseId=7, type=before, sql=select count(*) from member where MobilePhone='${mobilephone}';, expectedResult=[{"count(*)":"1"}], actualResult=, checkResult=, getRowNo()=6]], afterSqlCheckerList=null, getRowNo()=8]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- get -->
-        <test-method status="PASS" signature="get(base09.pojo.ApiCaseDetail)[pri:0, instance:base09.test.ExcelUtilsTest@34033bd0]" name="get" duration-ms="5" started-at="2019-06-17T21:45:12Z" data-provider="apitest" finished-at="2019-06-17T21:45:12Z">
+        <test-method status="PASS" signature="get(base10.pojo.ApiCaseDetail)[pri:0, instance:base10.test.ExcelUtilsTest@34033bd0]" name="get" duration-ms="6" started-at="2019-07-07T17:22:22Z" data-provider="apitest" finished-at="2019-07-07T17:22:22Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[ApiCaseDetail [caseId=8, apiId=2, isExcute=Y, requestData={"mobilephone":"13999888819","pwd":""}, expectedResponseData={"status":0,"code":"20103","data":null,"msg":"密码不能为空"}, actualResponseData=, sqlCheckResult=, reqHeader=, respHeader=, extractRespData=, assertKeyInfo=[{"jsonPath":"$.msg","expectedValue":"密码不能为空"}], apiInfo=ApiInfo [apiId=2, apiName=login, type=Post, url=http://localhost:9000/futureloan/mvc/api/member/login, getRowNo()=3], beforeSqlCheckerList=null, afterSqlCheckerList=null, getRowNo()=9]]]>
+                <![CDATA[ApiCaseDetail [caseId=8, apiId=2, isExcute=Y, requestData={"mobilephone":"${mobilephone}","pwd":""}, expectedResponseData={"status":0,"code":"20103","data":null,"msg":"密码不能为空"}, actualResponseData=, sqlCheckResult=, reqHeader=, respHeader=, extractRespData=, assertKeyInfo=[{"jsonPath":"$.msg","expectedValue":"密码不能为空"}], apiInfo=ApiInfo [apiId=2, apiName=login, type=Post, url=http://localhost:9000/futureloan/mvc/api/member/login, getRowNo()=3], beforeSqlCheckerList=null, afterSqlCheckerList=null, getRowNo()=9]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- get -->
-        <test-method status="PASS" signature="get(base09.pojo.ApiCaseDetail)[pri:0, instance:base09.test.ExcelUtilsTest@34033bd0]" name="get" duration-ms="5" started-at="2019-06-17T21:45:12Z" data-provider="apitest" finished-at="2019-06-17T21:45:12Z">
+        <test-method status="PASS" signature="get(base10.pojo.ApiCaseDetail)[pri:0, instance:base10.test.ExcelUtilsTest@34033bd0]" name="get" duration-ms="4" started-at="2019-07-07T17:22:22Z" data-provider="apitest" finished-at="2019-07-07T17:22:22Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[ApiCaseDetail [caseId=9, apiId=2, isExcute=Y, requestData={"mobilephone":"","pwd":"123456"}, expectedResponseData={"status":"0","code":"20103",data:null,"msg":"手机号不能为空"}, actualResponseData=, sqlCheckResult=, reqHeader=, respHeader=, extractRespData=, assertKeyInfo=[{"jsonPath":"$.msg","expectedValue":"手机号不能为空"}], apiInfo=ApiInfo [apiId=2, apiName=login, type=Post, url=http://localhost:9000/futureloan/mvc/api/member/login, getRowNo()=3], beforeSqlCheckerList=null, afterSqlCheckerList=null, getRowNo()=10]]]>
+                <![CDATA[ApiCaseDetail [caseId=9, apiId=2, isExcute=Y, requestData={"mobilephone":"","pwd":"${pwd}"}, expectedResponseData={"status":"0","code":"20103",data:null,"msg":"手机号不能为空"}, actualResponseData=, sqlCheckResult=, reqHeader=, respHeader=, extractRespData=, assertKeyInfo=[{"jsonPath":"$.msg","expectedValue":"手机号不能为空"}], apiInfo=ApiInfo [apiId=2, apiName=login, type=Post, url=http://localhost:9000/futureloan/mvc/api/member/login, getRowNo()=3], beforeSqlCheckerList=null, afterSqlCheckerList=null, getRowNo()=10]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- get -->
-        <test-method status="PASS" signature="get(base09.pojo.ApiCaseDetail)[pri:0, instance:base09.test.ExcelUtilsTest@34033bd0]" name="get" duration-ms="47" started-at="2019-06-17T21:45:12Z" data-provider="apitest" finished-at="2019-06-17T21:45:12Z">
+        <test-method status="PASS" signature="get(base10.pojo.ApiCaseDetail)[pri:0, instance:base10.test.ExcelUtilsTest@34033bd0]" name="get" duration-ms="57" started-at="2019-07-07T17:22:22Z" data-provider="apitest" finished-at="2019-07-07T17:22:23Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[ApiCaseDetail [caseId=10, apiId=2, isExcute=Y, requestData={"mobilephone":"13666666665","pwd":"123456"}, expectedResponseData={"status":"0","code":"20111",data:null,"msg":"用户名或者密码错误"}, actualResponseData=, sqlCheckResult=, reqHeader=, respHeader=, extractRespData=, assertKeyInfo=[{"jsonPath":"$.msg","expectedValue":"用户名或密码错误"}], apiInfo=ApiInfo [apiId=2, apiName=login, type=Post, url=http://localhost:9000/futureloan/mvc/api/member/login, getRowNo()=3], beforeSqlCheckerList=null, afterSqlCheckerList=null, getRowNo()=11]]]>
+                <![CDATA[ApiCaseDetail [caseId=10, apiId=2, isExcute=Y, requestData={"mobilephone":"13666666665","pwd":"${pwd}"}, expectedResponseData={"status":"0","code":"20111",data:null,"msg":"用户名或者密码错误"}, actualResponseData=, sqlCheckResult=, reqHeader=, respHeader=, extractRespData=, assertKeyInfo=[{"jsonPath":"$.msg","expectedValue":"用户名或密码错误"}], apiInfo=ApiInfo [apiId=2, apiName=login, type=Post, url=http://localhost:9000/futureloan/mvc/api/member/login, getRowNo()=3], beforeSqlCheckerList=null, afterSqlCheckerList=null, getRowNo()=11]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- get -->
-        <test-method status="PASS" signature="get(base09.pojo.ApiCaseDetail)[pri:0, instance:base09.test.ExcelUtilsTest@34033bd0]" name="get" duration-ms="45" started-at="2019-06-17T21:45:12Z" data-provider="apitest" finished-at="2019-06-17T21:45:12Z">
+        <test-method status="PASS" signature="get(base10.pojo.ApiCaseDetail)[pri:0, instance:base10.test.ExcelUtilsTest@34033bd0]" name="get" duration-ms="54" started-at="2019-07-07T17:22:23Z" data-provider="apitest" finished-at="2019-07-07T17:22:23Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[ApiCaseDetail [caseId=11, apiId=2, isExcute=Y, requestData={"mobilephone":"13999888819","pwd":"1234567"}, expectedResponseData={"status":"0","code":"20111",data:null,"msg":"用户名或者密码错误"}, actualResponseData=, sqlCheckResult=, reqHeader=, respHeader=, extractRespData=, assertKeyInfo=[{"jsonPath":"$.msg","expectedValue":"用户名或密码错误"}], apiInfo=ApiInfo [apiId=2, apiName=login, type=Post, url=http://localhost:9000/futureloan/mvc/api/member/login, getRowNo()=3], beforeSqlCheckerList=null, afterSqlCheckerList=null, getRowNo()=12]]]>
+                <![CDATA[ApiCaseDetail [caseId=11, apiId=2, isExcute=Y, requestData={"mobilephone":"${mobilephone}","pwd":"1234567"}, expectedResponseData={"status":"0","code":"20111",data:null,"msg":"用户名或者密码错误"}, actualResponseData=, sqlCheckResult=, reqHeader=, respHeader=, extractRespData=, assertKeyInfo=[{"jsonPath":"$.msg","expectedValue":"用户名或密码错误"}], apiInfo=ApiInfo [apiId=2, apiName=login, type=Post, url=http://localhost:9000/futureloan/mvc/api/member/login, getRowNo()=3], beforeSqlCheckerList=null, afterSqlCheckerList=null, getRowNo()=12]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- get -->
-        <test-method status="PASS" signature="get(base09.pojo.ApiCaseDetail)[pri:0, instance:base09.test.ExcelUtilsTest@34033bd0]" name="get" duration-ms="44" started-at="2019-06-17T21:45:12Z" data-provider="apitest" finished-at="2019-06-17T21:45:12Z">
+        <test-method status="PASS" signature="get(base10.pojo.ApiCaseDetail)[pri:0, instance:base10.test.ExcelUtilsTest@34033bd0]" name="get" duration-ms="50" started-at="2019-07-07T17:22:23Z" data-provider="apitest" finished-at="2019-07-07T17:22:23Z">
           <params>
             <param index="0">
               <value>
@@ -143,29 +143,29 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- get -->
-        <test-method status="PASS" signature="get(base09.pojo.ApiCaseDetail)[pri:0, instance:base09.test.ExcelUtilsTest@34033bd0]" name="get" duration-ms="6" started-at="2019-06-17T21:45:12Z" data-provider="apitest" finished-at="2019-06-17T21:45:12Z">
+        <test-method status="PASS" signature="get(base10.pojo.ApiCaseDetail)[pri:0, instance:base10.test.ExcelUtilsTest@34033bd0]" name="get" duration-ms="6" started-at="2019-07-07T17:22:23Z" data-provider="apitest" finished-at="2019-07-07T17:22:23Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[ApiCaseDetail [caseId=13, apiId=3, isExcute=Y, requestData={"mobilephone":"13999888819","amount":"-100"}, expectedResponseData={"status":0,"code":"20117","data":null,"msg":"请输入范围在0到50万之间的正数金额"}, actualResponseData=, sqlCheckResult=, reqHeader=[{"headerName":"Cookie","paramName":"cookie"}], respHeader=, extractRespData=, assertKeyInfo=[{"jsonPath":"$.msg","expectedValue":"请输入范围在0到50万之间的正数金额"}], apiInfo=ApiInfo [apiId=3, apiName=recharge, type=post, url=http://localhost:9000/futureloan/mvc/api/member/recharge, getRowNo()=4], beforeSqlCheckerList=null, afterSqlCheckerList=null, getRowNo()=14]]]>
+                <![CDATA[ApiCaseDetail [caseId=13, apiId=3, isExcute=Y, requestData={"mobilephone":"${mobilephone}","amount":"-100"}, expectedResponseData={"status":0,"code":"20117","data":null,"msg":"请输入范围在0到50万之间的正数金额"}, actualResponseData=, sqlCheckResult=, reqHeader=[{"headerName":"Cookie","paramName":"cookie"}], respHeader=, extractRespData=, assertKeyInfo=[{"jsonPath":"$.msg","expectedValue":"请输入范围在0到50万之间的正数金额"}], apiInfo=ApiInfo [apiId=3, apiName=recharge, type=post, url=http://localhost:9000/futureloan/mvc/api/member/recharge, getRowNo()=4], beforeSqlCheckerList=null, afterSqlCheckerList=null, getRowNo()=14]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- get -->
-        <test-method status="PASS" signature="get(base09.pojo.ApiCaseDetail)[pri:0, instance:base09.test.ExcelUtilsTest@34033bd0]" name="get" duration-ms="757" started-at="2019-06-17T21:45:12Z" data-provider="apitest" finished-at="2019-06-17T21:45:13Z">
+        <test-method status="PASS" signature="get(base10.pojo.ApiCaseDetail)[pri:0, instance:base10.test.ExcelUtilsTest@34033bd0]" name="get" duration-ms="772" started-at="2019-07-07T17:22:23Z" data-provider="apitest" finished-at="2019-07-07T17:22:23Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[ApiCaseDetail [caseId=14, apiId=3, isExcute=Y, requestData={"mobilephone":"13999888819","amount":"10000"}, expectedResponseData={"status":1,"code":"10001","data":{"id":1,"regname":"test","pwd":"E10ADC3949BA59ABBE56E057F20F883E","mobilephone":"13999888819","leaveamount":"10000.00","type":"1","regtime":"2018-04-26 14:42:36.0"},"msg":"充值成功"}, actualResponseData=, sqlCheckResult=, reqHeader=[{"headerName":"Cookie","paramName":"cookie"}], respHeader=, extractRespData=[{"parameterName":"memberId","jsonPath":"$.data.id"},{"parameterName":"leaveAmount","jsonPath":"$.data.leaveamount"}], assertKeyInfo=[{"jsonPath":"$.msg","expectedValue":"充值成功"}], apiInfo=ApiInfo [apiId=3, apiName=recharge, type=post, url=http://localhost:9000/futureloan/mvc/api/member/recharge, getRowNo()=4], beforeSqlCheckerList=[SqlChecker [sqlId=6, caseId=14, type=before, sql=select LeaveAmount from member where MobilePhone='13999888819', expectedResult=[{"LeaveAmount":"0.00"}], actualResult=, checkResult=, getRowNo()=7]], afterSqlCheckerList=[SqlChecker [sqlId=7, caseId=14, type=after, sql=select LeaveAmount from member where MobilePhone='13999888819', expectedResult=[{"LeaveAmount":"10000.00"}], actualResult=, checkResult=, getRowNo()=8]], getRowNo()=15]]]>
+                <![CDATA[ApiCaseDetail [caseId=14, apiId=3, isExcute=Y, requestData={"mobilephone":"${mobilephone}","amount":"10000"}, expectedResponseData={"status":1,"code":"10001","data":{"id":1,"regname":"${nickname}","pwd":"E10ADC3949BA59ABBE56E057F20F883E","mobilephone":"${mobilephone}","leaveamount":"10000.00","type":"1","regtime":"2018-04-26 14:42:36.0"},"msg":"充值成功"}, actualResponseData=, sqlCheckResult=, reqHeader=[{"headerName":"Cookie","paramName":"cookie"}], respHeader=, extractRespData=[{"parameterName":"memberId","jsonPath":"$.data.id"},{"parameterName":"leaveAmount","jsonPath":"$.data.leaveamount"}], assertKeyInfo=[{"jsonPath":"$.msg","expectedValue":"充值成功"}], apiInfo=ApiInfo [apiId=3, apiName=recharge, type=post, url=http://localhost:9000/futureloan/mvc/api/member/recharge, getRowNo()=4], beforeSqlCheckerList=[SqlChecker [sqlId=6, caseId=14, type=before, sql=select LeaveAmount from member where MobilePhone='${mobilephone}', expectedResult=[{"LeaveAmount":"0.00"}], actualResult=, checkResult=, getRowNo()=7]], afterSqlCheckerList=[SqlChecker [sqlId=7, caseId=14, type=after, sql=select LeaveAmount from member where MobilePhone='${mobilephone}', expectedResult=[{"LeaveAmount":"10000.00"}], actualResult=, checkResult=, getRowNo()=8]], getRowNo()=15]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- get -->
-        <test-method status="PASS" signature="get(base09.pojo.ApiCaseDetail)[pri:0, instance:base09.test.ExcelUtilsTest@34033bd0]" name="get" duration-ms="6" started-at="2019-06-17T21:45:13Z" data-provider="apitest" finished-at="2019-06-17T21:45:13Z">
+        <test-method status="PASS" signature="get(base10.pojo.ApiCaseDetail)[pri:0, instance:base10.test.ExcelUtilsTest@34033bd0]" name="get" duration-ms="8" started-at="2019-07-07T17:22:23Z" data-provider="apitest" finished-at="2019-07-07T17:22:23Z">
           <params>
             <param index="0">
               <value>
@@ -176,29 +176,29 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- get -->
-        <test-method status="PASS" signature="get(base09.pojo.ApiCaseDetail)[pri:0, instance:base09.test.ExcelUtilsTest@34033bd0]" name="get" duration-ms="34" started-at="2019-06-17T21:45:13Z" data-provider="apitest" finished-at="2019-06-17T21:45:13Z">
+        <test-method status="PASS" signature="get(base10.pojo.ApiCaseDetail)[pri:0, instance:base10.test.ExcelUtilsTest@34033bd0]" name="get" duration-ms="8" started-at="2019-07-07T17:22:23Z" data-provider="apitest" finished-at="2019-07-07T17:22:23Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[ApiCaseDetail [caseId=16, apiId=3, isExcute=Y, requestData={"mobilephone":"13999888819","amount":"abc"}, expectedResponseData={"status":0,"code":"20118","data":null,"msg":"请输入数字"}, actualResponseData=, sqlCheckResult=, reqHeader=[{"headerName":"Cookie","paramName":"cookie"}], respHeader=, extractRespData=, assertKeyInfo=[{"jsonPath":"$.msg","expectedValue":"请输入数字"}], apiInfo=ApiInfo [apiId=3, apiName=recharge, type=post, url=http://localhost:9000/futureloan/mvc/api/member/recharge, getRowNo()=4], beforeSqlCheckerList=null, afterSqlCheckerList=null, getRowNo()=17]]]>
+                <![CDATA[ApiCaseDetail [caseId=16, apiId=3, isExcute=Y, requestData={"mobilephone":"${mobilephone}","amount":"abc"}, expectedResponseData={"status":0,"code":"20118","data":null,"msg":"请输入数字"}, actualResponseData=, sqlCheckResult=, reqHeader=[{"headerName":"Cookie","paramName":"cookie"}], respHeader=, extractRespData=, assertKeyInfo=[{"jsonPath":"$.msg","expectedValue":"请输入数字"}], apiInfo=ApiInfo [apiId=3, apiName=recharge, type=post, url=http://localhost:9000/futureloan/mvc/api/member/recharge, getRowNo()=4], beforeSqlCheckerList=null, afterSqlCheckerList=null, getRowNo()=17]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- get -->
-        <test-method status="PASS" signature="get(base09.pojo.ApiCaseDetail)[pri:0, instance:base09.test.ExcelUtilsTest@34033bd0]" name="get" duration-ms="54" started-at="2019-06-17T21:45:13Z" data-provider="apitest" finished-at="2019-06-17T21:45:13Z">
+        <test-method status="PASS" signature="get(base10.pojo.ApiCaseDetail)[pri:0, instance:base10.test.ExcelUtilsTest@34033bd0]" name="get" duration-ms="42" started-at="2019-07-07T17:22:23Z" data-provider="apitest" finished-at="2019-07-07T17:22:23Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[ApiCaseDetail [caseId=17, apiId=4, isExcute=Y, requestData={"mobilephone":"13999888819","amount":"-100"}, expectedResponseData={"status":0,"code":"20117","data":null,"msg":"请输入范围在0到50万之间的正数金额"}, actualResponseData=, sqlCheckResult=, reqHeader=[{"headerName":"Cookie","paramName":"cookie"}], respHeader=, extractRespData=, assertKeyInfo=[{"jsonPath":"$.msg","expectedValue":"请输入范围在0到50万之间的正数金额"}], apiInfo=ApiInfo [apiId=4, apiName=withdraw, type=post, url=http://localhost:9000/futureloan/mvc/api/member/withdraw, getRowNo()=5], beforeSqlCheckerList=null, afterSqlCheckerList=null, getRowNo()=18]]]>
+                <![CDATA[ApiCaseDetail [caseId=17, apiId=4, isExcute=Y, requestData={"mobilephone":"${mobilephone}","amount":"-100"}, expectedResponseData={"status":0,"code":"20117","data":null,"msg":"请输入范围在0到50万之间的正数金额"}, actualResponseData=, sqlCheckResult=, reqHeader=[{"headerName":"Cookie","paramName":"cookie"}], respHeader=, extractRespData=, assertKeyInfo=[{"jsonPath":"$.msg","expectedValue":"请输入范围在0到50万之间的正数金额"}], apiInfo=ApiInfo [apiId=4, apiName=withdraw, type=post, url=http://localhost:9000/futureloan/mvc/api/member/withdraw, getRowNo()=5], beforeSqlCheckerList=null, afterSqlCheckerList=null, getRowNo()=18]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- get -->
-        <test-method status="PASS" signature="get(base09.pojo.ApiCaseDetail)[pri:0, instance:base09.test.ExcelUtilsTest@34033bd0]" name="get" duration-ms="6" started-at="2019-06-17T21:45:13Z" data-provider="apitest" finished-at="2019-06-17T21:45:13Z">
+        <test-method status="PASS" signature="get(base10.pojo.ApiCaseDetail)[pri:0, instance:base10.test.ExcelUtilsTest@34033bd0]" name="get" duration-ms="6" started-at="2019-07-07T17:22:23Z" data-provider="apitest" finished-at="2019-07-07T17:22:23Z">
           <params>
             <param index="0">
               <value>
@@ -209,51 +209,51 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- get -->
-        <test-method status="PASS" signature="get(base09.pojo.ApiCaseDetail)[pri:0, instance:base09.test.ExcelUtilsTest@34033bd0]" name="get" duration-ms="45" started-at="2019-06-17T21:45:13Z" data-provider="apitest" finished-at="2019-06-17T21:45:13Z">
+        <test-method status="PASS" signature="get(base10.pojo.ApiCaseDetail)[pri:0, instance:base10.test.ExcelUtilsTest@34033bd0]" name="get" duration-ms="205" started-at="2019-07-07T17:22:23Z" data-provider="apitest" finished-at="2019-07-07T17:22:24Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[ApiCaseDetail [caseId=19, apiId=4, isExcute=Y, requestData={"mobilephone":"13999888819","amount":"10000"}, expectedResponseData={"status":0,"code":"20119","data":null,"msg":"取现成功"}, actualResponseData=, sqlCheckResult=, reqHeader=[{"headerName":"Cookie","paramName":"cookie"}], respHeader=, extractRespData=, assertKeyInfo=[{"jsonPath":"$.msg","expectedValue":"取现成功"}], apiInfo=ApiInfo [apiId=4, apiName=withdraw, type=post, url=http://localhost:9000/futureloan/mvc/api/member/withdraw, getRowNo()=5], beforeSqlCheckerList=null, afterSqlCheckerList=null, getRowNo()=20]]]>
+                <![CDATA[ApiCaseDetail [caseId=19, apiId=4, isExcute=Y, requestData={"mobilephone":"${mobilephone}","amount":"10000"}, expectedResponseData={"status":0,"code":"20119","data":null,"msg":"取现成功"}, actualResponseData=, sqlCheckResult=, reqHeader=[{"headerName":"Cookie","paramName":"cookie"}], respHeader=, extractRespData=, assertKeyInfo=[{"jsonPath":"$.msg","expectedValue":"取现成功"}], apiInfo=ApiInfo [apiId=4, apiName=withdraw, type=post, url=http://localhost:9000/futureloan/mvc/api/member/withdraw, getRowNo()=5], beforeSqlCheckerList=null, afterSqlCheckerList=null, getRowNo()=20]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- get -->
-        <test-method status="PASS" signature="get(base09.pojo.ApiCaseDetail)[pri:0, instance:base09.test.ExcelUtilsTest@34033bd0]" name="get" duration-ms="121" started-at="2019-06-17T21:45:13Z" data-provider="apitest" finished-at="2019-06-17T21:45:14Z">
+        <test-method status="PASS" signature="get(base10.pojo.ApiCaseDetail)[pri:0, instance:base10.test.ExcelUtilsTest@34033bd0]" name="get" duration-ms="143" started-at="2019-07-07T17:22:24Z" data-provider="apitest" finished-at="2019-07-07T17:22:24Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[ApiCaseDetail [caseId=20, apiId=4, isExcute=Y, requestData={"mobilephone":"13999888819","amount":"0"}, expectedResponseData={"status":0,"code":"20117","data":null,"msg":"取现成功"}, actualResponseData=, sqlCheckResult=, reqHeader=[{"headerName":"Cookie","paramName":"cookie"}], respHeader=, extractRespData=, assertKeyInfo=[{"jsonPath":"$.msg","expectedValue":"取现成功"}], apiInfo=ApiInfo [apiId=4, apiName=withdraw, type=post, url=http://localhost:9000/futureloan/mvc/api/member/withdraw, getRowNo()=5], beforeSqlCheckerList=null, afterSqlCheckerList=null, getRowNo()=21]]]>
+                <![CDATA[ApiCaseDetail [caseId=20, apiId=4, isExcute=Y, requestData={"mobilephone":"${mobilephone}","amount":"0"}, expectedResponseData={"status":0,"code":"20117","data":null,"msg":"取现成功"}, actualResponseData=, sqlCheckResult=, reqHeader=[{"headerName":"Cookie","paramName":"cookie"}], respHeader=, extractRespData=, assertKeyInfo=[{"jsonPath":"$.msg","expectedValue":"取现成功"}], apiInfo=ApiInfo [apiId=4, apiName=withdraw, type=post, url=http://localhost:9000/futureloan/mvc/api/member/withdraw, getRowNo()=5], beforeSqlCheckerList=null, afterSqlCheckerList=null, getRowNo()=21]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- get -->
-        <test-method status="PASS" signature="get(base09.pojo.ApiCaseDetail)[pri:0, instance:base09.test.ExcelUtilsTest@34033bd0]" name="get" duration-ms="272" started-at="2019-06-17T21:45:14Z" data-provider="apitest" finished-at="2019-06-17T21:45:14Z">
+        <test-method status="PASS" signature="get(base10.pojo.ApiCaseDetail)[pri:0, instance:base10.test.ExcelUtilsTest@34033bd0]" name="get" duration-ms="44" started-at="2019-07-07T17:22:24Z" data-provider="apitest" finished-at="2019-07-07T17:22:24Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[ApiCaseDetail [caseId=21, apiId=4, isExcute=Y, requestData={"mobilephone":"13999888819","amount":"100"}, expectedResponseData={"status":1,"code":"10001","data":null,"msg":"余额不足，请修改提现额度"}, actualResponseData=, sqlCheckResult=, reqHeader=[{"headerName":"Cookie","paramName":"cookie"}], respHeader=, extractRespData=, assertKeyInfo=[{"jsonPath":"$.msg","expectedValue":"余额不足，请修改提现额度"}], apiInfo=ApiInfo [apiId=4, apiName=withdraw, type=post, url=http://localhost:9000/futureloan/mvc/api/member/withdraw, getRowNo()=5], beforeSqlCheckerList=null, afterSqlCheckerList=null, getRowNo()=22]]]>
+                <![CDATA[ApiCaseDetail [caseId=21, apiId=4, isExcute=Y, requestData={"mobilephone":"${mobilephone}","amount":"100"}, expectedResponseData={"status":1,"code":"10001","data":null,"msg":"余额不足，请修改提现额度"}, actualResponseData=, sqlCheckResult=, reqHeader=[{"headerName":"Cookie","paramName":"cookie"}], respHeader=, extractRespData=, assertKeyInfo=[{"jsonPath":"$.msg","expectedValue":"余额不足，请修改提现额度"}], apiInfo=ApiInfo [apiId=4, apiName=withdraw, type=post, url=http://localhost:9000/futureloan/mvc/api/member/withdraw, getRowNo()=5], beforeSqlCheckerList=null, afterSqlCheckerList=null, getRowNo()=22]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- get -->
-        <test-method status="PASS" signature="get(base09.pojo.ApiCaseDetail)[pri:0, instance:base09.test.ExcelUtilsTest@34033bd0]" name="get" duration-ms="89" started-at="2019-06-17T21:45:14Z" data-provider="apitest" finished-at="2019-06-17T21:45:14Z">
+        <test-method status="PASS" signature="get(base10.pojo.ApiCaseDetail)[pri:0, instance:base10.test.ExcelUtilsTest@34033bd0]" name="get" duration-ms="89" started-at="2019-07-07T17:22:24Z" data-provider="apitest" finished-at="2019-07-07T17:22:24Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[ApiCaseDetail [caseId=22, apiId=7, isExcute=Y, requestData={"memberId":"1","title":"测试新增项目","loanRate":"12","loanTerm":"3","loanDateType":"2","repaymemtWay":"11","biddingDays":"5","amount":"100000"}, expectedResponseData={"status":1,"code":"10001","data":null,"msg":"加标成功"}, actualResponseData=, sqlCheckResult=, reqHeader=[{"headerName":"Cookie","paramName":"cookie"}], respHeader=, extractRespData=, assertKeyInfo=[{"jsonPath":"$.msg","expectedValue":"加标成功"}], apiInfo=ApiInfo [apiId=7, apiName=add , type=post, url=http://localhost:9000/futureloan/mvc/api/loan/add, getRowNo()=8], beforeSqlCheckerList=null, afterSqlCheckerList=null, getRowNo()=23]]]>
+                <![CDATA[ApiCaseDetail [caseId=22, apiId=7, isExcute=Y, requestData={"memberId":"${memberId}","title":"测试新增项目","loanRate":"12","loanTerm":"3","loanDateType":"2","repaymemtWay":"11","biddingDays":"5","amount":"100000"}, expectedResponseData={"status":1,"code":"10001","data":null,"msg":"加标成功"}, actualResponseData=, sqlCheckResult=, reqHeader=[{"headerName":"Cookie","paramName":"cookie"}], respHeader=, extractRespData=, assertKeyInfo=[{"jsonPath":"$.msg","expectedValue":"加标成功"}], apiInfo=ApiInfo [apiId=7, apiName=add , type=post, url=http://localhost:9000/futureloan/mvc/api/loan/add, getRowNo()=8], beforeSqlCheckerList=null, afterSqlCheckerList=null, getRowNo()=23]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- get -->
-        <test-method status="PASS" signature="get(base09.pojo.ApiCaseDetail)[pri:0, instance:base09.test.ExcelUtilsTest@34033bd0]" name="get" duration-ms="629" started-at="2019-06-17T21:45:14Z" data-provider="apitest" finished-at="2019-06-17T21:45:14Z">
+        <test-method status="PASS" signature="get(base10.pojo.ApiCaseDetail)[pri:0, instance:base10.test.ExcelUtilsTest@34033bd0]" name="get" duration-ms="1466" started-at="2019-07-07T17:22:24Z" data-provider="apitest" finished-at="2019-07-07T17:22:25Z">
           <params>
             <param index="0">
               <value>
@@ -264,29 +264,29 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- get -->
-        <test-method status="PASS" signature="get(base09.pojo.ApiCaseDetail)[pri:0, instance:base09.test.ExcelUtilsTest@34033bd0]" name="get" duration-ms="1570" started-at="2019-06-17T21:45:14Z" data-provider="apitest" finished-at="2019-06-17T21:45:16Z">
+        <test-method status="PASS" signature="get(base10.pojo.ApiCaseDetail)[pri:0, instance:base10.test.ExcelUtilsTest@34033bd0]" name="get" duration-ms="2191" started-at="2019-07-07T17:22:25Z" data-provider="apitest" finished-at="2019-07-07T17:22:28Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[ApiCaseDetail [caseId=24, apiId=6, isExcute=Y, requestData={"memberId":"1","password":"123456","loanId":"1","amount":"100"}, expectedResponseData={"status":1,"code":"10001","data":null,"msg":"竞标成功"}, actualResponseData=, sqlCheckResult=, reqHeader=[{"headerName":"Cookie","paramName":"cookie"}], respHeader=, extractRespData=, assertKeyInfo=[{"jsonPath":"$.msg","expectedValue":"竞标成功"}], apiInfo=ApiInfo [apiId=6, apiName=bidLoan, type=post, url=http://localhost:9000/futureloan/mvc/api/member/bidLoan, getRowNo()=7], beforeSqlCheckerList=[SqlChecker [sqlId=10, caseId=24, type=before, sql=select count(1) as loanNum from loan where id=1, expectedResult=[{"loanNum":"1"}], actualResult=, checkResult=, getRowNo()=11], SqlChecker [sqlId=11, caseId=24, type=before, sql=select LeaveAmount from member where MobilePhone='13999888819', expectedResult=[{"LeaveAmount":"10000.00"}], actualResult=, checkResult=, getRowNo()=12]], afterSqlCheckerList=[SqlChecker [sqlId=12, caseId=24, type=after, sql=select MemberID,LoanId,Amount,IsValid from invest order by id desc limit 1, expectedResult=[{"MemberID":"1","LoanId":"1","Amount":"100.00","IsValid":"1"}], actualResult=, checkResult=, getRowNo()=13], SqlChecker [sqlId=13, caseId=24, type=after, sql=select LeaveAmount from member where MobilePhone='13999888819', expectedResult=[{"LeaveAmount":"9900.00"}], actualResult=, checkResult=, getRowNo()=14]], getRowNo()=25]]]>
+                <![CDATA[ApiCaseDetail [caseId=24, apiId=6, isExcute=Y, requestData={"memberId":"${memberId}","password":"${pwd}","loanId":"1","amount":"100"}, expectedResponseData={"status":1,"code":"10001","data":null,"msg":"竞标成功"}, actualResponseData=, sqlCheckResult=, reqHeader=[{"headerName":"Cookie","paramName":"cookie"}], respHeader=, extractRespData=, assertKeyInfo=[{"jsonPath":"$.msg","expectedValue":"竞标成功"}], apiInfo=ApiInfo [apiId=6, apiName=bidLoan, type=post, url=http://localhost:9000/futureloan/mvc/api/member/bidLoan, getRowNo()=7], beforeSqlCheckerList=[SqlChecker [sqlId=10, caseId=24, type=before, sql=select count(1) as loanNum from loan where id=1, expectedResult=[{"loanNum":"1"}], actualResult=, checkResult=, getRowNo()=11], SqlChecker [sqlId=11, caseId=24, type=before, sql=select LeaveAmount from member where MobilePhone='${mobilephone}', expectedResult=[{"LeaveAmount":"10000.00"}], actualResult=, checkResult=, getRowNo()=12]], afterSqlCheckerList=[SqlChecker [sqlId=12, caseId=24, type=after, sql=select MemberID,LoanId,Amount,IsValid from invest order by id desc limit 1, expectedResult=[{"MemberID":"1","LoanId":"1","Amount":"100.00","IsValid":"1"}], actualResult=, checkResult=, getRowNo()=13], SqlChecker [sqlId=13, caseId=24, type=after, sql=select LeaveAmount from member where MobilePhone='${mobilephone}', expectedResult=[{"LeaveAmount":"9900.00"}], actualResult=, checkResult=, getRowNo()=14]], getRowNo()=25]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- get -->
-        <test-method status="PASS" signature="get(base09.pojo.ApiCaseDetail)[pri:0, instance:base09.test.ExcelUtilsTest@34033bd0]" name="get" duration-ms="385" started-at="2019-06-17T21:45:16Z" data-provider="apitest" finished-at="2019-06-17T21:45:16Z">
+        <test-method status="PASS" signature="get(base10.pojo.ApiCaseDetail)[pri:0, instance:base10.test.ExcelUtilsTest@34033bd0]" name="get" duration-ms="403" started-at="2019-07-07T17:22:28Z" data-provider="apitest" finished-at="2019-07-07T17:22:28Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[ApiCaseDetail [caseId=25, apiId=6, isExcute=Y, requestData={"memberId":"1","password":"123456","loanId":"10000","amount":"100000"}, expectedResponseData={"status":0,"code":"11009","data":null,"msg":"不存在该标的"}, actualResponseData=, sqlCheckResult=, reqHeader=[{"headerName":"Cookie","paramName":"cookie"}], respHeader=, extractRespData=, assertKeyInfo=[{"jsonPath":"$.msg","expectedValue":"不存在该标的"}], apiInfo=ApiInfo [apiId=6, apiName=bidLoan, type=post, url=http://localhost:9000/futureloan/mvc/api/member/bidLoan, getRowNo()=7], beforeSqlCheckerList=null, afterSqlCheckerList=[SqlChecker [sqlId=14, caseId=25, type=after, sql=select count(1) as loanNum from loan where id=10000, expectedResult=[{"loanNum":"0"}], actualResult=, checkResult=, getRowNo()=15]], getRowNo()=26]]]>
+                <![CDATA[ApiCaseDetail [caseId=25, apiId=6, isExcute=Y, requestData={"memberId":"${memberId}","password":"${pwd}","loanId":"10000","amount":"100000"}, expectedResponseData={"status":0,"code":"11009","data":null,"msg":"不存在该标的"}, actualResponseData=, sqlCheckResult=, reqHeader=[{"headerName":"Cookie","paramName":"cookie"}], respHeader=, extractRespData=, assertKeyInfo=[{"jsonPath":"$.msg","expectedValue":"不存在该标的"}], apiInfo=ApiInfo [apiId=6, apiName=bidLoan, type=post, url=http://localhost:9000/futureloan/mvc/api/member/bidLoan, getRowNo()=7], beforeSqlCheckerList=null, afterSqlCheckerList=[SqlChecker [sqlId=14, caseId=25, type=after, sql=select count(1) as loanNum from loan where id=10000, expectedResult=[{"loanNum":"0"}], actualResult=, checkResult=, getRowNo()=15]], getRowNo()=26]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- get -->
-        <test-method status="PASS" signature="get(base09.pojo.ApiCaseDetail)[pri:0, instance:base09.test.ExcelUtilsTest@34033bd0]" name="get" duration-ms="349" started-at="2019-06-17T21:45:16Z" data-provider="apitest" finished-at="2019-06-17T21:45:17Z">
+        <test-method status="PASS" signature="get(base10.pojo.ApiCaseDetail)[pri:0, instance:base10.test.ExcelUtilsTest@34033bd0]" name="get" duration-ms="306" started-at="2019-07-07T17:22:28Z" data-provider="apitest" finished-at="2019-07-07T17:22:28Z">
           <params>
             <param index="0">
               <value>
@@ -297,7 +297,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- get -->
-        <test-method status="PASS" signature="get(base09.pojo.ApiCaseDetail)[pri:0, instance:base09.test.ExcelUtilsTest@34033bd0]" name="get" duration-ms="410" started-at="2019-06-17T21:45:17Z" data-provider="apitest" finished-at="2019-06-17T21:45:17Z">
+        <test-method status="PASS" signature="get(base10.pojo.ApiCaseDetail)[pri:0, instance:base10.test.ExcelUtilsTest@34033bd0]" name="get" duration-ms="357" started-at="2019-07-07T17:22:28Z" data-provider="apitest" finished-at="2019-07-07T17:22:29Z">
           <params>
             <param index="0">
               <value>
@@ -308,7 +308,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- get -->
-        <test-method status="PASS" signature="get(base09.pojo.ApiCaseDetail)[pri:0, instance:base09.test.ExcelUtilsTest@34033bd0]" name="get" duration-ms="979" started-at="2019-06-17T21:45:17Z" data-provider="apitest" finished-at="2019-06-17T21:45:18Z">
+        <test-method status="PASS" signature="get(base10.pojo.ApiCaseDetail)[pri:0, instance:base10.test.ExcelUtilsTest@34033bd0]" name="get" duration-ms="963" started-at="2019-07-07T17:22:29Z" data-provider="apitest" finished-at="2019-07-07T17:22:30Z">
           <params>
             <param index="0">
               <value>
@@ -319,11 +319,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- get -->
-        <test-method status="PASS" signature="afterSuite()[pri:0, instance:base09.test.ExcelUtilsTest@34033bd0]" name="afterSuite" is-config="true" duration-ms="147" started-at="2019-06-17T21:45:18Z" finished-at="2019-06-17T21:45:18Z">
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:base10.test.ExcelUtilsTest@34033bd0]" name="afterSuite" is-config="true" duration-ms="155" started-at="2019-07-07T17:22:30Z" finished-at="2019-07-07T17:22:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
-      </class> <!-- base09.test.ExcelUtilsTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- base10.test.ExcelUtilsTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

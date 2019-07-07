@@ -7,8 +7,10 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
+import base07.utils.DBUtils;
 import base10.pojo.ApiCaseDetail;
 import base10.pojo.CellData;
+import base10.utils.AssertKeyInfoUtils;
 import base10.utils.DataCheckerUtils;
 import base10.utils.DataProviderUtils;
 import base10.utils.ExcelUtils;
@@ -24,7 +26,11 @@ public class ExcelUtilsTest {
 	@BeforeSuite
 	public void beforeSuite(){
 		//数据清洗
-		
+		DBUtils.sqlAddDelUpdate("truncate table financelog");
+		DBUtils.sqlAddDelUpdate("truncate table invest");
+		DBUtils.sqlAddDelUpdate("truncate table loan");
+		DBUtils.sqlAddDelUpdate("truncate table member");
+		DBUtils.sqlAddDelUpdate("truncate table repayment");
 		
 		//参数替换准备的数据
 		ParamsOperUtils.addGlobalData("mobilephone", "13999888819");
@@ -41,14 +47,17 @@ public class ExcelUtilsTest {
 		DataCheckerUtils.check(apiCaseDetail,"before");
 		//执行用例
 		String actualResult = HttpUtils.request(apiCaseDetail);
+		//抽取数据依赖的数据
+		ParamsOperUtils.extractRespData(actualResult,apiCaseDetail);
 		//后向数据验证
 		DataCheckerUtils.check(apiCaseDetail,"after");
 		//添加用例实际结果
 		DataProviderUtils.addCellData(new CellData(apiCaseDetail.getRowNo(), 6, actualResult));
-		//断言
-		System.out.println(actualResult);
-//		Assert.assertTrue(actualResult.contains(apiCaseDetail.getExpectedResponseData()));
 		
+		//断言
+//		System.out.println(actualResult);
+//		Assert.assertTrue(actualResult.contains(apiCaseDetail.getExpectedResponseData()));		
+		AssertKeyInfoUtils.assertResponseEntity(actualResult,apiCaseDetail);
 	}
 
 	@AfterSuite

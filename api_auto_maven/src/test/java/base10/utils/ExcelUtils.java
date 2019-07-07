@@ -108,7 +108,7 @@ public class ExcelUtils {
 					//进行参数替换后的数据,此处注释掉，
 					//因为还要做响应数据提取和数据依赖以及断言数据所以需要在请求之前替换
 					//还有在Excel中替换的地方都需要注意，比如第二张表和第三张表的数据
-					cellValue = ParamsOperUtils.getReplaceJsonData(cellValue); 
+//					cellValue = ParamsOperUtils.getReplaceJsonData(cellValue); 
 					String fieldName = fieldArray[j]; //得到列名
 					String setFieldName = "set" + fieldName; //得到set方法
 					Method method = clazz.getMethod(setFieldName, String.class);

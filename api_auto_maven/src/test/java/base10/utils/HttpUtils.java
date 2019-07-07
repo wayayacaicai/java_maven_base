@@ -80,14 +80,15 @@ public class HttpUtils {
 		}
 	}
 	
-	
 	/**
-	 * @Desc get请求方法
+	 * @Desc get请求方法,发起请求之前，先进行参数替换
 	 * @param apiCaseDetail
 	 * @return
 	 */
 	public static String get(ApiCaseDetail apiCaseDetail) {
-		Map<String, String> urlParamsMap = (Map<String, String>)JSONObject.parse(apiCaseDetail.getRequestData());		
+		//发起请求之前，先进行参数替换
+		String replaceJsonData = ParamsOperUtils.getReplaceJsonData(apiCaseDetail.getRequestData());
+		Map<String, String> urlParamsMap = (Map<String, String>)JSONObject.parse(replaceJsonData);		
 		String baseUrl = apiCaseDetail.getApiInfo().getUrl();
 		return get(baseUrl, urlParamsMap,apiCaseDetail);
 	}
@@ -136,12 +137,14 @@ public class HttpUtils {
 
 	
 	/**
-	 * @Desc post请求方法
+	 * @Desc post请求方法,发起请求之前，先进行参数替换
 	 * @param apiCaseDetail
 	 * @return
 	 */
 	public static String post(ApiCaseDetail apiCaseDetail) {
-		Map<String, String> urlParamsMap = (Map<String, String>)JSONObject.parse(apiCaseDetail.getRequestData());
+		//发起请求之前，先进行参数替换
+		String replaceJsonData = ParamsOperUtils.getReplaceJsonData(apiCaseDetail.getRequestData());
+		Map<String, String> urlParamsMap = (Map<String, String>)JSONObject.parse(replaceJsonData);
 		String baseUrl = apiCaseDetail.getApiInfo().getUrl();
 		return post(baseUrl, urlParamsMap,apiCaseDetail);
 	}

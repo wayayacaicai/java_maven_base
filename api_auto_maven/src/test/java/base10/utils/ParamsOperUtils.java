@@ -1,9 +1,17 @@
 package base10.utils;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import com.alibaba.fastjson.JSONObject;
+import com.jayway.jsonpath.Configuration;
+import com.jayway.jsonpath.JsonPath;
+
+import base10.pojo.ApiCaseDetail;
+import base10.pojo.ExtractRespDataObject;
 
 /**
  * @Desc:参数替换、数据依赖工具类 
@@ -39,4 +47,33 @@ public class ParamsOperUtils {
 		}
 		return str;
 	}
+	
+	/**
+	 * @Desc 抽取数据依赖数据的方法
+	 * @param actualResult
+	 * @param apiCaseDetail
+	 */
+	public static void extractRespData(String actualResult, ApiCaseDetail apiCaseDetail) {
+		//提取的响应数据规则的字符串形式
+		String extractRespData = apiCaseDetail.getExtractRespData();
+		if(StringUtils.isEmpty(extractRespData)){
+			return;
+		}
+		List<ExtractRespDataObject> extractRespDataObjects = JSONObject.parseArray(extractRespData, ExtractRespDataObject.class);
+		for (ExtractRespDataObject extractRespDataObject : extractRespDataObjects) {
+			//参数名--》设值回全局数据池
+			String parameterName  =extractRespDataObject.getParameterName();
+			//jsonPath--》提取的规则
+			String jsonPath = extractRespDataObject.getJsonPath();
+			//一次性解析，这样后续不用重复去解析json
+			Object document = Configuration.defaultConfiguration().jsonProvider().parse(actualResult);
+			//提取出来的值
+			Object extractObject = JsonPath.read(document, jsonPath);
+			//设值回全局数据池
+			ParamsOperUtils.addGlobalData(parameterName, extractObject.toString());
+		}
+		
+	}
+	
+	
 }

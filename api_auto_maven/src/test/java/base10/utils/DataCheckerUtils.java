@@ -34,8 +34,9 @@ public class DataCheckerUtils {
 		
 		for (SqlChecker sqlChecker : sqlCheckerList) {
 			String sql = sqlChecker.getSql(); //需要验证的sql
+			String replacedSql = ParamsOperUtils.getReplaceJsonData(sql); //替换参数后的sql语句
 			String expectedResult = sqlChecker.getExpectedResult(); //期望结果
-			List<LinkedHashMap<String, String>> actualResultList = DBUtils.sqlQuery(sql); //查询结果
+			List<LinkedHashMap<String, String>> actualResultList = DBUtils.sqlQuery(replacedSql); //查询结果
 			String actualResult = JSONObject.toJSONString(actualResultList); //查询结果字符串
 			//添加实际结果
 			DataProviderUtils.addSqlChecker(new CellData(sqlChecker.getRowNo(), 6, actualResult));
