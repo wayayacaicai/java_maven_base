@@ -66,7 +66,7 @@ public class ExcelUtilsTest {
 		List<CellData> cellDataList = DataProviderUtils.getCellDataList();
 		List<CellData> sqlCheckerList = DataProviderUtils.getSqlCheckerList();
 		ExcelUtils.writeExcelAll("src/test/resources/base10/testcase.xlsx",
-				"target/base10/testcase.xlsx",
+				"target/testcase_result.xlsx",
 				1, cellDataList,2,sqlCheckerList);
 	}
 }
