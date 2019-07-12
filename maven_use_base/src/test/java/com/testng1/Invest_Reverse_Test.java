@@ -1,6 +1,5 @@
 package com.testng1;
 
-import org.junit.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.base.licai.Invester;

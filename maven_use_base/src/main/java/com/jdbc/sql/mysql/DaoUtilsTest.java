@@ -3,8 +3,6 @@ package com.jdbc.sql.mysql;
 import java.util.HashMap;
 import java.util.List;
 
-import org.junit.Test;;
-
 /**
  * @Desc:测试数据库的封装
  * @author:zpp
@@ -14,7 +12,7 @@ public class DaoUtilsTest {
 	/**
 	 * 查询
 	 */
-	@Test
+	//@Test
 	public void testDaoQuery() {
 		String sql = "select id,regname from member where id=?";
 		List<HashMap<String, String>> aList = DaoUtils.sqlQuery(sql, "150");
@@ -24,7 +22,7 @@ public class DaoUtilsTest {
 	/**
 	 * 增删改
 	 */
-	@Test
+	//@Test
 	public void testDaoAddDelUpdate() {
 		// 增加测试
 		String sql = "insert into member(RegName,Pwd,MobilePhone,Type,LeaveAmount,RegTime) values(?,?,?,?,?,?)";
